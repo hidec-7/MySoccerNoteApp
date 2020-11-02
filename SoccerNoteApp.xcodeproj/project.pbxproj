@@ -16,6 +16,7 @@
 		5DAC50EA253DF01600F788BA /* SoccerNoteAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAC50E9253DF01600F788BA /* SoccerNoteAppTests.swift */; };
 		5DAC50F5253DF01600F788BA /* SoccerNoteAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAC50F4253DF01600F788BA /* SoccerNoteAppUITests.swift */; };
 		5DCF3BE6254FCF0200987B9D /* GanmeManagement.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DCF3BE5254FCF0200987B9D /* GanmeManagement.storyboard */; };
+		5DCF3BF9254FD0B600987B9D /* GameManagementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCF3BF8254FD0B600987B9D /* GameManagementViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		5DAC50F4253DF01600F788BA /* SoccerNoteAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoccerNoteAppUITests.swift; sourceTree = "<group>"; };
 		5DAC50F6253DF01600F788BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5DCF3BE5254FCF0200987B9D /* GanmeManagement.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GanmeManagement.storyboard; sourceTree = "<group>"; };
+		5DCF3BF8254FD0B600987B9D /* GameManagementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManagementViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				5DAC50D2253DF01400F788BA /* AppDelegate.swift */,
 				5DAC50D4253DF01400F788BA /* SceneDelegate.swift */,
 				5DAC50D6253DF01400F788BA /* ViewController.swift */,
+				5DCF3BF8254FD0B600987B9D /* GameManagementViewController.swift */,
 				5DCF3BE5254FCF0200987B9D /* GanmeManagement.storyboard */,
 				5DAC50D8253DF01400F788BA /* Main.storyboard */,
 				5DAC50DB253DF01600F788BA /* Assets.xcassets */,
@@ -265,6 +268,7 @@
 				5DAC50D7253DF01400F788BA /* ViewController.swift in Sources */,
 				5DAC50D3253DF01400F788BA /* AppDelegate.swift in Sources */,
 				5DAC50D5253DF01400F788BA /* SceneDelegate.swift in Sources */,
+				5DCF3BF9254FD0B600987B9D /* GameManagementViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
