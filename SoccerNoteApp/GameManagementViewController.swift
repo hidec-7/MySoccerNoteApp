@@ -9,21 +9,30 @@ import UIKit
 
 class GameManagementViewController: UIViewController {
 
+    @IBOutlet weak var gameManagementTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+    }
+
+}
+
+class GameManagementTableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var VSLabel: UILabel!
+    @IBOutlet weak var opponentLabel: UILabel!
+    @IBOutlet weak var myScoreLabel: UILabel!
+    @IBOutlet weak var opponentScoreLabel: UILabel!
+    @IBOutlet weak var ratioLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
     }
-    */
-
+    
 }

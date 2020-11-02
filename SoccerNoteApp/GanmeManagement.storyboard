@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="80" id="zrS-eM-gCW">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="80" id="zrS-eM-gCW" customClass="GameManagementTableViewCell" customModule="SoccerNoteApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zrS-eM-gCW" id="bNP-Mw-OH5">
@@ -98,6 +98,14 @@
                                                 <constraint firstItem="Fkl-gc-GJo" firstAttribute="leading" secondItem="bNP-Mw-OH5" secondAttribute="leadingMargin" constant="10" id="qsQ-gn-ESI"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="VSLabel" destination="Zgr-Vw-Qig" id="pFR-A3-Kbn"/>
+                                            <outlet property="dateLabel" destination="Fkl-gc-GJo" id="69W-yE-ytL"/>
+                                            <outlet property="myScoreLabel" destination="jV9-qX-m5W" id="ndb-Nx-wdZ"/>
+                                            <outlet property="opponentLabel" destination="a5L-jb-9JF" id="jfH-Vz-SjL"/>
+                                            <outlet property="opponentScoreLabel" destination="jbv-HP-49M" id="HKU-xM-31A"/>
+                                            <outlet property="ratioLabel" destination="tlC-M4-ClY" id="hiW-6c-eaC"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -111,10 +119,13 @@
                             <constraint firstItem="s4Z-uh-DRK" firstAttribute="trailing" secondItem="4Ng-Wb-jrm" secondAttribute="trailing" id="ie2-rA-7RM"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="gameManagementTableView" destination="4Ng-Wb-jrm" id="Yh4-44-6ky"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="moZ-HD-8Az" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-84.057971014492765" y="34.821428571428569"/>
+            <point key="canvasLocation" x="-114" y="-70"/>
         </scene>
     </scenes>
     <resources>
