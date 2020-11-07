@@ -8,22 +8,39 @@
 import UIKit
 
 class GameManagementViewController: UIViewController {
-
+    
+    private let cellId = "cellId"
+    
+    @IBOutlet weak var gameManagementTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        gameManagementTableView.delegate = self
+        gameManagementTableView.dataSource = self
+        gameManagementTableView.register(UITableViewCell.self, forCellReuseIdentifier: cellId)
     }
     
+}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension GameManagementViewController: UITableViewDelegate,UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
     }
-    */
-
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 100
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = gameManagementTableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
+        return cell
+        
+    }
+    
+    
+    
+    
 }
