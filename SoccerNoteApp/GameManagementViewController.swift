@@ -9,7 +9,7 @@ import UIKit
 
 class GameManagementViewController: UIViewController {
     
-    //仮の実装
+    //この後TableViewCellのXibファイルとの紐付けに使います
     private let cellId = "cellId"
     
     @IBOutlet weak var gameManagementTableView: UITableView!
