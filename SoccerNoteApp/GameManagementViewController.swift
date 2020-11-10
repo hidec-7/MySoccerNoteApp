@@ -21,6 +21,7 @@ class GameManagementViewController: UIViewController {
         gameManagementTableView.dataSource = self
         gameManagementTableView.register(UITableViewCell.self, forCellReuseIdentifier: cellId)
     }
+    
 }
 
 extension GameManagementViewController: UITableViewDelegate,UITableViewDataSource {
@@ -39,4 +40,5 @@ extension GameManagementViewController: UITableViewDelegate,UITableViewDataSourc
         let cell = gameManagementTableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
         return cell
     }
+    
 }
