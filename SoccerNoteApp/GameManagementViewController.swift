@@ -19,6 +19,8 @@ class GameManagementViewController: UIViewController {
         
         gameManagementTableView.delegate = self
         gameManagementTableView.dataSource = self
+        
+        //仮の実装（この後TableViewCellとの紐付けの際削除する予定）
         gameManagementTableView.register(UITableViewCell.self, forCellReuseIdentifier: cellId)
     }
     
