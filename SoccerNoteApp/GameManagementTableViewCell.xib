@@ -92,6 +92,14 @@
                     <constraint firstItem="nhY-Li-2Pd" firstAttribute="top" secondItem="4eG-Yg-Dwe" secondAttribute="top" constant="45" id="tpQ-da-IIV"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="VSLabel" destination="6kS-Uq-Fbf" id="Sb5-av-kbi"/>
+                <outlet property="dateLabel" destination="Ptj-GL-WcP" id="iWn-Mu-uKA"/>
+                <outlet property="myScoreLabel" destination="nhY-Li-2Pd" id="Nzf-au-6uL"/>
+                <outlet property="opponentScoreLabel" destination="RIg-B5-WdD" id="lJe-U5-gyZ"/>
+                <outlet property="opponentTeamLabel" destination="Dsg-El-719" id="h0f-PM-dzl"/>
+                <outlet property="versusLabel" destination="NdY-Yw-Juf" id="ZGV-ap-oz4"/>
+            </connections>
             <point key="canvasLocation" x="186.95652173913044" y="189.50892857142856"/>
         </tableViewCell>
     </objects>
