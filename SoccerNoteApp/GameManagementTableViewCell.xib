@@ -35,10 +35,10 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="日付" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ptj-GL-WcP">
-                        <rect key="frame" x="15" y="55" width="250" height="36"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2020年11月12日" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ptj-GL-WcP">
+                        <rect key="frame" x="60" y="55" width="150" height="36"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="250" id="iCS-mK-qkW"/>
+                            <constraint firstAttribute="width" constant="150" id="iCS-mK-qkW"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -75,7 +75,7 @@
                     <constraint firstItem="nhY-Li-2Pd" firstAttribute="leading" secondItem="Dsg-El-719" secondAttribute="trailing" constant="15" id="fHK-IU-jXl"/>
                     <constraint firstItem="RIg-B5-WdD" firstAttribute="top" secondItem="4eG-Yg-Dwe" secondAttribute="top" constant="10" id="goH-78-KNg"/>
                     <constraint firstItem="6kS-Uq-Fbf" firstAttribute="leading" secondItem="4eG-Yg-Dwe" secondAttribute="leading" constant="15" id="jBx-w3-KAx"/>
-                    <constraint firstItem="Ptj-GL-WcP" firstAttribute="leading" secondItem="4eG-Yg-Dwe" secondAttribute="leading" constant="15" id="leE-va-dar"/>
+                    <constraint firstItem="Ptj-GL-WcP" firstAttribute="leading" secondItem="4eG-Yg-Dwe" secondAttribute="leading" constant="60" id="leE-va-dar"/>
                     <constraint firstItem="NdY-Yw-Juf" firstAttribute="top" secondItem="4eG-Yg-Dwe" secondAttribute="top" constant="10" id="nbj-5J-ZyT"/>
                 </constraints>
             </tableViewCellContentView>
