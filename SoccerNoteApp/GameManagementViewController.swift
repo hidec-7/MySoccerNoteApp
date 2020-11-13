@@ -17,6 +17,8 @@ class GameManagementViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        title = "試合管理"
+        
         gameManagementTableView.delegate = self
         gameManagementTableView.dataSource = self
         
