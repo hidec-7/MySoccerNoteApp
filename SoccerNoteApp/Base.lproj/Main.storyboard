@@ -31,8 +31,13 @@
                             <constraint firstItem="Dte-cP-JJe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ri9-wb-wRv"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="HL9-jX-8jB"/>
+                    <navigationItem key="navigationItem" id="HL9-jX-8jB">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="tMa-K9-bVj">
+                            <color key="tintColor" red="0.092434234917163849" green="0.46455097198486328" blue="0.58892422914505005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="gameAddButton" destination="tMa-K9-bVj" id="C7s-Um-wN3"/>
                         <outlet property="gameManagementTableView" destination="Dte-cP-JJe" id="KlS-Te-5ii"/>
                     </connections>
                 </viewController>

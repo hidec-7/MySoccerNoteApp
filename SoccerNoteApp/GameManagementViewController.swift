@@ -13,6 +13,8 @@ class GameManagementViewController: UIViewController {
     private let cellId = "cellId"
     
     @IBOutlet weak var gameManagementTableView: UITableView!
+    @IBOutlet weak var gameAddButton: UIBarButtonItem!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
