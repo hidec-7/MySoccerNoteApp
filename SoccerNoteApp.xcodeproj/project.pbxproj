@@ -17,6 +17,7 @@
 		5DAC50DF253DF01600F788BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DAC50DD253DF01600F788BA /* LaunchScreen.storyboard */; };
 		5DAC50EA253DF01600F788BA /* SoccerNoteAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAC50E9253DF01600F788BA /* SoccerNoteAppTests.swift */; };
 		5DAC50F5253DF01600F788BA /* SoccerNoteAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAC50F4253DF01600F788BA /* SoccerNoteAppUITests.swift */; };
+		5DEB73B6255FA1A900FD06E3 /* GameRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DEB73B5255FA1A900FD06E3 /* GameRegisterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		5DAC50F0253DF01600F788BA /* SoccerNoteAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoccerNoteAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DAC50F4253DF01600F788BA /* SoccerNoteAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoccerNoteAppUITests.swift; sourceTree = "<group>"; };
 		5DAC50F6253DF01600F788BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5DEB73B5255FA1A900FD06E3 /* GameRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRegisterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				5DAC50D6253DF01400F788BA /* ViewController.swift */,
 				5D14B37525565ADB002CA3D4 /* GameManagementTableViewCell.swift */,
 				5D14B370255659FA002CA3D4 /* GameManagementViewController.swift */,
+				5DEB73B5255FA1A900FD06E3 /* GameRegisterViewController.swift */,
 				5DAC50D8253DF01400F788BA /* Main.storyboard */,
 				5DAC50DB253DF01600F788BA /* Assets.xcassets */,
 				5DAC50DD253DF01600F788BA /* LaunchScreen.storyboard */,
@@ -268,6 +271,7 @@
 				5DAC50D3253DF01400F788BA /* AppDelegate.swift in Sources */,
 				5D14B37625565ADB002CA3D4 /* GameManagementTableViewCell.swift in Sources */,
 				5DAC50D5253DF01400F788BA /* SceneDelegate.swift in Sources */,
+				5DEB73B6255FA1A900FD06E3 /* GameRegisterViewController.swift in Sources */,
 				5D14B371255659FA002CA3D4 /* GameManagementViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
