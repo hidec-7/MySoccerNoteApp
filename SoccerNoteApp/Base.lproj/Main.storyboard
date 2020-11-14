@@ -45,10 +45,10 @@
             </objects>
             <point key="canvasLocation" x="1050.7246376811595" y="110.49107142857143"/>
         </scene>
-        <!--View Controller-->
+        <!--Game Register View Controller-->
         <scene sceneID="Ukc-rz-EO8">
             <objects>
-                <viewController id="rP5-fx-GU0" sceneMemberID="viewController">
+                <viewController id="rP5-fx-GU0" customClass="GameRegisterViewController" customModule="SoccerNoteApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qNZ-Id-jpi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
