@@ -12,11 +12,11 @@ class GameRegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NavigationBar()
+        setupNavigationBar()
 
     }
     
-    func NavigationBar() {
+    func setupNavigationBar() {
         navigationItem.title = "試合"
         self.navigationController?.navigationBar.tintColor = UIColor.white
     }
