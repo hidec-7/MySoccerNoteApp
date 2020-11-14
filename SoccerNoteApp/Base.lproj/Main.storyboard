@@ -33,7 +33,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="HL9-jX-8jB">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="tMa-K9-bVj">
-                            <color key="tintColor" red="0.092434234917163849" green="0.46455097198486328" blue="0.58892422914505005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -70,6 +70,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yIJ-7I-Aar">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.14693497512197692" green="0.34631367410427921" blue="0.49445108259994974" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
