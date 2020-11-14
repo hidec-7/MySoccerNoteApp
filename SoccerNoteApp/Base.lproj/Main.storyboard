@@ -39,6 +39,7 @@
                     <connections>
                         <outlet property="gameAddButton" destination="tMa-K9-bVj" id="C7s-Um-wN3"/>
                         <outlet property="gameManagementTableView" destination="Dte-cP-JJe" id="KlS-Te-5ii"/>
+                        <segue destination="rP5-fx-GU0" kind="show" id="osG-eI-CUr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
