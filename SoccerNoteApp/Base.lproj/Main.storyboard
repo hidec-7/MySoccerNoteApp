@@ -34,12 +34,14 @@
                     <navigationItem key="navigationItem" id="HL9-jX-8jB">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="tMa-K9-bVj">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="rP5-fx-GU0" kind="show" id="3Kv-jA-KiH"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="gameAddButton" destination="tMa-K9-bVj" id="C7s-Um-wN3"/>
                         <outlet property="gameManagementTableView" destination="Dte-cP-JJe" id="KlS-Te-5ii"/>
-                        <segue destination="rP5-fx-GU0" kind="show" id="osG-eI-CUr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
