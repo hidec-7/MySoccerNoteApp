@@ -18,7 +18,11 @@ class GameManagementViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "試合管理"
+        func headerTitle() {
+            title = "試合管理"
+        }
+        
+        headerTitle()
         
         gameManagementTableView.delegate = self
         gameManagementTableView.dataSource = self
@@ -26,7 +30,7 @@ class GameManagementViewController: UIViewController {
         //仮の実装（この後TableViewCellとの紐付けの際削除する予定）
         gameManagementTableView.register(UITableViewCell.self, forCellReuseIdentifier: cellId)
     }
-    
+   
 }
 
 extension GameManagementViewController: UITableViewDelegate,UITableViewDataSource {
