@@ -18,10 +18,6 @@ class GameManagementViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        func headerTitle() {
-            title = "試合管理"
-        }
-        
         headerTitle()
         
         gameManagementTableView.delegate = self
@@ -29,6 +25,10 @@ class GameManagementViewController: UIViewController {
         
         //仮の実装（この後TableViewCellとの紐付けの際削除する予定）
         gameManagementTableView.register(UITableViewCell.self, forCellReuseIdentifier: cellId)
+    }
+    
+    func headerTitle() {
+        title = "試合管理"
     }
    
 }
