@@ -9,8 +9,6 @@ import UIKit
 
 class GameRegisterViewController: UIViewController {
     
-    @IBOutlet weak var datePicker: UIDatePicker!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         

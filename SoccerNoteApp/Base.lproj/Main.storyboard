@@ -74,9 +74,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Orh-nQ-m2s"/>
-                    <connections>
-                        <outlet property="datePicker" destination="3Kg-3u-GOy" id="FcG-V2-kZ1"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lFU-aH-rS5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
