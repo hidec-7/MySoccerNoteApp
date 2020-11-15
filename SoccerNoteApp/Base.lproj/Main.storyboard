@@ -60,7 +60,7 @@
                                 <rect key="frame" x="8" y="96" width="398" height="40"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="3Kg-3u-GOy" secondAttribute="height" multiplier="199:20" id="EHs-Qr-KGF"/>
+                                    <constraint firstAttribute="width" secondItem="3Kg-3u-GOy" secondAttribute="height" multiplier="10:1" id="EHs-Qr-KGF"/>
                                 </constraints>
                                 <locale key="locale" localeIdentifier="ja_JP"/>
                             </datePicker>
