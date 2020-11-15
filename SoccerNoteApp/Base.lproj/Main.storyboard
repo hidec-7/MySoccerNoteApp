@@ -55,14 +55,29 @@
                     <view key="view" contentMode="scaleToFill" id="qNZ-Id-jpi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="5" translatesAutoresizingMaskIntoConstraints="NO" id="3Kg-3u-GOy">
+                                <rect key="frame" x="8" y="96" width="398" height="40"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="3Kg-3u-GOy" secondAttribute="height" multiplier="10:1" id="EHs-Qr-KGF"/>
+                                </constraints>
+                                <locale key="locale" localeIdentifier="ja_JP"/>
+                            </datePicker>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="SjI-ID-hWl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3Kg-3u-GOy" firstAttribute="leading" secondItem="SjI-ID-hWl" secondAttribute="leading" constant="8" id="595-Px-JP6"/>
+                            <constraint firstItem="SjI-ID-hWl" firstAttribute="trailing" secondItem="3Kg-3u-GOy" secondAttribute="trailing" constant="8" id="buk-Sa-aHG"/>
+                            <constraint firstItem="3Kg-3u-GOy" firstAttribute="top" secondItem="SjI-ID-hWl" secondAttribute="top" constant="8" id="xy0-0r-vrY"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Orh-nQ-m2s"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lFU-aH-rS5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1913" y="110"/>
+            <point key="canvasLocation" x="1911.594202898551" y="109.82142857142857"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="pxE-C4-7s9">
