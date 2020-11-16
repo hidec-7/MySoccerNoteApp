@@ -7,7 +7,7 @@
 
 import UIKit
 
-class GameRegisterViewController: UIViewController {
+class GameRegisterViewController: UIViewController,UITextFieldDelegate {
     
     @IBOutlet weak var teamTextField: UITextField!
     @IBOutlet weak var myScoreLabel: UITextField!
@@ -16,8 +16,20 @@ class GameRegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        teamTextField.delegate = self
+        myScoreLabel.delegate = self
+        opponentScoreLabel.delegate = self
+        
         setupNavigationBar()
 
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
     }
     
     func setupNavigationBar() {
