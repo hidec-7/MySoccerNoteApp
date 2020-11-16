@@ -9,6 +9,10 @@ import UIKit
 
 class GameRegisterViewController: UIViewController {
     
+    @IBOutlet weak var teamTextField: UITextField!
+    @IBOutlet weak var myScoreLabel: UITextField!
+    @IBOutlet weak var opponentScoreLabel: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
