@@ -12,9 +12,12 @@ class GameManagementViewController: UIViewController {
     private let cellId = "cellId"
     
     @IBOutlet weak var gameManagementTableView: UITableView!
+    @IBOutlet weak var gameAddButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        headerTitle()
         
         gameManagementTableView.delegate = self
         gameManagementTableView.dataSource = self
@@ -22,6 +25,10 @@ class GameManagementViewController: UIViewController {
         
     }
     
+    func headerTitle() {
+        title = "試合管理"
+    }
+   
 }
 
 extension GameManagementViewController: UITableViewDelegate,UITableViewDataSource {
