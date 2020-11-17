@@ -20,6 +20,9 @@ class GameRegisterViewController: UIViewController,UITextFieldDelegate {
         myScoreLabel.delegate = self
         opponentScoreLabel.delegate = self
         
+        self.myScoreLabel.keyboardType = UIKeyboardType.numberPad
+        self.opponentScoreLabel.keyboardType = UIKeyboardType.numberPad
+        
         setupNavigationBar()
 
     }
