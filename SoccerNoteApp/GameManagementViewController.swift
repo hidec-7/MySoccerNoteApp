@@ -9,7 +9,6 @@ import UIKit
 
 class GameManagementViewController: UIViewController {
     
-    //この後TableViewCellのXibファイルとの紐付けに使います
     private let cellId = "cellId"
     
     @IBOutlet weak var gameManagementTableView: UITableView!
@@ -22,9 +21,8 @@ class GameManagementViewController: UIViewController {
         
         gameManagementTableView.delegate = self
         gameManagementTableView.dataSource = self
-        
-        //仮の実装（この後TableViewCellとの紐付けの際削除する予定）
-        gameManagementTableView.register(UITableViewCell.self, forCellReuseIdentifier: cellId)
+        gameManagementTableView.register(UINib(nibName: "GameManagementTableViewCell", bundle: nil), forCellReuseIdentifier: cellId)
+
     }
     
     func headerTitle() {

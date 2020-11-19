@@ -113,11 +113,11 @@
 				5D14B37525565ADB002CA3D4 /* GameManagementTableViewCell.swift */,
 				5D14B370255659FA002CA3D4 /* GameManagementViewController.swift */,
 				5DEB73B5255FA1A900FD06E3 /* GameRegisterViewController.swift */,
+				5D36A56C256638750040F961 /* GameManagementTableViewCell.xib */,
 				5DAC50D8253DF01400F788BA /* Main.storyboard */,
 				5DAC50DB253DF01600F788BA /* Assets.xcassets */,
 				5DAC50DD253DF01600F788BA /* LaunchScreen.storyboard */,
 				5DAC50E0253DF01600F788BA /* Info.plist */,
-				5D36A56C256638750040F961 /* GameManagementTableViewCell.xib */,
 			);
 			path = SoccerNoteApp;
 			sourceTree = "<group>";
