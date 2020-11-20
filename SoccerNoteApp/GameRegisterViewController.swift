@@ -20,11 +20,15 @@ class GameRegisterViewController: UIViewController,UITextFieldDelegate {
         myScoreTextField.delegate = self
         opponentScoreTextField.delegate = self
         
-        self.myScoreTextField.keyboardType = UIKeyboardType.numberPad
-        self.opponentScoreTextField.keyboardType = UIKeyboardType.numberPad
+        setupKeyboard()
         
         setupNavigationBar()
 
+    }
+    
+    func setupKeyboard() {
+        self.myScoreTextField.keyboardType = UIKeyboardType.numberPad
+        self.opponentScoreTextField.keyboardType = UIKeyboardType.numberPad
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
