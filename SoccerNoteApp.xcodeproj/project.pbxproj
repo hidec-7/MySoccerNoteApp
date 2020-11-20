@@ -9,11 +9,7 @@
 /* Begin PBXBuildFile section */
 		5D14B371255659FA002CA3D4 /* GameManagementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D14B370255659FA002CA3D4 /* GameManagementViewController.swift */; };
 		5D14B37625565ADB002CA3D4 /* GameManagementTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D14B37525565ADB002CA3D4 /* GameManagementTableViewCell.swift */; };
-<<<<<<< HEAD
-		5D36A56D256638750040F961 /* GameManagementTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D36A56C256638750040F961 /* GameManagementTableViewCell.xib */; };
-=======
 		5D14B396255BA6A1002CA3D4 /* GameManagementTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D14B395255BA6A1002CA3D4 /* GameManagementTableViewCell.xib */; };
->>>>>>> origin/feature/add-UI-TableViewCell
 		5DAC50D3253DF01400F788BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAC50D2253DF01400F788BA /* AppDelegate.swift */; };
 		5DAC50D5253DF01400F788BA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAC50D4253DF01400F788BA /* SceneDelegate.swift */; };
 		5DAC50D7253DF01400F788BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAC50D6253DF01400F788BA /* ViewController.swift */; };
@@ -45,11 +41,7 @@
 /* Begin PBXFileReference section */
 		5D14B370255659FA002CA3D4 /* GameManagementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManagementViewController.swift; sourceTree = "<group>"; };
 		5D14B37525565ADB002CA3D4 /* GameManagementTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManagementTableViewCell.swift; sourceTree = "<group>"; };
-<<<<<<< HEAD
-		5D36A56C256638750040F961 /* GameManagementTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameManagementTableViewCell.xib; sourceTree = "<group>"; };
-=======
 		5D14B395255BA6A1002CA3D4 /* GameManagementTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameManagementTableViewCell.xib; sourceTree = "<group>"; };
->>>>>>> origin/feature/add-UI-TableViewCell
 		5DAC50CF253DF01400F788BA /* SoccerNoteApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoccerNoteApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DAC50D2253DF01400F788BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DAC50D4253DF01400F788BA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -253,11 +245,7 @@
 			files = (
 				5DAC50DF253DF01600F788BA /* LaunchScreen.storyboard in Resources */,
 				5DAC50DC253DF01600F788BA /* Assets.xcassets in Resources */,
-<<<<<<< HEAD
-				5D36A56D256638750040F961 /* GameManagementTableViewCell.xib in Resources */,
-=======
 				5D14B396255BA6A1002CA3D4 /* GameManagementTableViewCell.xib in Resources */,
->>>>>>> origin/feature/add-UI-TableViewCell
 				5DAC50DA253DF01400F788BA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
