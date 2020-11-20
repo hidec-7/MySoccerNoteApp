@@ -10,18 +10,18 @@ import UIKit
 class GameRegisterViewController: UIViewController,UITextFieldDelegate {
     
     @IBOutlet weak var teamTextField: UITextField!
-    @IBOutlet weak var myScoreLabel: UITextField!
-    @IBOutlet weak var opponentScoreLabel: UITextField!
+    @IBOutlet weak var myScoreTextField: UITextField!
+    @IBOutlet weak var opponentScoreTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         teamTextField.delegate = self
-        myScoreLabel.delegate = self
-        opponentScoreLabel.delegate = self
+        myScoreTextField.delegate = self
+        opponentScoreTextField.delegate = self
         
-        self.myScoreLabel.keyboardType = UIKeyboardType.numberPad
-        self.opponentScoreLabel.keyboardType = UIKeyboardType.numberPad
+        self.myScoreTextField.keyboardType = UIKeyboardType.numberPad
+        self.opponentScoreTextField.keyboardType = UIKeyboardType.numberPad
         
         setupNavigationBar()
 

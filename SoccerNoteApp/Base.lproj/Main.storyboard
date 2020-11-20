@@ -120,8 +120,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="Orh-nQ-m2s"/>
                     <connections>
-                        <outlet property="myScoreLabel" destination="i39-ld-Wyn" id="JNe-B1-RpD"/>
-                        <outlet property="opponentScoreLabel" destination="u5l-uM-MaY" id="bXn-jv-cuT"/>
+                        <outlet property="myScoreTextField" destination="i39-ld-Wyn" id="Z4K-Bg-IQZ"/>
+                        <outlet property="opponentScoreTextField" destination="u5l-uM-MaY" id="q7N-1o-FuB"/>
                         <outlet property="teamTextField" destination="HMf-mO-THt" id="D0g-D1-TOC"/>
                     </connections>
                 </viewController>
