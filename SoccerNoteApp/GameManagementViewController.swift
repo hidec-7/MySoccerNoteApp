@@ -22,11 +22,7 @@ class GameManagementViewController: UIViewController {
         gameManagementTableView.delegate = self
         gameManagementTableView.dataSource = self
         gameManagementTableView.register(UINib(nibName: "GameManagementTableViewCell", bundle: nil), forCellReuseIdentifier: cellId)
-<<<<<<< HEAD
-
-=======
         
->>>>>>> origin/feature/add-UI-TableViewCell
     }
     
     func headerTitle() {
