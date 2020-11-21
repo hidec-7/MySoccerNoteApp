@@ -70,6 +70,12 @@
                     <constraint firstItem="zdL-tw-K4p" firstAttribute="bottom" secondItem="fYU-tM-s5i" secondAttribute="bottom" id="laQ-3l-eKJ"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="dateLabel" destination="L6z-lr-DAz" id="c9u-q5-3Zw"/>
+                <outlet property="myScoreLabel" destination="VEX-Kd-J5j" id="xAn-EE-X9a"/>
+                <outlet property="opponentScoreLabel" destination="aZ1-yB-x34" id="g2w-bj-IYe"/>
+                <outlet property="opponentTeamLabel" destination="zdL-tw-K4p" id="d4U-nw-6k4"/>
+            </connections>
             <point key="canvasLocation" x="78.985507246376812" y="70.3125"/>
         </tableViewCell>
     </objects>
