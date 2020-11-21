@@ -64,7 +64,7 @@
                                 </constraints>
                                 <locale key="locale" localeIdentifier="ja_JP"/>
                             </datePicker>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="1Pj-GZ-yV1">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="1Pj-GZ-yV1" userLabel="Game Data Stack View">
                                 <rect key="frame" x="16" y="150" width="382" height="77"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="TTt-Tu-3dT" userLabel="Team Stack View">
