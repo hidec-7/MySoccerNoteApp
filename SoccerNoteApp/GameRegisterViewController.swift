@@ -10,6 +10,9 @@ import UIKit
 class GameRegisterViewController: UIViewController,UITextFieldDelegate,UINavigationBarDelegate {
     
     @IBOutlet weak var gameNavigationBar: UINavigationBar!
+    @IBAction func backToGameManagement(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
     @IBOutlet weak var teamTextField: UITextField!
     @IBOutlet weak var myScoreTextField: UITextField!
