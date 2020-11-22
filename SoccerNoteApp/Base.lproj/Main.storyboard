@@ -35,7 +35,7 @@
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="tMa-K9-bVj">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <segue destination="rP5-fx-GU0" kind="show" id="3Kv-jA-KiH"/>
+                                <segue destination="rP5-fx-GU0" kind="presentation" id="zBt-vP-6wQ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -51,13 +51,13 @@
         <!--Game Register View Controller-->
         <scene sceneID="Ukc-rz-EO8">
             <objects>
-                <viewController id="rP5-fx-GU0" customClass="GameRegisterViewController" customModule="SoccerNoteApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="rP5-fx-GU0" customClass="GameRegisterViewController" customModule="SoccerNoteApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qNZ-Id-jpi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="5" translatesAutoresizingMaskIntoConstraints="NO" id="3Kg-3u-GOy">
-                                <rect key="frame" x="16" y="96" width="382" height="38"/>
+                                <rect key="frame" x="16" y="52" width="382" height="38"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="3Kg-3u-GOy" secondAttribute="height" multiplier="10:1" id="EHs-Qr-KGF"/>
@@ -65,7 +65,7 @@
                                 <locale key="locale" localeIdentifier="ja_JP"/>
                             </datePicker>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="1Pj-GZ-yV1" userLabel="Game Data Stack View">
-                                <rect key="frame" x="16" y="150" width="382" height="77"/>
+                                <rect key="frame" x="16" y="106" width="382" height="77"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="TTt-Tu-3dT" userLabel="Team Stack View">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="31"/>
