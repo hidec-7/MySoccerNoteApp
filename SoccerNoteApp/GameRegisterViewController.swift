@@ -10,19 +10,18 @@ import UIKit
 class GameRegisterViewController: UIViewController,UITextFieldDelegate,UINavigationBarDelegate {
     
     @IBOutlet weak var gameNavigationBar: UINavigationBar!
-    @IBAction func backToGameManagement(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
-    
     @IBOutlet weak var teamTextField: UITextField!
     @IBOutlet weak var myScoreTextField: UITextField!
     @IBOutlet weak var opponentScoreTextField: UITextField!
+    
+    @IBAction func backToGameManagement(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         gameNavigationBar.delegate = self
-        
         teamTextField.delegate = self
         myScoreTextField.delegate = self
         opponentScoreTextField.delegate = self
