@@ -64,7 +64,7 @@
                                         <barButtonItem key="leftBarButtonItem" image="chevron.backward" catalog="system" style="plain" id="miu-Z4-Vhx">
                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <connections>
-                                                <action selector="backToGameManagement:" destination="rP5-fx-GU0" id="SEH-8m-o8K"/>
+                                                <action selector="backToGameManagement:" destination="rP5-fx-GU0" id="lyL-xZ-vdh"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>

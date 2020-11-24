@@ -14,7 +14,7 @@ class GameRegisterViewController: UIViewController,UITextFieldDelegate,UINavigat
     @IBOutlet weak var myScoreTextField: UITextField!
     @IBOutlet weak var opponentScoreTextField: UITextField!
     
-    @IBAction func backToGameManagement(_ sender: UIButton) {
+    @IBAction func backToGameManagement(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
     }
     
