@@ -7,23 +7,30 @@
 
 import UIKit
 
-class GameRegisterViewController: UIViewController,UITextFieldDelegate {
+class GameRegisterViewController: UIViewController,UITextFieldDelegate,UINavigationBarDelegate {
     
+    @IBOutlet weak var gameNavigationBar: UINavigationBar!
     @IBOutlet weak var teamTextField: UITextField!
     @IBOutlet weak var myScoreTextField: UITextField!
     @IBOutlet weak var opponentScoreTextField: UITextField!
     
+    @IBAction func backToGameManagement(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        gameNavigationBar.delegate = self
         teamTextField.delegate = self
         myScoreTextField.delegate = self
         opponentScoreTextField.delegate = self
         
         setupKeyboard()
-        
-        setupNavigationBar()
-
+    }
+    
+    func position(for bar: UIBarPositioning) -> UIBarPosition {
+        return .topAttached
     }
     
     func setupKeyboard() {
@@ -37,11 +44,6 @@ class GameRegisterViewController: UIViewController,UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
-    }
-    
-    func setupNavigationBar() {
-        navigationItem.title = "試合"
-        self.navigationController?.navigationBar.tintColor = UIColor.white
     }
     
  }

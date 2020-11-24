@@ -35,7 +35,7 @@
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="tMa-K9-bVj">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <segue destination="rP5-fx-GU0" kind="show" id="3Kv-jA-KiH"/>
+                                <segue destination="rP5-fx-GU0" kind="presentation" id="zBt-vP-6wQ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -51,11 +51,25 @@
         <!--Game Register View Controller-->
         <scene sceneID="Ukc-rz-EO8">
             <objects>
-                <viewController id="rP5-fx-GU0" customClass="GameRegisterViewController" customModule="SoccerNoteApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="rP5-fx-GU0" customClass="GameRegisterViewController" customModule="SoccerNoteApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qNZ-Id-jpi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PM2-Sh-RwO">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <color key="barTintColor" red="0.1469349751" green="0.34631367410000002" blue="0.49445108259999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <items>
+                                    <navigationItem title="試合" id="HTE-mg-BDj">
+                                        <barButtonItem key="leftBarButtonItem" image="chevron.backward" catalog="system" style="plain" id="miu-Z4-Vhx">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <action selector="backToGameManagement:" destination="rP5-fx-GU0" id="lyL-xZ-vdh"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="5" translatesAutoresizingMaskIntoConstraints="NO" id="3Kg-3u-GOy">
                                 <rect key="frame" x="16" y="96" width="382" height="38"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -64,8 +78,8 @@
                                 </constraints>
                                 <locale key="locale" localeIdentifier="ja_JP"/>
                             </datePicker>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="1Pj-GZ-yV1" userLabel="Game Data Stack View">
-                                <rect key="frame" x="16" y="150" width="382" height="77"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="1Pj-GZ-yV1" userLabel="Game Data Stack View">
+                                <rect key="frame" x="16" y="142" width="382" height="72"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="TTt-Tu-3dT" userLabel="Team Stack View">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="31"/>
@@ -84,7 +98,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="-24" translatesAutoresizingMaskIntoConstraints="NO" id="Bcz-jX-70f" userLabel="Score Stack View">
-                                        <rect key="frame" x="0.0" y="46" width="382" height="31"/>
+                                        <rect key="frame" x="0.0" y="41" width="382" height="31"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="スコア" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i39-ld-Wyn">
                                                 <rect key="frame" x="0.0" y="0.0" width="143.5" height="31"/>
@@ -110,16 +124,20 @@
                         <viewLayoutGuide key="safeArea" id="SjI-ID-hWl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="1Pj-GZ-yV1" firstAttribute="top" secondItem="3Kg-3u-GOy" secondAttribute="bottom" constant="16" id="22G-0u-ZkS"/>
+                            <constraint firstItem="PM2-Sh-RwO" firstAttribute="leading" secondItem="SjI-ID-hWl" secondAttribute="leading" id="0jb-u7-PX1"/>
+                            <constraint firstItem="1Pj-GZ-yV1" firstAttribute="top" secondItem="3Kg-3u-GOy" secondAttribute="bottom" constant="8" id="22G-0u-ZkS"/>
+                            <constraint firstItem="PM2-Sh-RwO" firstAttribute="trailing" secondItem="SjI-ID-hWl" secondAttribute="trailing" id="6an-Pl-Zxn"/>
+                            <constraint firstItem="3Kg-3u-GOy" firstAttribute="top" secondItem="PM2-Sh-RwO" secondAttribute="bottom" constant="8" id="IjR-a6-DDb"/>
                             <constraint firstItem="3Kg-3u-GOy" firstAttribute="leading" secondItem="SjI-ID-hWl" secondAttribute="leading" constant="16" id="K5a-4C-cpV"/>
                             <constraint firstItem="1Pj-GZ-yV1" firstAttribute="centerX" secondItem="3Kg-3u-GOy" secondAttribute="centerX" id="V1H-fV-RvW"/>
                             <constraint firstItem="1Pj-GZ-yV1" firstAttribute="width" secondItem="3Kg-3u-GOy" secondAttribute="width" id="Wuz-Vo-a10"/>
-                            <constraint firstItem="3Kg-3u-GOy" firstAttribute="top" secondItem="SjI-ID-hWl" secondAttribute="top" constant="8" id="gId-oO-yYT"/>
                             <constraint firstAttribute="trailing" secondItem="3Kg-3u-GOy" secondAttribute="trailing" constant="16" id="niy-wG-4k3"/>
+                            <constraint firstItem="PM2-Sh-RwO" firstAttribute="top" secondItem="SjI-ID-hWl" secondAttribute="top" id="wx8-90-QtE"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Orh-nQ-m2s"/>
                     <connections>
+                        <outlet property="gameNavigationBar" destination="PM2-Sh-RwO" id="vx1-Fy-wCn"/>
                         <outlet property="myScoreTextField" destination="i39-ld-Wyn" id="Z4K-Bg-IQZ"/>
                         <outlet property="opponentScoreTextField" destination="u5l-uM-MaY" id="q7N-1o-FuB"/>
                         <outlet property="teamTextField" destination="HMf-mO-THt" id="D0g-D1-TOC"/>
@@ -150,6 +168,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
