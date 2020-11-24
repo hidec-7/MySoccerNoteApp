@@ -121,21 +121,30 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="3lk-kU-cIY" userLabel="Impression Stack View">
-                                <rect key="frame" x="16" y="222" width="382" height="101.5"/>
+                                <rect key="frame" x="16" y="222" width="382" height="485.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="aX0-Y7-CQv" userLabel="First Half Stack View">
-                                        <rect key="frame" x="0.0" y="0.0" width="382" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="148.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="前半" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O1G-XQ-wZg">
-                                                <rect key="frame" x="0.0" y="0.0" width="382" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="382" height="21.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZUY-7G-0EB">
+                                                <rect key="frame" x="0.0" y="21.5" width="382" height="127"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="ZUY-7G-0EB" secondAttribute="height" multiplier="3:1" id="mnG-dF-Ip2"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="zFD-fJ-wZx" userLabel="Sencond Half Stack View">
-                                        <rect key="frame" x="0.0" y="40.5" width="382" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="168.5" width="382" height="148.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="後半" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hfB-Ml-wpG">
                                                 <rect key="frame" x="0.0" y="0.0" width="382" height="20.5"/>
@@ -143,10 +152,17 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="AM9-Fv-Aa6">
+                                                <rect key="frame" x="0.0" y="20.5" width="382" height="128"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="syE-lO-Eli" userLabel="All Stack View">
-                                        <rect key="frame" x="0.0" y="81" width="382" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="337" width="382" height="148.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="まとめ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uka-XJ-nVH">
                                                 <rect key="frame" x="0.0" y="0.0" width="382" height="20.5"/>
@@ -154,6 +170,13 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3gj-Dt-Bve">
+                                                <rect key="frame" x="0.0" y="20.5" width="382" height="128"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
                                         </subviews>
                                     </stackView>
                                 </subviews>
@@ -178,9 +201,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="Orh-nQ-m2s"/>
                     <connections>
+                        <outlet property="firstHalfTextView" destination="ZUY-7G-0EB" id="uOx-yT-BeH"/>
                         <outlet property="gameNavigationBar" destination="PM2-Sh-RwO" id="vx1-Fy-wCn"/>
+                        <outlet property="matomeTextView" destination="3gj-Dt-Bve" id="Ue6-5j-q6r"/>
                         <outlet property="myScoreTextField" destination="i39-ld-Wyn" id="Z4K-Bg-IQZ"/>
                         <outlet property="opponentScoreTextField" destination="u5l-uM-MaY" id="q7N-1o-FuB"/>
+                        <outlet property="secondHalfTextView" destination="AM9-Fv-Aa6" id="gZu-qI-yfh"/>
                         <outlet property="teamTextField" destination="HMf-mO-THt" id="D0g-D1-TOC"/>
                     </connections>
                 </viewController>
@@ -210,6 +236,9 @@
     </scenes>
     <resources>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

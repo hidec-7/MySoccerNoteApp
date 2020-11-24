@@ -13,6 +13,9 @@ class GameRegisterViewController: UIViewController,UITextFieldDelegate,UINavigat
     @IBOutlet weak var teamTextField: UITextField!
     @IBOutlet weak var myScoreTextField: UITextField!
     @IBOutlet weak var opponentScoreTextField: UITextField!
+    @IBOutlet weak var firstHalfTextView: UITextView!
+    @IBOutlet weak var secondHalfTextView: UITextView!
+    @IBOutlet weak var matomeTextView: UITextView!
     
     @IBAction func backToGameManagement(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
@@ -27,6 +30,14 @@ class GameRegisterViewController: UIViewController,UITextFieldDelegate,UINavigat
         opponentScoreTextField.delegate = self
         
         setupKeyboard()
+        
+        setupTextView()
+    }
+    
+    func setupTextView() {
+        firstHalfTextView.layer.borderWidth = 1.0
+        secondHalfTextView.layer.borderWidth = 1.0
+        matomeTextView.layer.borderWidth = 1.0
     }
     
     func position(for bar: UIBarPositioning) -> UIBarPosition {
