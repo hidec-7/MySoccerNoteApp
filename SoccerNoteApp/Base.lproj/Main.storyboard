@@ -120,6 +120,44 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="3lk-kU-cIY" userLabel="Impression Stack View">
+                                <rect key="frame" x="16" y="222" width="382" height="101.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="aX0-Y7-CQv" userLabel="First Half Stack View">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="前半" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O1G-XQ-wZg">
+                                                <rect key="frame" x="0.0" y="0.0" width="382" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="zFD-fJ-wZx" userLabel="Sencond Half Stack View">
+                                        <rect key="frame" x="0.0" y="40.5" width="382" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="後半" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hfB-Ml-wpG">
+                                                <rect key="frame" x="0.0" y="0.0" width="382" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="syE-lO-Eli" userLabel="All Stack View">
+                                        <rect key="frame" x="0.0" y="81" width="382" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="まとめ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uka-XJ-nVH">
+                                                <rect key="frame" x="0.0" y="0.0" width="382" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="SjI-ID-hWl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -130,7 +168,10 @@
                             <constraint firstItem="3Kg-3u-GOy" firstAttribute="top" secondItem="PM2-Sh-RwO" secondAttribute="bottom" constant="8" id="IjR-a6-DDb"/>
                             <constraint firstItem="3Kg-3u-GOy" firstAttribute="leading" secondItem="SjI-ID-hWl" secondAttribute="leading" constant="16" id="K5a-4C-cpV"/>
                             <constraint firstItem="1Pj-GZ-yV1" firstAttribute="centerX" secondItem="3Kg-3u-GOy" secondAttribute="centerX" id="V1H-fV-RvW"/>
+                            <constraint firstItem="3lk-kU-cIY" firstAttribute="top" secondItem="1Pj-GZ-yV1" secondAttribute="bottom" constant="8" id="WJX-X7-mIJ"/>
+                            <constraint firstItem="3lk-kU-cIY" firstAttribute="centerX" secondItem="1Pj-GZ-yV1" secondAttribute="centerX" id="WgQ-uA-duo"/>
                             <constraint firstItem="1Pj-GZ-yV1" firstAttribute="width" secondItem="3Kg-3u-GOy" secondAttribute="width" id="Wuz-Vo-a10"/>
+                            <constraint firstItem="3lk-kU-cIY" firstAttribute="width" secondItem="1Pj-GZ-yV1" secondAttribute="width" id="ild-0L-bXW"/>
                             <constraint firstAttribute="trailing" secondItem="3Kg-3u-GOy" secondAttribute="trailing" constant="16" id="niy-wG-4k3"/>
                             <constraint firstItem="PM2-Sh-RwO" firstAttribute="top" secondItem="SjI-ID-hWl" secondAttribute="top" id="wx8-90-QtE"/>
                         </constraints>
