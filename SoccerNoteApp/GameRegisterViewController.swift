@@ -27,7 +27,6 @@ class GameRegisterViewController: UIViewController,UITextFieldDelegate,UINavigat
         opponentScoreTextField.delegate = self
         
         setupKeyboard()
-        
     }
     
     func position(for bar: UIBarPositioning) -> UIBarPosition {
