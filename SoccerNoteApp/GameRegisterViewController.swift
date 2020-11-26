@@ -30,7 +30,6 @@ class GameRegisterViewController: UIViewController,UITextFieldDelegate,UINavigat
         opponentScoreTextField.delegate = self
         
         setupKeyboard()
-        
         setupTextView()
     }
     
