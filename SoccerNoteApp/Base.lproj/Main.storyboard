@@ -57,7 +57,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PM2-Sh-RwO">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="128.5"/>
                                 <color key="barTintColor" red="0.1469349751" green="0.34631367410000002" blue="0.49445108259999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
                                     <navigationItem title="試合" id="HTE-mg-BDj">
@@ -71,7 +71,7 @@
                                 </items>
                             </navigationBar>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="5" translatesAutoresizingMaskIntoConstraints="NO" id="3Kg-3u-GOy">
-                                <rect key="frame" x="16" y="96" width="382" height="38"/>
+                                <rect key="frame" x="16" y="180.5" width="382" height="38"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="3Kg-3u-GOy" secondAttribute="height" multiplier="10:1" id="EHs-Qr-KGF"/>
@@ -79,7 +79,7 @@
                                 <locale key="locale" localeIdentifier="ja_JP"/>
                             </datePicker>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="1Pj-GZ-yV1" userLabel="Game Data Stack View">
-                                <rect key="frame" x="16" y="142" width="382" height="72"/>
+                                <rect key="frame" x="16" y="226.5" width="382" height="72"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="TTt-Tu-3dT" userLabel="Team Stack View">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="31"/>
@@ -120,6 +120,65 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3lk-kU-cIY" userLabel="Impression Stack View">
+                                <rect key="frame" x="16" y="306.5" width="382" height="465.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="aX0-Y7-CQv" userLabel="First Half Stack View">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="148.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="前半" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O1G-XQ-wZg">
+                                                <rect key="frame" x="0.0" y="0.0" width="382" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZUY-7G-0EB">
+                                                <rect key="frame" x="0.0" y="20.5" width="382" height="128"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="zFD-fJ-wZx" userLabel="Sencond Half Stack View">
+                                        <rect key="frame" x="0.0" y="158.5" width="382" height="148.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="後半" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hfB-Ml-wpG">
+                                                <rect key="frame" x="0.0" y="0.0" width="382" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="AM9-Fv-Aa6">
+                                                <rect key="frame" x="0.0" y="20.5" width="382" height="128"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="syE-lO-Eli" userLabel="All Stack View">
+                                        <rect key="frame" x="0.0" y="317" width="382" height="148.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="まとめ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uka-XJ-nVH">
+                                                <rect key="frame" x="0.0" y="0.0" width="382" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3gj-Dt-Bve">
+                                                <rect key="frame" x="0.0" y="20.5" width="382" height="128"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="SjI-ID-hWl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -130,16 +189,23 @@
                             <constraint firstItem="3Kg-3u-GOy" firstAttribute="top" secondItem="PM2-Sh-RwO" secondAttribute="bottom" constant="8" id="IjR-a6-DDb"/>
                             <constraint firstItem="3Kg-3u-GOy" firstAttribute="leading" secondItem="SjI-ID-hWl" secondAttribute="leading" constant="16" id="K5a-4C-cpV"/>
                             <constraint firstItem="1Pj-GZ-yV1" firstAttribute="centerX" secondItem="3Kg-3u-GOy" secondAttribute="centerX" id="V1H-fV-RvW"/>
+                            <constraint firstItem="3lk-kU-cIY" firstAttribute="top" secondItem="1Pj-GZ-yV1" secondAttribute="bottom" constant="8" id="WJX-X7-mIJ"/>
+                            <constraint firstItem="3lk-kU-cIY" firstAttribute="centerX" secondItem="1Pj-GZ-yV1" secondAttribute="centerX" id="WgQ-uA-duo"/>
                             <constraint firstItem="1Pj-GZ-yV1" firstAttribute="width" secondItem="3Kg-3u-GOy" secondAttribute="width" id="Wuz-Vo-a10"/>
+                            <constraint firstItem="3lk-kU-cIY" firstAttribute="width" secondItem="1Pj-GZ-yV1" secondAttribute="width" id="ild-0L-bXW"/>
                             <constraint firstAttribute="trailing" secondItem="3Kg-3u-GOy" secondAttribute="trailing" constant="16" id="niy-wG-4k3"/>
                             <constraint firstItem="PM2-Sh-RwO" firstAttribute="top" secondItem="SjI-ID-hWl" secondAttribute="top" id="wx8-90-QtE"/>
+                            <constraint firstItem="SjI-ID-hWl" firstAttribute="bottom" secondItem="3lk-kU-cIY" secondAttribute="bottom" constant="90" id="yQI-1k-9Vi"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Orh-nQ-m2s"/>
                     <connections>
+                        <outlet property="firstHalfTextView" destination="ZUY-7G-0EB" id="uOx-yT-BeH"/>
                         <outlet property="gameNavigationBar" destination="PM2-Sh-RwO" id="vx1-Fy-wCn"/>
+                        <outlet property="matomeTextView" destination="3gj-Dt-Bve" id="Ue6-5j-q6r"/>
                         <outlet property="myScoreTextField" destination="i39-ld-Wyn" id="Z4K-Bg-IQZ"/>
                         <outlet property="opponentScoreTextField" destination="u5l-uM-MaY" id="q7N-1o-FuB"/>
+                        <outlet property="secondHalfTextView" destination="AM9-Fv-Aa6" id="gZu-qI-yfh"/>
                         <outlet property="teamTextField" destination="HMf-mO-THt" id="D0g-D1-TOC"/>
                     </connections>
                 </viewController>
@@ -169,6 +235,9 @@
     </scenes>
     <resources>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
