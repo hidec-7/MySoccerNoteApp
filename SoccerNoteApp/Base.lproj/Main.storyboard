@@ -64,7 +64,7 @@
                                         <barButtonItem key="leftBarButtonItem" image="chevron.backward" catalog="system" style="plain" id="miu-Z4-Vhx">
                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <connections>
-                                                <action selector="backToGameManagement:" destination="rP5-fx-GU0" id="lyL-xZ-vdh"/>
+                                                <action selector="didTapBackButton:" destination="rP5-fx-GU0" id="NW4-nr-UIS"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -190,7 +190,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="registerButtonToBack:" destination="rP5-fx-GU0" eventType="touchUpInside" id="LtR-cF-hex"/>
+                                    <action selector="didTapRegisterButton:" destination="rP5-fx-GU0" eventType="touchUpInside" id="VWe-V5-eFb"/>
                                 </connections>
                             </button>
                         </subviews>

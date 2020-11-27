@@ -18,10 +18,11 @@ class GameRegisterViewController: UIViewController,UITextFieldDelegate,UINavigat
     @IBOutlet weak var matomeTextView: UITextView!
     @IBOutlet weak var registerButton: UIButton!
     
-    @IBAction func backToGameManagement(_ sender: UIBarButtonItem) {
+    @IBAction func didTapBackButton(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
     }
-    @IBAction func registerButtonToBack(_ sender: UIButton) {
+    
+    @IBAction func didTapRegisterButton(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
     
