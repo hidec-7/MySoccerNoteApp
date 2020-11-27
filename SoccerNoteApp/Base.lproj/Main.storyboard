@@ -57,7 +57,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PM2-Sh-RwO">
-                                <rect key="frame" x="0.0" y="44" width="375" height="48"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="54"/>
                                 <color key="barTintColor" red="0.1469349751" green="0.34631367410000002" blue="0.49445108259999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
                                     <navigationItem title="試合" id="HTE-mg-BDj">
@@ -71,7 +71,7 @@
                                 </items>
                             </navigationBar>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="5" translatesAutoresizingMaskIntoConstraints="NO" id="3Kg-3u-GOy">
-                                <rect key="frame" x="16" y="100" width="343" height="34.333333333333343"/>
+                                <rect key="frame" x="16" y="106" width="343" height="34.333333333333343"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="3Kg-3u-GOy" secondAttribute="height" multiplier="10:1" id="EHs-Qr-KGF"/>
@@ -79,7 +79,7 @@
                                 <locale key="locale" localeIdentifier="ja_JP"/>
                             </datePicker>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="1Pj-GZ-yV1" userLabel="Game Data Stack View">
-                                <rect key="frame" x="16" y="142.33333333333334" width="343" height="72.666666666666657"/>
+                                <rect key="frame" x="16" y="148.33333333333334" width="343" height="72.666666666666657"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="TTt-Tu-3dT" userLabel="Team Stack View">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="31.333333333333332"/>
@@ -121,7 +121,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3lk-kU-cIY" userLabel="Impression Stack View">
-                                <rect key="frame" x="16" y="223" width="343" height="465"/>
+                                <rect key="frame" x="16" y="229" width="343" height="465"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="aX0-Y7-CQv" userLabel="First Half Stack View">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="148.33333333333334"/>
@@ -179,12 +179,22 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kJn-No-Q5j">
+                                <rect key="frame" x="139.66666666666666" y="718" width="96" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="kJn-No-Q5j" secondAttribute="height" multiplier="8:3" id="KCl-4b-Hv7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="SjI-ID-hWl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="PM2-Sh-RwO" firstAttribute="leading" secondItem="SjI-ID-hWl" secondAttribute="leading" id="0jb-u7-PX1"/>
+                            <constraint firstItem="SjI-ID-hWl" firstAttribute="bottom" secondItem="kJn-No-Q5j" secondAttribute="bottom" constant="24" id="18J-UI-WiC"/>
                             <constraint firstItem="1Pj-GZ-yV1" firstAttribute="top" secondItem="3Kg-3u-GOy" secondAttribute="bottom" constant="8" id="22G-0u-ZkS"/>
+                            <constraint firstItem="kJn-No-Q5j" firstAttribute="centerX" secondItem="3lk-kU-cIY" secondAttribute="centerX" id="435-B2-XnJ"/>
                             <constraint firstItem="PM2-Sh-RwO" firstAttribute="trailing" secondItem="SjI-ID-hWl" secondAttribute="trailing" id="6an-Pl-Zxn"/>
                             <constraint firstItem="3Kg-3u-GOy" firstAttribute="top" secondItem="PM2-Sh-RwO" secondAttribute="bottom" constant="8" id="IjR-a6-DDb"/>
                             <constraint firstItem="3Kg-3u-GOy" firstAttribute="leading" secondItem="SjI-ID-hWl" secondAttribute="leading" constant="16" id="K5a-4C-cpV"/>
@@ -194,8 +204,8 @@
                             <constraint firstItem="1Pj-GZ-yV1" firstAttribute="width" secondItem="3Kg-3u-GOy" secondAttribute="width" id="Wuz-Vo-a10"/>
                             <constraint firstItem="3lk-kU-cIY" firstAttribute="width" secondItem="1Pj-GZ-yV1" secondAttribute="width" id="ild-0L-bXW"/>
                             <constraint firstAttribute="trailing" secondItem="3Kg-3u-GOy" secondAttribute="trailing" constant="16" id="niy-wG-4k3"/>
+                            <constraint firstItem="kJn-No-Q5j" firstAttribute="top" secondItem="3lk-kU-cIY" secondAttribute="bottom" constant="24" id="rOE-ck-QQa"/>
                             <constraint firstItem="PM2-Sh-RwO" firstAttribute="top" secondItem="SjI-ID-hWl" secondAttribute="top" id="wx8-90-QtE"/>
-                            <constraint firstItem="SjI-ID-hWl" firstAttribute="bottom" secondItem="3lk-kU-cIY" secondAttribute="bottom" constant="90" id="yQI-1k-9Vi"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Orh-nQ-m2s"/>
@@ -211,7 +221,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lFU-aH-rS5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1911.594202898551" y="109.82142857142857"/>
+            <point key="canvasLocation" x="1911.2" y="109.35960591133005"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="pxE-C4-7s9">
