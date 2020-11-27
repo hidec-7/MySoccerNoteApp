@@ -34,9 +34,13 @@ class GameRegisterViewController: UIViewController,UITextFieldDelegate,UINavigat
         myScoreTextField.delegate = self
         opponentScoreTextField.delegate = self
         
-        setupKeyboard()
-        setupTextView()
+        setupFirst()
+    }
+    
+    func setupFirst() {
         setupRegisterButton()
+        setupTextView()
+        setupKeyboard()
     }
     
     func setupRegisterButton() {
