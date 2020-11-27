@@ -21,6 +21,9 @@ class GameRegisterViewController: UIViewController,UITextFieldDelegate,UINavigat
     @IBAction func backToGameManagement(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
     }
+    @IBAction func registerButtonToBack(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
