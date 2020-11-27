@@ -181,11 +181,14 @@
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kJn-No-Q5j">
                                 <rect key="frame" x="139.66666666666666" y="718" width="96" height="36"/>
+                                <color key="backgroundColor" red="0.25951080180000002" green="0.44316002090000001" blue="0.5641634995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="kJn-No-Q5j" secondAttribute="height" multiplier="8:3" id="KCl-4b-Hv7"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="登録">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="SjI-ID-hWl"/>
@@ -215,6 +218,7 @@
                         <outlet property="matomeTextView" destination="3gj-Dt-Bve" id="Ue6-5j-q6r"/>
                         <outlet property="myScoreTextField" destination="i39-ld-Wyn" id="Z4K-Bg-IQZ"/>
                         <outlet property="opponentScoreTextField" destination="u5l-uM-MaY" id="q7N-1o-FuB"/>
+                        <outlet property="registerButton" destination="kJn-No-Q5j" id="Ulg-uT-AoA"/>
                         <outlet property="secondHalfTextView" destination="AM9-Fv-Aa6" id="gZu-qI-yfh"/>
                         <outlet property="teamTextField" destination="HMf-mO-THt" id="D0g-D1-TOC"/>
                     </connections>
