@@ -16,8 +16,13 @@ class GameRegisterViewController: UIViewController,UITextFieldDelegate,UINavigat
     @IBOutlet weak var firstHalfTextView: UITextView!
     @IBOutlet weak var secondHalfTextView: UITextView!
     @IBOutlet weak var matomeTextView: UITextView!
+    @IBOutlet weak var registerButton: UIButton!
     
-    @IBAction func backToGameManagement(_ sender: UIBarButtonItem) {
+    @IBAction func didTapBackButton(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func didTapRegisterButton(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
     
@@ -29,8 +34,17 @@ class GameRegisterViewController: UIViewController,UITextFieldDelegate,UINavigat
         myScoreTextField.delegate = self
         opponentScoreTextField.delegate = self
         
-        setupKeyboard()
+        setupFirst()
+    }
+    
+    func setupFirst() {
+        setupRegisterButton()
         setupTextView()
+        setupKeyboard()
+    }
+    
+    func setupRegisterButton() {
+        registerButton.layer.cornerRadius = 15.0
     }
     
     func setupTextView() {
