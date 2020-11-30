@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18ABFFE72E8854D7D84ECA12 /* Pods_SoccerNoteAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF3D223E0E2FB07140786953 /* Pods_SoccerNoteAppTests.framework */; };
 		5D14B371255659FA002CA3D4 /* GameManagementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D14B370255659FA002CA3D4 /* GameManagementViewController.swift */; };
 		5D14B37625565ADB002CA3D4 /* GameManagementTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D14B37525565ADB002CA3D4 /* GameManagementTableViewCell.swift */; };
 		5D18C04525691DDA00FE56AF /* GameManagementTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D18C04425691DDA00FE56AF /* GameManagementTableViewCell.xib */; };
@@ -19,6 +20,8 @@
 		5DAC50EA253DF01600F788BA /* SoccerNoteAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAC50E9253DF01600F788BA /* SoccerNoteAppTests.swift */; };
 		5DAC50F5253DF01600F788BA /* SoccerNoteAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAC50F4253DF01600F788BA /* SoccerNoteAppUITests.swift */; };
 		5DEB73B6255FA1A900FD06E3 /* GameRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DEB73B5255FA1A900FD06E3 /* GameRegisterViewController.swift */; };
+		88B4CD97EF5C5CA0733D80D3 /* Pods_SoccerNoteApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB1D48FC99ECD2AD6F3E59D0 /* Pods_SoccerNoteApp.framework */; };
+		D4A1AB5059EFDED3C1CD37D2 /* Pods_SoccerNoteApp_SoccerNoteAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 492B97FBBAFC7EFFC420BBA4 /* Pods_SoccerNoteApp_SoccerNoteAppUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +42,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		115F135CA71328672A592ED8 /* Pods-SoccerNoteAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoccerNoteAppTests.debug.xcconfig"; path = "Target Support Files/Pods-SoccerNoteAppTests/Pods-SoccerNoteAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		492B97FBBAFC7EFFC420BBA4 /* Pods_SoccerNoteApp_SoccerNoteAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SoccerNoteApp_SoccerNoteAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5269FAAE9731CADC327C1A6E /* Pods-SoccerNoteApp-SoccerNoteAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoccerNoteApp-SoccerNoteAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-SoccerNoteApp-SoccerNoteAppUITests/Pods-SoccerNoteApp-SoccerNoteAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5D14B370255659FA002CA3D4 /* GameManagementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManagementViewController.swift; sourceTree = "<group>"; };
 		5D14B37525565ADB002CA3D4 /* GameManagementTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManagementTableViewCell.swift; sourceTree = "<group>"; };
 		5D18C04425691DDA00FE56AF /* GameManagementTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameManagementTableViewCell.xib; sourceTree = "<group>"; };
@@ -57,6 +63,12 @@
 		5DAC50F4253DF01600F788BA /* SoccerNoteAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoccerNoteAppUITests.swift; sourceTree = "<group>"; };
 		5DAC50F6253DF01600F788BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5DEB73B5255FA1A900FD06E3 /* GameRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRegisterViewController.swift; sourceTree = "<group>"; };
+		8638536FE9BFCBFCEEE6EB00 /* Pods-SoccerNoteApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoccerNoteApp.debug.xcconfig"; path = "Target Support Files/Pods-SoccerNoteApp/Pods-SoccerNoteApp.debug.xcconfig"; sourceTree = "<group>"; };
+		BA673359A16D73500144469D /* Pods-SoccerNoteAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoccerNoteAppTests.release.xcconfig"; path = "Target Support Files/Pods-SoccerNoteAppTests/Pods-SoccerNoteAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		BF3D223E0E2FB07140786953 /* Pods_SoccerNoteAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SoccerNoteAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5F2C67FE05F3FA2D5317F1C /* Pods-SoccerNoteApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoccerNoteApp.release.xcconfig"; path = "Target Support Files/Pods-SoccerNoteApp/Pods-SoccerNoteApp.release.xcconfig"; sourceTree = "<group>"; };
+		EB1D48FC99ECD2AD6F3E59D0 /* Pods_SoccerNoteApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SoccerNoteApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5542C3DA6C179FD12882A6C /* Pods-SoccerNoteApp-SoccerNoteAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoccerNoteApp-SoccerNoteAppUITests.release.xcconfig"; path = "Target Support Files/Pods-SoccerNoteApp-SoccerNoteAppUITests/Pods-SoccerNoteApp-SoccerNoteAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88B4CD97EF5C5CA0733D80D3 /* Pods_SoccerNoteApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18ABFFE72E8854D7D84ECA12 /* Pods_SoccerNoteAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,12 +92,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4A1AB5059EFDED3C1CD37D2 /* Pods_SoccerNoteApp_SoccerNoteAppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		333DD8FE221CF6126FEFEAFE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EB1D48FC99ECD2AD6F3E59D0 /* Pods_SoccerNoteApp.framework */,
+				492B97FBBAFC7EFFC420BBA4 /* Pods_SoccerNoteApp_SoccerNoteAppUITests.framework */,
+				BF3D223E0E2FB07140786953 /* Pods_SoccerNoteAppTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5DAC50C6253DF01400F788BA = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +116,8 @@
 				5DAC50E8253DF01600F788BA /* SoccerNoteAppTests */,
 				5DAC50F3253DF01600F788BA /* SoccerNoteAppUITests */,
 				5DAC50D0253DF01400F788BA /* Products */,
+				9E8B5C3BD3A99408ACE6DAA2 /* Pods */,
+				333DD8FE221CF6126FEFEAFE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -140,6 +167,20 @@
 			path = SoccerNoteAppUITests;
 			sourceTree = "<group>";
 		};
+		9E8B5C3BD3A99408ACE6DAA2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8638536FE9BFCBFCEEE6EB00 /* Pods-SoccerNoteApp.debug.xcconfig */,
+				D5F2C67FE05F3FA2D5317F1C /* Pods-SoccerNoteApp.release.xcconfig */,
+				5269FAAE9731CADC327C1A6E /* Pods-SoccerNoteApp-SoccerNoteAppUITests.debug.xcconfig */,
+				F5542C3DA6C179FD12882A6C /* Pods-SoccerNoteApp-SoccerNoteAppUITests.release.xcconfig */,
+				115F135CA71328672A592ED8 /* Pods-SoccerNoteAppTests.debug.xcconfig */,
+				BA673359A16D73500144469D /* Pods-SoccerNoteAppTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +188,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5DAC50F9253DF01600F788BA /* Build configuration list for PBXNativeTarget "SoccerNoteApp" */;
 			buildPhases = (
+				F5BAE27E8BBE545D62D4ACAC /* [CP] Check Pods Manifest.lock */,
 				5DAC50CB253DF01400F788BA /* Sources */,
 				5DAC50CC253DF01400F788BA /* Frameworks */,
 				5DAC50CD253DF01400F788BA /* Resources */,
+				5A265AB08BF8D3DFBF55E108 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -164,6 +207,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5DAC50FC253DF01600F788BA /* Build configuration list for PBXNativeTarget "SoccerNoteAppTests" */;
 			buildPhases = (
+				3454FB34932C59F252A62C82 /* [CP] Check Pods Manifest.lock */,
 				5DAC50E1253DF01600F788BA /* Sources */,
 				5DAC50E2253DF01600F788BA /* Frameworks */,
 				5DAC50E3253DF01600F788BA /* Resources */,
@@ -182,9 +226,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5DAC50FF253DF01600F788BA /* Build configuration list for PBXNativeTarget "SoccerNoteAppUITests" */;
 			buildPhases = (
+				BC8A7767EDA3429381155C2F /* [CP] Check Pods Manifest.lock */,
 				5DAC50EC253DF01600F788BA /* Sources */,
 				5DAC50ED253DF01600F788BA /* Frameworks */,
 				5DAC50EE253DF01600F788BA /* Resources */,
+				E04238407FA67C337B6649AE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -265,6 +311,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3454FB34932C59F252A62C82 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SoccerNoteAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5A265AB08BF8D3DFBF55E108 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SoccerNoteApp/Pods-SoccerNoteApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SoccerNoteApp/Pods-SoccerNoteApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SoccerNoteApp/Pods-SoccerNoteApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC8A7767EDA3429381155C2F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SoccerNoteApp-SoccerNoteAppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E04238407FA67C337B6649AE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SoccerNoteApp-SoccerNoteAppUITests/Pods-SoccerNoteApp-SoccerNoteAppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SoccerNoteApp-SoccerNoteAppUITests/Pods-SoccerNoteApp-SoccerNoteAppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SoccerNoteApp-SoccerNoteAppUITests/Pods-SoccerNoteApp-SoccerNoteAppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F5BAE27E8BBE545D62D4ACAC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SoccerNoteApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5DAC50CB253DF01400F788BA /* Sources */ = {
@@ -449,6 +598,7 @@
 		};
 		5DAC50FA253DF01600F788BA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8638536FE9BFCBFCEEE6EB00 /* Pods-SoccerNoteApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -469,6 +619,7 @@
 		};
 		5DAC50FB253DF01600F788BA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5F2C67FE05F3FA2D5317F1C /* Pods-SoccerNoteApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -489,6 +640,7 @@
 		};
 		5DAC50FD253DF01600F788BA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 115F135CA71328672A592ED8 /* Pods-SoccerNoteAppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -511,6 +663,7 @@
 		};
 		5DAC50FE253DF01600F788BA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA673359A16D73500144469D /* Pods-SoccerNoteAppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -533,6 +686,7 @@
 		};
 		5DAC5100253DF01600F788BA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5269FAAE9731CADC327C1A6E /* Pods-SoccerNoteApp-SoccerNoteAppUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -553,6 +707,7 @@
 		};
 		5DAC5101253DF01600F788BA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F5542C3DA6C179FD12882A6C /* Pods-SoccerNoteApp-SoccerNoteAppUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

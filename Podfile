@@ -16,4 +16,6 @@ target 'SoccerNoteApp' do
     # Pods for testing
   end
 
+  pod 'IQKeyboardManagerSwift'
+
 end
