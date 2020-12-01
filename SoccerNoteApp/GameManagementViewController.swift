@@ -26,7 +26,7 @@ class GameManagementViewController: UIViewController {
         
     }
     
-    func headerTitle() {
+    private func headerTitle() {
         title = "試合管理"
     }
    

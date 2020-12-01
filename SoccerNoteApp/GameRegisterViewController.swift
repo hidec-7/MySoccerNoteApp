@@ -37,17 +37,17 @@ class GameRegisterViewController: UIViewController,UITextFieldDelegate,UINavigat
         setupFirst()
     }
     
-    func setupFirst() {
+    private func setupFirst() {
         setupRegisterButton()
         setupTextView()
         setupKeyboard()
     }
     
-    func setupRegisterButton() {
+    private func setupRegisterButton() {
         registerButton.layer.cornerRadius = 15.0
     }
     
-    func setupTextView() {
+    private func setupTextView() {
         firstHalfTextView.layer.borderWidth = 1.0
         secondHalfTextView.layer.borderWidth = 1.0
         matomeTextView.layer.borderWidth = 1.0
@@ -57,7 +57,7 @@ class GameRegisterViewController: UIViewController,UITextFieldDelegate,UINavigat
         return .topAttached
     }
     
-    func setupKeyboard() {
+    private func setupKeyboard() {
         self.myScoreTextField.keyboardType = UIKeyboardType.numberPad
         self.opponentScoreTextField.keyboardType = UIKeyboardType.numberPad
     }
