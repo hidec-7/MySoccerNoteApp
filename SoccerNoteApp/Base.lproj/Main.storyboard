@@ -42,6 +42,7 @@
                     <connections>
                         <outlet property="gameAddButton" destination="tMa-K9-bVj" id="C7s-Um-wN3"/>
                         <outlet property="gameManagementTableView" destination="Dte-cP-JJe" id="KlS-Te-5ii"/>
+                        <segue destination="rP5-fx-GU0" kind="presentation" identifier="gameRegister" id="scN-CC-TLH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -250,6 +251,9 @@
             <point key="canvasLocation" x="140.57971014492756" y="110.49107142857143"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="scN-CC-TLH"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <systemColor name="labelColor">
