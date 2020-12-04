@@ -12,7 +12,7 @@ class GameEditViewController: UIViewController,UINavigationBarDelegate {
     @IBOutlet weak var gameEditNavigationBar: UINavigationBar!
     @IBOutlet weak var teamEditTextField: UITextField!
     @IBOutlet var myScoreEditTextField: UIView!
-    @IBOutlet weak var opponentScoreTextField: UITextField!
+    @IBOutlet weak var opponentScoreEditTextField: UITextField!
     @IBOutlet weak var firstHalfEditTextView: UITextView!
     @IBOutlet weak var secondHalfEditTextView: UITextView!
     @IBOutlet weak var matomeEditTextView: UITextView!
