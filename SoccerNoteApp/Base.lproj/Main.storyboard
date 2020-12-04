@@ -303,17 +303,79 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZC7-ZI-fiY" userLabel="Impression Stack View">
+                                <rect key="frame" x="16" y="226" width="343" height="465"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="j6P-b8-UHv" userLabel="First Half Stack View">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="148.33333333333334"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="前半" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BcZ-xk-bQn">
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="rwk-OM-phs">
+                                                <rect key="frame" x="0.0" y="20.333333333333343" width="343" height="128"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="HAQ-Qf-Ltx" userLabel="Sencond Half Stack View">
+                                        <rect key="frame" x="0.0" y="158.33333333333331" width="343" height="148.33333333333331"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="後半" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="62z-tK-ZeX">
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5BQ-VF-aht">
+                                                <rect key="frame" x="0.0" y="20.333333333333371" width="343" height="128"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="n5r-Lv-nsl" userLabel="All Stack View">
+                                        <rect key="frame" x="0.0" y="316.66666666666663" width="343" height="148.33333333333337"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="まとめ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q0I-rJ-K6Y">
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8Pu-g6-wvP">
+                                                <rect key="frame" x="0.0" y="20.333333333333371" width="343" height="128"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6pS-Ur-o3u"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Z06-EE-D7X" firstAttribute="leading" secondItem="6pS-Ur-o3u" secondAttribute="leading" id="0X6-cU-OFG"/>
+                            <constraint firstItem="ZC7-ZI-fiY" firstAttribute="centerX" secondItem="BSq-yI-X1g" secondAttribute="centerX" id="6bI-10-2mt"/>
                             <constraint firstItem="2ie-Qz-tbo" firstAttribute="centerX" secondItem="Z06-EE-D7X" secondAttribute="centerX" id="Gyk-q6-ada"/>
                             <constraint firstItem="BSq-yI-X1g" firstAttribute="top" secondItem="2ie-Qz-tbo" secondAttribute="bottom" constant="8" id="JaH-V1-nqA"/>
                             <constraint firstItem="BSq-yI-X1g" firstAttribute="centerX" secondItem="2ie-Qz-tbo" secondAttribute="centerX" id="KAw-Fn-Ch6"/>
                             <constraint firstItem="2ie-Qz-tbo" firstAttribute="top" secondItem="Z06-EE-D7X" secondAttribute="bottom" constant="8" id="Khf-9r-M9s"/>
                             <constraint firstItem="2ie-Qz-tbo" firstAttribute="leading" secondItem="6pS-Ur-o3u" secondAttribute="leading" constant="16" id="OwP-X8-qgH"/>
+                            <constraint firstItem="ZC7-ZI-fiY" firstAttribute="top" secondItem="BSq-yI-X1g" secondAttribute="bottom" constant="8" id="cbe-nB-ag9"/>
                             <constraint firstItem="BSq-yI-X1g" firstAttribute="width" secondItem="2ie-Qz-tbo" secondAttribute="width" id="dBo-tg-e2d"/>
+                            <constraint firstItem="ZC7-ZI-fiY" firstAttribute="width" secondItem="BSq-yI-X1g" secondAttribute="width" id="giv-zX-N7C"/>
                             <constraint firstItem="2ie-Qz-tbo" firstAttribute="top" secondItem="Z06-EE-D7X" secondAttribute="bottom" constant="8" id="mB8-7N-rm1"/>
                             <constraint firstItem="6pS-Ur-o3u" firstAttribute="trailing" secondItem="2ie-Qz-tbo" secondAttribute="trailing" constant="16" id="ozm-Bf-y0K"/>
                             <constraint firstItem="Z06-EE-D7X" firstAttribute="top" secondItem="6pS-Ur-o3u" secondAttribute="top" id="sNG-g7-9yZ"/>
@@ -321,9 +383,12 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="firstHalfEditTextView" destination="j6P-b8-UHv" id="ugo-8K-CVB"/>
                         <outlet property="gameEditNavigationBar" destination="Z06-EE-D7X" id="ngC-Vf-wch"/>
+                        <outlet property="matomeEditTextView" destination="8Pu-g6-wvP" id="UA2-Ff-w8x"/>
                         <outlet property="myScoreEditTextField" destination="mLL-cd-pzF" id="2ai-V4-czm"/>
                         <outlet property="opponentScoreTextField" destination="9Vv-ke-i6a" id="dzv-dF-1h7"/>
+                        <outlet property="secondHalfEditTextView" destination="5BQ-VF-aht" id="bYj-7H-jCU"/>
                         <outlet property="teamEditTextField" destination="LqK-vz-phX" id="5mL-7q-g6Y"/>
                     </connections>
                 </viewController>
