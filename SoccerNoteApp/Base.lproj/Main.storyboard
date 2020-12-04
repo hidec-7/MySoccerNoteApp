@@ -42,6 +42,7 @@
                     <connections>
                         <outlet property="gameAddButton" destination="tMa-K9-bVj" id="C7s-Um-wN3"/>
                         <outlet property="gameManagementTableView" destination="Dte-cP-JJe" id="KlS-Te-5ii"/>
+                        <segue destination="dYk-Ue-BcU" kind="presentation" identifier="gameEdit" id="Bso-bp-HOe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -233,7 +234,7 @@
         <!--Game Edit View Controller-->
         <scene sceneID="42S-Vn-j2h">
             <objects>
-                <viewController id="dYk-Ue-BcU" customClass="GameEditViewController" customModule="SoccerNoteApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="dYk-Ue-BcU" customClass="GameEditViewController" customModule="SoccerNoteApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mLL-cd-pzF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -243,7 +244,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jCo-98-oLi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1911" y="797"/>
+            <point key="canvasLocation" x="1911" y="853"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="pxE-C4-7s9">
