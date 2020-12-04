@@ -10,6 +10,9 @@ import UIKit
 class GameEditViewController: UIViewController,UINavigationBarDelegate {
     
     @IBOutlet weak var gameEditNavigationBar: UINavigationBar!
+    @IBOutlet weak var teamEditTextField: UITextField!
+    @IBOutlet var myScoreEditTextField: UIView!
+    @IBOutlet weak var opponentScoreTextField: UITextField!
     
     @IBAction func didTapBackButton(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
