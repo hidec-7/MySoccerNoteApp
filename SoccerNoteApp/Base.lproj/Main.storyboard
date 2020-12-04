@@ -253,11 +253,23 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="5" translatesAutoresizingMaskIntoConstraints="NO" id="2ie-Qz-tbo">
+                                <rect key="frame" x="16" y="96" width="343" height="34"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="2ie-Qz-tbo" secondAttribute="height" multiplier="10:1" id="U1n-rU-sSs"/>
+                                </constraints>
+                                <locale key="locale" localeIdentifier="ja_JP"/>
+                            </datePicker>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6pS-Ur-o3u"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Z06-EE-D7X" firstAttribute="leading" secondItem="6pS-Ur-o3u" secondAttribute="leading" id="0X6-cU-OFG"/>
+                            <constraint firstItem="2ie-Qz-tbo" firstAttribute="centerX" secondItem="Z06-EE-D7X" secondAttribute="centerX" id="Gyk-q6-ada"/>
+                            <constraint firstItem="2ie-Qz-tbo" firstAttribute="leading" secondItem="6pS-Ur-o3u" secondAttribute="leading" constant="16" id="OwP-X8-qgH"/>
+                            <constraint firstItem="2ie-Qz-tbo" firstAttribute="top" secondItem="Z06-EE-D7X" secondAttribute="bottom" constant="8" id="mB8-7N-rm1"/>
+                            <constraint firstItem="6pS-Ur-o3u" firstAttribute="trailing" secondItem="2ie-Qz-tbo" secondAttribute="trailing" constant="16" id="ozm-Bf-y0K"/>
                             <constraint firstItem="Z06-EE-D7X" firstAttribute="top" secondItem="6pS-Ur-o3u" secondAttribute="top" id="sNG-g7-9yZ"/>
                             <constraint firstItem="Z06-EE-D7X" firstAttribute="trailing" secondItem="6pS-Ur-o3u" secondAttribute="trailing" id="tKI-PC-uas"/>
                         </constraints>
@@ -268,7 +280,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jCo-98-oLi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1911" y="852"/>
+            <point key="canvasLocation" x="1909.5999999999999" y="851.97044334975374"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="pxE-C4-7s9">
