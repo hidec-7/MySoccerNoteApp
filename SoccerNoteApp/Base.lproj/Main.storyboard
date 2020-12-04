@@ -238,13 +238,37 @@
                     <view key="view" contentMode="scaleToFill" id="mLL-cd-pzF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z06-EE-D7X">
+                                <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                                <color key="barTintColor" red="0.1469349751" green="0.34631367410000002" blue="0.49445108259999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <items>
+                                    <navigationItem title="試合" id="SPV-5F-0AA">
+                                        <barButtonItem key="leftBarButtonItem" image="chevron.backward" catalog="system" style="plain" id="vei-Hs-DJj">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <action selector="didTapBackButton:" destination="dYk-Ue-BcU" id="pN6-hi-oI6"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6pS-Ur-o3u"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Z06-EE-D7X" firstAttribute="leading" secondItem="6pS-Ur-o3u" secondAttribute="leading" id="0X6-cU-OFG"/>
+                            <constraint firstItem="Z06-EE-D7X" firstAttribute="top" secondItem="6pS-Ur-o3u" secondAttribute="top" id="sNG-g7-9yZ"/>
+                            <constraint firstItem="Z06-EE-D7X" firstAttribute="trailing" secondItem="6pS-Ur-o3u" secondAttribute="trailing" id="tKI-PC-uas"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="gameEditNavigationBar" destination="Z06-EE-D7X" id="ngC-Vf-wch"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jCo-98-oLi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1911" y="853"/>
+            <point key="canvasLocation" x="1911" y="852"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="pxE-C4-7s9">
