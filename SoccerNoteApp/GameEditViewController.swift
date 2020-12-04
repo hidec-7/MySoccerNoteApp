@@ -13,11 +13,16 @@ class GameEditViewController: UIViewController,UINavigationBarDelegate {
     @IBOutlet weak var teamEditTextField: UITextField!
     @IBOutlet var myScoreEditTextField: UIView!
     @IBOutlet weak var opponentScoreTextField: UITextField!
-    @IBOutlet weak var firstHalfEditTextView: UIStackView!
+    @IBOutlet weak var firstHalfEditTextView: UITextView!
     @IBOutlet weak var secondHalfEditTextView: UITextView!
     @IBOutlet weak var matomeEditTextView: UITextView!
+    @IBOutlet weak var registerEditButton: UIButton!
     
     @IBAction func didTapBackButton(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func didTapRegisterEditButton(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
     
@@ -30,10 +35,15 @@ class GameEditViewController: UIViewController,UINavigationBarDelegate {
     }
     
     private func setupFirst() {
-        setupTextView()
+        setupRegisterEditButton()
+        setupEditTextView()
     }
     
-    private func setupTextView() {
+    private func setupRegisterEditButton() {
+        registerEditButton.layer.cornerRadius = 15.0
+    }
+    
+    private func setupEditTextView() {
             firstHalfEditTextView.layer.borderWidth = 1.0
             secondHalfEditTextView.layer.borderWidth = 1.0
             matomeEditTextView.layer.borderWidth = 1.0

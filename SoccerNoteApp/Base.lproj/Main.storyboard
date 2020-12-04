@@ -240,7 +240,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z06-EE-D7X">
-                                <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="54"/>
                                 <color key="barTintColor" red="0.1469349751" green="0.34631367410000002" blue="0.49445108259999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
                                     <navigationItem title="試合" id="SPV-5F-0AA">
@@ -254,7 +254,7 @@
                                 </items>
                             </navigationBar>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="5" translatesAutoresizingMaskIntoConstraints="NO" id="2ie-Qz-tbo">
-                                <rect key="frame" x="16" y="96" width="343" height="34.333333333333343"/>
+                                <rect key="frame" x="16" y="106" width="343" height="34.333333333333343"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="2ie-Qz-tbo" secondAttribute="height" multiplier="10:1" id="U1n-rU-sSs"/>
@@ -262,7 +262,7 @@
                                 <locale key="locale" localeIdentifier="ja_JP"/>
                             </datePicker>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="BSq-yI-X1g" userLabel="Game Data Edit Stack View">
-                                <rect key="frame" x="16" y="138.33333333333334" width="343" height="72.666666666666657"/>
+                                <rect key="frame" x="16" y="148.33333333333334" width="343" height="72.666666666666657"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="MM1-b1-LUu" userLabel="Team Edit Stack View">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="31.333333333333332"/>
@@ -303,10 +303,10 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZC7-ZI-fiY" userLabel="Impression Stack View">
-                                <rect key="frame" x="16" y="226" width="343" height="465"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZC7-ZI-fiY" userLabel="Impression Stack View">
+                                <rect key="frame" x="16" y="229" width="343" height="465"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="j6P-b8-UHv" userLabel="First Half Stack View">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="j6P-b8-UHv" userLabel="First Half Stack View">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="148.33333333333334"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="前半" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BcZ-xk-bQn">
@@ -315,7 +315,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="rwk-OM-phs">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="rwk-OM-phs">
                                                 <rect key="frame" x="0.0" y="20.333333333333343" width="343" height="128"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <color key="textColor" systemColor="labelColor"/>
@@ -324,7 +324,7 @@
                                             </textView>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="HAQ-Qf-Ltx" userLabel="Sencond Half Stack View">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="HAQ-Qf-Ltx" userLabel="Sencond Half Stack View">
                                         <rect key="frame" x="0.0" y="158.33333333333331" width="343" height="148.33333333333331"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="後半" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="62z-tK-ZeX">
@@ -333,7 +333,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5BQ-VF-aht">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5BQ-VF-aht">
                                                 <rect key="frame" x="0.0" y="20.333333333333371" width="343" height="128"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <color key="textColor" systemColor="labelColor"/>
@@ -342,7 +342,7 @@
                                             </textView>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="n5r-Lv-nsl" userLabel="All Stack View">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="n5r-Lv-nsl" userLabel="All Stack View">
                                         <rect key="frame" x="0.0" y="316.66666666666663" width="343" height="148.33333333333337"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="まとめ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q0I-rJ-K6Y">
@@ -351,7 +351,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8Pu-g6-wvP">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8Pu-g6-wvP">
                                                 <rect key="frame" x="0.0" y="20.333333333333371" width="343" height="128"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <color key="textColor" systemColor="labelColor"/>
@@ -362,6 +362,21 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7e9-3y-h75">
+                                <rect key="frame" x="139.66666666666666" y="718" width="96" height="36"/>
+                                <color key="backgroundColor" red="0.25951080180000002" green="0.44316002090000001" blue="0.5641634995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="7e9-3y-h75" secondAttribute="height" multiplier="8:3" id="Txy-bU-cAy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <state key="normal" title="登録">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapRegisterButton:" destination="rP5-fx-GU0" eventType="touchUpInside" id="hcc-uo-0NG"/>
+                                    <action selector="didTapRegisterEditButton:" destination="dYk-Ue-BcU" eventType="touchUpInside" id="9Cs-vC-qSU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6pS-Ur-o3u"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -376,18 +391,22 @@
                             <constraint firstItem="ZC7-ZI-fiY" firstAttribute="top" secondItem="BSq-yI-X1g" secondAttribute="bottom" constant="8" id="cbe-nB-ag9"/>
                             <constraint firstItem="BSq-yI-X1g" firstAttribute="width" secondItem="2ie-Qz-tbo" secondAttribute="width" id="dBo-tg-e2d"/>
                             <constraint firstItem="ZC7-ZI-fiY" firstAttribute="width" secondItem="BSq-yI-X1g" secondAttribute="width" id="giv-zX-N7C"/>
+                            <constraint firstItem="6pS-Ur-o3u" firstAttribute="bottom" secondItem="7e9-3y-h75" secondAttribute="bottom" constant="24" id="kaO-Ai-EvH"/>
                             <constraint firstItem="2ie-Qz-tbo" firstAttribute="top" secondItem="Z06-EE-D7X" secondAttribute="bottom" constant="8" id="mB8-7N-rm1"/>
+                            <constraint firstItem="7e9-3y-h75" firstAttribute="centerX" secondItem="ZC7-ZI-fiY" secondAttribute="centerX" id="nud-uL-a0d"/>
+                            <constraint firstItem="7e9-3y-h75" firstAttribute="top" secondItem="ZC7-ZI-fiY" secondAttribute="bottom" constant="24" id="o0b-P5-8us"/>
                             <constraint firstItem="6pS-Ur-o3u" firstAttribute="trailing" secondItem="2ie-Qz-tbo" secondAttribute="trailing" constant="16" id="ozm-Bf-y0K"/>
                             <constraint firstItem="Z06-EE-D7X" firstAttribute="top" secondItem="6pS-Ur-o3u" secondAttribute="top" id="sNG-g7-9yZ"/>
                             <constraint firstItem="Z06-EE-D7X" firstAttribute="trailing" secondItem="6pS-Ur-o3u" secondAttribute="trailing" id="tKI-PC-uas"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="firstHalfEditTextView" destination="j6P-b8-UHv" id="ugo-8K-CVB"/>
+                        <outlet property="firstHalfEditTextView" destination="rwk-OM-phs" id="cBg-Mm-nxB"/>
                         <outlet property="gameEditNavigationBar" destination="Z06-EE-D7X" id="ngC-Vf-wch"/>
                         <outlet property="matomeEditTextView" destination="8Pu-g6-wvP" id="UA2-Ff-w8x"/>
                         <outlet property="myScoreEditTextField" destination="mLL-cd-pzF" id="2ai-V4-czm"/>
                         <outlet property="opponentScoreTextField" destination="9Vv-ke-i6a" id="dzv-dF-1h7"/>
+                        <outlet property="registerEditButton" destination="7e9-3y-h75" id="wMe-Ni-g1d"/>
                         <outlet property="secondHalfEditTextView" destination="5BQ-VF-aht" id="bYj-7H-jCU"/>
                         <outlet property="teamEditTextField" destination="LqK-vz-phX" id="5mL-7q-g6Y"/>
                     </connections>
