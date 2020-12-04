@@ -7,7 +7,7 @@
 
 import UIKit
 
-class GameEditViewController: UIViewController,UINavigationBarDelegate {
+class GameEditViewController: UIViewController,UITextFieldDelegate,UINavigationBarDelegate {
     
     @IBOutlet weak var gameEditNavigationBar: UINavigationBar!
     @IBOutlet weak var teamEditTextField: UITextField!
@@ -30,13 +30,22 @@ class GameEditViewController: UIViewController,UINavigationBarDelegate {
         super.viewDidLoad()
 
         gameEditNavigationBar.delegate = self
+        teamEditTextField.delegate = self
+        myScoreEditTextField.delegate = self
+        opponentScoreEditTextField.delegate = self
         
         setupFirst()
     }
     
     private func setupFirst() {
+        setupKeyboard()
         setupRegisterEditButton()
         setupEditTextView()
+    }
+    
+    private func setupKeyboard() {
+        self.myScoreEditTextField.keyboardType = UIKeyboardType.numberPad
+        self.opponentScoreEditTextField.keyboardType = UIKeyboardType.numberPad
     }
     
     private func setupRegisterEditButton() {
@@ -51,6 +60,14 @@ class GameEditViewController: UIViewController,UINavigationBarDelegate {
     
     func position(for bar: UIBarPositioning) -> UIBarPosition {
         return .topAttached
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
     }
 
 }
