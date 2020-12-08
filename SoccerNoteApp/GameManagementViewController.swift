@@ -53,5 +53,4 @@ extension GameManagementViewController: UITableViewDelegate,UITableViewDataSourc
         tableView.deselectRow(at: indexPath, animated: true)
         performSegue(withIdentifier: "gameEdit", sender: nil)
     }
-    
 }

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class GameEditViewController: UIViewController,UITextFieldDelegate,UINavigationBarDelegate {
+class GameEditViewController: UIViewController, UITextFieldDelegate, UINavigationBarDelegate {
     
     @IBOutlet weak var gameEditNavigationBar: UINavigationBar!
     @IBOutlet weak var teamEditTextField: UITextField!
@@ -16,14 +16,14 @@ class GameEditViewController: UIViewController,UITextFieldDelegate,UINavigationB
     @IBOutlet weak var firstHalfEditTextView: UITextView!
     @IBOutlet weak var secondHalfEditTextView: UITextView!
     @IBOutlet weak var matomeEditTextView: UITextView!
-    @IBOutlet weak var registerEditButton: UIButton!
+    @IBOutlet weak var editButton: UIButton!
     
     @IBAction func didTapBackButton(_ sender: UIBarButtonItem) {
-        self.dismiss(animated: true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func didTapRegisterEditButton(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
+    @IBAction func didTapEditButton(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
@@ -39,17 +39,17 @@ class GameEditViewController: UIViewController,UITextFieldDelegate,UINavigationB
     
     private func setupFirst() {
         setupKeyboard()
-        setupRegisterEditButton()
+        setupEditButton()
         setupEditTextView()
     }
     
     private func setupKeyboard() {
-        self.myScoreEditTextField.keyboardType = UIKeyboardType.numberPad
-        self.opponentScoreEditTextField.keyboardType = UIKeyboardType.numberPad
+        myScoreEditTextField.keyboardType = UIKeyboardType.numberPad
+        opponentScoreEditTextField.keyboardType = UIKeyboardType.numberPad
     }
     
-    private func setupRegisterEditButton() {
-        registerEditButton.layer.cornerRadius = 15.0
+    private func setupEditButton() {
+        editButton.layer.cornerRadius = 15.0
     }
     
     private func setupEditTextView() {
@@ -69,5 +69,4 @@ class GameEditViewController: UIViewController,UITextFieldDelegate,UINavigationB
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
     }
-
 }

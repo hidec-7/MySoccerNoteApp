@@ -401,12 +401,12 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="editButton" destination="7e9-3y-h75" id="UcI-kX-Ekd"/>
                         <outlet property="firstHalfEditTextView" destination="rwk-OM-phs" id="cBg-Mm-nxB"/>
                         <outlet property="gameEditNavigationBar" destination="Z06-EE-D7X" id="ngC-Vf-wch"/>
                         <outlet property="matomeEditTextView" destination="8Pu-g6-wvP" id="UA2-Ff-w8x"/>
                         <outlet property="myScoreEditTextField" destination="LqK-vz-phX" id="lfv-CV-c9T"/>
                         <outlet property="opponentScoreEditTextField" destination="9Vv-ke-i6a" id="4Eo-IJ-2W3"/>
-                        <outlet property="registerEditButton" destination="7e9-3y-h75" id="wMe-Ni-g1d"/>
                         <outlet property="secondHalfEditTextView" destination="5BQ-VF-aht" id="bYj-7H-jCU"/>
                         <outlet property="teamEditTextField" destination="LqK-vz-phX" id="5mL-7q-g6Y"/>
                     </connections>
