@@ -11,8 +11,8 @@ class GameManagementViewController: UIViewController {
     
     private let cellId = "cellId"
     
-    @IBOutlet weak var gameManagementTableView: UITableView!
-    @IBOutlet weak var gameAddButton: UIBarButtonItem!
+    @IBOutlet weak private var gameManagementTableView: UITableView!
+    @IBOutlet weak private var gameAddButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,4 +49,8 @@ extension GameManagementViewController: UITableViewDelegate,UITableViewDataSourc
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        performSegue(withIdentifier: "gameEdit", sender: nil)
+    }
 }
