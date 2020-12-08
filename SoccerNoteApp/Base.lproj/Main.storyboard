@@ -243,7 +243,7 @@
                                 <rect key="frame" x="0.0" y="44" width="375" height="54"/>
                                 <color key="barTintColor" red="0.1469349751" green="0.34631367410000002" blue="0.49445108259999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
-                                    <navigationItem title="試合" id="SPV-5F-0AA">
+                                    <navigationItem title="編集" id="SPV-5F-0AA">
                                         <barButtonItem key="leftBarButtonItem" image="chevron.backward" catalog="system" style="plain" id="vei-Hs-DJj">
                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <connections>
