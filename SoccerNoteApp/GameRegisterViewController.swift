@@ -9,20 +9,20 @@ import UIKit
 
 class GameRegisterViewController: UIViewController,UITextFieldDelegate,UINavigationBarDelegate {
     
-    @IBOutlet weak var gameNavigationBar: UINavigationBar!
-    @IBOutlet weak var teamTextField: UITextField!
-    @IBOutlet weak var myScoreTextField: UITextField!
-    @IBOutlet weak var opponentScoreTextField: UITextField!
-    @IBOutlet weak var firstHalfTextView: UITextView!
-    @IBOutlet weak var secondHalfTextView: UITextView!
-    @IBOutlet weak var matomeTextView: UITextView!
-    @IBOutlet weak var registerButton: UIButton!
+    @IBOutlet weak private var gameNavigationBar: UINavigationBar!
+    @IBOutlet weak private var teamTextField: UITextField!
+    @IBOutlet weak private var myScoreTextField: UITextField!
+    @IBOutlet weak private var opponentScoreTextField: UITextField!
+    @IBOutlet weak private var firstHalfTextView: UITextView!
+    @IBOutlet weak private var secondHalfTextView: UITextView!
+    @IBOutlet weak private var matomeTextView: UITextView!
+    @IBOutlet weak private var registerButton: UIButton!
     
-    @IBAction func didTapBackButton(_ sender: UIBarButtonItem) {
+    @IBAction private func didTapBackButton(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func didTapRegisterButton(_ sender: UIButton) {
+    @IBAction private func didTapRegisterButton(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
     
