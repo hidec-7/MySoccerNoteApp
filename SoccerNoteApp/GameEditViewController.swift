@@ -9,20 +9,20 @@ import UIKit
 
 class GameEditViewController: UIViewController, UITextFieldDelegate, UINavigationBarDelegate {
     
-    @IBOutlet weak var gameEditNavigationBar: UINavigationBar!
-    @IBOutlet weak var teamEditTextField: UITextField!
-    @IBOutlet weak var myScoreEditTextField: UITextField!
-    @IBOutlet weak var opponentScoreEditTextField: UITextField!
-    @IBOutlet weak var firstHalfEditTextView: UITextView!
-    @IBOutlet weak var secondHalfEditTextView: UITextView!
-    @IBOutlet weak var matomeEditTextView: UITextView!
-    @IBOutlet weak var editButton: UIButton!
+    @IBOutlet weak private var gameEditNavigationBar: UINavigationBar!
+    @IBOutlet weak private var teamEditTextField: UITextField!
+    @IBOutlet weak private var myScoreEditTextField: UITextField!
+    @IBOutlet weak private var opponentScoreEditTextField: UITextField!
+    @IBOutlet weak private var firstHalfEditTextView: UITextView!
+    @IBOutlet weak private var secondHalfEditTextView: UITextView!
+    @IBOutlet weak private var matomeEditTextView: UITextView!
+    @IBOutlet weak private var editButton: UIButton!
     
-    @IBAction func didTapBackButton(_ sender: UIBarButtonItem) {
+    @IBAction private func didTapBackButton(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func didTapEditButton(_ sender: UIButton) {
+    @IBAction private func didTapEditButton(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
     
