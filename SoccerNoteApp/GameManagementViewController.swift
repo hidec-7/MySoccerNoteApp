@@ -53,4 +53,10 @@ extension GameManagementViewController: UITableViewDelegate,UITableViewDataSourc
         tableView.deselectRow(at: indexPath, animated: true)
         performSegue(withIdentifier: "gameEdit", sender: nil)
     }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            //CRUDのDeleteを実装する際に追記
+        }
+    }
 }
