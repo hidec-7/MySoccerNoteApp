@@ -14,7 +14,6 @@
 		5DA8B4032579590A00E02818 /* GameEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA8B4022579590A00E02818 /* GameEditViewController.swift */; };
 		5DAC50D3253DF01400F788BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAC50D2253DF01400F788BA /* AppDelegate.swift */; };
 		5DAC50D5253DF01400F788BA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAC50D4253DF01400F788BA /* SceneDelegate.swift */; };
-		5DAC50D7253DF01400F788BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAC50D6253DF01400F788BA /* ViewController.swift */; };
 		5DAC50DA253DF01400F788BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DAC50D8253DF01400F788BA /* Main.storyboard */; };
 		5DAC50DC253DF01600F788BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DAC50DB253DF01600F788BA /* Assets.xcassets */; };
 		5DAC50DF253DF01600F788BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DAC50DD253DF01600F788BA /* LaunchScreen.storyboard */; };
@@ -53,7 +52,6 @@
 		5DAC50CF253DF01400F788BA /* SoccerNoteApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoccerNoteApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DAC50D2253DF01400F788BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DAC50D4253DF01400F788BA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5DAC50D6253DF01400F788BA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5DAC50D9253DF01400F788BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5DAC50DB253DF01600F788BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5DAC50DE253DF01600F788BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -170,7 +168,6 @@
 				5DA8B45F2581EF0300E02818 /* Model */,
 				5DA8B45E2581EEFC00E02818 /* View */,
 				5DA8B45D2581EEEE00E02818 /* Controller */,
-				5DAC50D6253DF01400F788BA /* ViewController.swift */,
 				5DAC50E0253DF01600F788BA /* Info.plist */,
 			);
 			path = SoccerNoteApp;
@@ -446,7 +443,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5DAC50D7253DF01400F788BA /* ViewController.swift in Sources */,
 				5DAC50D3253DF01400F788BA /* AppDelegate.swift in Sources */,
 				5D14B37625565ADB002CA3D4 /* GameManagementTableViewCell.swift in Sources */,
 				5DAC50D5253DF01400F788BA /* SceneDelegate.swift in Sources */,
