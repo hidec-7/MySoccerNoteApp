@@ -373,8 +373,8 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="didTapEditButton:" destination="dYk-Ue-BcU" eventType="touchUpInside" id="WxC-cV-9M4"/>
                                     <action selector="didTapRegisterButton:" destination="rP5-fx-GU0" eventType="touchUpInside" id="hcc-uo-0NG"/>
-                                    <action selector="didTapRegisterEditButton:" destination="dYk-Ue-BcU" eventType="touchUpInside" id="9Cs-vC-qSU"/>
                                 </connections>
                             </button>
                         </subviews>
