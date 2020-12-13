@@ -32,7 +32,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="HL9-jX-8jB">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="tMa-K9-bVj">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="add" id="tMa-K9-bVj">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <segue destination="rP5-fx-GU0" kind="presentation" id="zBt-vP-6wQ"/>
@@ -62,7 +62,7 @@
                                 <color key="barTintColor" red="0.1469349751" green="0.34631367410000002" blue="0.49445108259999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
                                     <navigationItem title="試合" id="HTE-mg-BDj">
-                                        <barButtonItem key="leftBarButtonItem" image="chevron.backward" catalog="system" style="plain" id="miu-Z4-Vhx">
+                                        <barButtonItem key="leftBarButtonItem" style="done" systemItem="stop" id="miu-Z4-Vhx">
                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <connections>
                                                 <action selector="didTapBackButton:" destination="rP5-fx-GU0" id="NW4-nr-UIS"/>
@@ -244,7 +244,7 @@
                                 <color key="barTintColor" red="0.1469349751" green="0.34631367410000002" blue="0.49445108259999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
                                     <navigationItem title="編集" id="SPV-5F-0AA">
-                                        <barButtonItem key="leftBarButtonItem" image="chevron.backward" catalog="system" style="plain" id="vei-Hs-DJj">
+                                        <barButtonItem key="leftBarButtonItem" style="done" systemItem="stop" id="vei-Hs-DJj">
                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <connections>
                                                 <action selector="didTapBackButton:" destination="dYk-Ue-BcU" id="pN6-hi-oI6"/>
@@ -436,7 +436,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
