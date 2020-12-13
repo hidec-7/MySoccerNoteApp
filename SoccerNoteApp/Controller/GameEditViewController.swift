@@ -22,7 +22,7 @@ class GameEditViewController: UIViewController, UITextFieldDelegate, UINavigatio
         dismiss(animated: true, completion: nil)
     }
     
-    @IBAction private func didTapEditButton(_ sender: UIButton) {
+    @IBAction func didTapEditButton(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
     
