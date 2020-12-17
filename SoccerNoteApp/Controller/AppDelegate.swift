@@ -13,20 +13,14 @@ import Firebase
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var loginModel = LoginModel()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         IQKeyboardManager.shared.enable = true
         // Override point for customization after application launch.
         FirebaseApp.configure()
         
-        Auth.auth().signInAnonymously() { ( authResult, error ) in
-            if error != nil{
-                print("Auth Error :\(error!.localizedDescription)")
-            }
-            guard let user = authResult?.user else { return }
-            let isAnonymous = user.isAnonymous  // true
-            let uid = user.uid
-        }
+        loginModel.loginFunction()
         
         return true
     }
