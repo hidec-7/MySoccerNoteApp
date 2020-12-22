@@ -6,19 +6,21 @@
 //
 
 import Foundation
-import UIKit
 import Firebase
 
 class LoginModel {
     
-    func loginFunction() {
+    let error: String? = "Auth Error:\(LocalizedError.self)"
+    
+    func anonymous() {
         Auth.auth().signInAnonymously() { ( authResult, error ) in
-            if error != nil{
-                print("Auth Error :\(error!.localizedDescription)")
+            if let AuthError = error {
+                print(AuthError)
             }
             guard let user = authResult?.user else { return }
-            let isAnonymous = user.isAnonymous  // true
-            let uid = user.uid
+            _ = user.isAnonymous  // true
+            _ = user.uid
+            return
         }
     }
     
