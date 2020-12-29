@@ -14,8 +14,6 @@ class LoginModel {
         Auth.auth().signInAnonymously() { ( authResult, error ) in
             if let error = error {
                 print("Auth Error :\(error.localizedDescription)")
-            }else{
-                print("")
             }
             guard let user = authResult?.user else { return }
             _ = user.isAnonymous  // true
