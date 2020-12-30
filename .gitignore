@@ -20,4 +20,4 @@ DerivedData
 *.xcuserstate
 
 # CocoaPod
-Pods/*
+Soccer/Pods/
