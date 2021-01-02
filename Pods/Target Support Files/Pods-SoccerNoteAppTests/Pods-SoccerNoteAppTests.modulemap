@@ -1,6 +1,0 @@
-framework module Pods_SoccerNoteAppTests {
-  umbrella header "Pods-SoccerNoteAppTests-umbrella.h"
-
-  export *
-  module * { export * }
-}
