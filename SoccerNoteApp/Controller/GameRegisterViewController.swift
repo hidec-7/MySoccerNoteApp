@@ -6,10 +6,14 @@
 //
 
 import UIKit
+import Firebase
 
-class GameRegisterViewController: UIViewController,UITextFieldDelegate,UINavigationBarDelegate {
+class GameRegisterViewController: UIViewController,UITextFieldDelegate,UINavigationBarDelegate,UITextViewDelegate {
+    
+    let ref = Database.database().reference()
     
     @IBOutlet weak private var gameNavigationBar: UINavigationBar!
+    @IBOutlet weak var registerDate: UIDatePicker!
     @IBOutlet weak private var teamTextField: UITextField!
     @IBOutlet weak private var myScoreTextField: UITextField!
     @IBOutlet weak private var opponentScoreTextField: UITextField!
@@ -22,10 +26,6 @@ class GameRegisterViewController: UIViewController,UITextFieldDelegate,UINavigat
         self.dismiss(animated: true, completion: nil)
     }
     
-    @IBAction private func didTapRegisterButton(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,6 +35,31 @@ class GameRegisterViewController: UIViewController,UITextFieldDelegate,UINavigat
         opponentScoreTextField.delegate = self
         
         setupFirst()
+    }
+    
+    @IBAction func didTapRegisterButton(_ sender: UIButton) {
+        createGameData()
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    func createGameData() {
+        let date: String = "\(registerDate.date)"
+        guard let team = teamTextField.text else { return }
+        guard let myScore = myScoreTextField.text else { return }
+        guard let opponentScore = opponentScoreTextField.text else { return }
+        let zenhan = firstHalfTextView.text
+        let kouhan = secondHalfTextView.text
+        let matome = matomeTextView.text
+        let registerData = [
+            "date": date,
+            "team": team,
+            "myScore": myScore,
+            "opponentScore": opponentScore,
+            "zenhan": zenhan as Any,
+            "kouhan": kouhan as Any,
+            "matome": matome as Any,
+        ] as [String : Any]
+        ref.child((Auth.auth().currentUser?.uid)!).childByAutoId().setValue(registerData)
     }
     
     private func setupFirst() {
