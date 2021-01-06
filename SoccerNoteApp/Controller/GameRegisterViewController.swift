@@ -8,12 +8,12 @@
 import UIKit
 import Firebase
 
-class GameRegisterViewController: UIViewController,UITextFieldDelegate,UINavigationBarDelegate,UITextViewDelegate {
+class GameRegisterViewController: UIViewController, UITextFieldDelegate, UINavigationBarDelegate, UITextViewDelegate {
     
     let ref = Database.database().reference()
     
     @IBOutlet weak private var gameNavigationBar: UINavigationBar!
-    @IBOutlet weak var registerDate: UIDatePicker!
+    @IBOutlet weak private var registerDatePicker: UIDatePicker!
     @IBOutlet weak private var teamTextField: UITextField!
     @IBOutlet weak private var myScoreTextField: UITextField!
     @IBOutlet weak private var opponentScoreTextField: UITextField!
@@ -43,7 +43,7 @@ class GameRegisterViewController: UIViewController,UITextFieldDelegate,UINavigat
     }
     
     func createGameData() {
-        let date: String = "\(registerDate.date)"
+        let date: String = "\(registerDatePicker.date)"
         guard let team = teamTextField.text else { return }
         guard let myScore = myScoreTextField.text else { return }
         guard let opponentScore = opponentScoreTextField.text else { return }

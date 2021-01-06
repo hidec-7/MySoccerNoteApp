@@ -223,7 +223,7 @@
                         <outlet property="myScoreTextField" destination="i39-ld-Wyn" id="Z4K-Bg-IQZ"/>
                         <outlet property="opponentScoreTextField" destination="u5l-uM-MaY" id="q7N-1o-FuB"/>
                         <outlet property="registerButton" destination="kJn-No-Q5j" id="qlk-os-N2W"/>
-                        <outlet property="registerDate" destination="3Kg-3u-GOy" id="49S-ws-oNb"/>
+                        <outlet property="registerDatePicker" destination="3Kg-3u-GOy" id="KcV-gm-8M1"/>
                         <outlet property="secondHalfTextView" destination="AM9-Fv-Aa6" id="gZu-qI-yfh"/>
                         <outlet property="teamTextField" destination="HMf-mO-THt" id="D0g-D1-TOC"/>
                     </connections>
