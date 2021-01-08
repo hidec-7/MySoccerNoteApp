@@ -13,13 +13,13 @@ class GameRegisterViewController: UIViewController, UITextFieldDelegate, UINavig
     let ref = Database.database().reference()
     
     @IBOutlet weak private var gameNavigationBar: UINavigationBar!
-    @IBOutlet weak private var registerDatePicker: UIDatePicker!
+    @IBOutlet weak private var gameDatePicker: UIDatePicker!
     @IBOutlet weak private var teamTextField: UITextField!
     @IBOutlet weak private var myScoreTextField: UITextField!
     @IBOutlet weak private var opponentScoreTextField: UITextField!
     @IBOutlet weak private var firstHalfTextView: UITextView!
     @IBOutlet weak private var secondHalfTextView: UITextView!
-    @IBOutlet weak private var matomeTextView: UITextView!
+    @IBOutlet weak private var conclusionTextView: UITextView!
     @IBOutlet weak private var registerButton: UIButton!
     
     @IBAction private func didTapBackButton(_ sender: UIBarButtonItem) {
@@ -43,23 +43,24 @@ class GameRegisterViewController: UIViewController, UITextFieldDelegate, UINavig
     }
     
     func createGameData() {
-        let date: String = "\(registerDatePicker.date)"
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        let date: String = "\(gameDatePicker.date)"
         guard let team = teamTextField.text else { return }
         guard let myScore = myScoreTextField.text else { return }
         guard let opponentScore = opponentScoreTextField.text else { return }
-        let zenhan = firstHalfTextView.text
-        let kouhan = secondHalfTextView.text
-        let matome = matomeTextView.text
-        let registerData = [
+        let firstHalf: String = firstHalfTextView.text
+        let secondHalf: String = secondHalfTextView.text
+        let conclusion: String = conclusionTextView.text
+        let gameData = [
             "date": date,
             "team": team,
             "myScore": myScore,
             "opponentScore": opponentScore,
-            "zenhan": zenhan as Any,
-            "kouhan": kouhan as Any,
-            "matome": matome as Any,
-        ] as [String : Any]
-        ref.child((Auth.auth().currentUser?.uid)!).childByAutoId().setValue(registerData)
+            "zenhan": firstHalf,
+            "kouhan": secondHalf,
+            "matome": conclusion,
+        ]
+        ref.child(uid).childByAutoId().setValue(gameData)
     }
     
     private func setupFirst() {
@@ -75,7 +76,7 @@ class GameRegisterViewController: UIViewController, UITextFieldDelegate, UINavig
     private func setupTextView() {
         firstHalfTextView.layer.borderWidth = 1.0
         secondHalfTextView.layer.borderWidth = 1.0
-        matomeTextView.layer.borderWidth = 1.0
+        conclusionTextView.layer.borderWidth = 1.0
     }
     
     func position(for bar: UIBarPositioning) -> UIBarPosition {
