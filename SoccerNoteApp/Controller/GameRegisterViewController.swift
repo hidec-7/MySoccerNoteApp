@@ -56,9 +56,9 @@ class GameRegisterViewController: UIViewController, UITextFieldDelegate, UINavig
             "team": team,
             "myScore": myScore,
             "opponentScore": opponentScore,
-            "zenhan": firstHalf,
-            "kouhan": secondHalf,
-            "matome": conclusion,
+            "frist": firstHalf,
+            "second": secondHalf,
+            "conclusion": conclusion,
         ]
         ref.child(uid).childByAutoId().setValue(gameData)
     }
