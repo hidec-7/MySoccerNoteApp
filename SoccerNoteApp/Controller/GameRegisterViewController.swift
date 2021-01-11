@@ -44,9 +44,6 @@ class GameRegisterViewController: UIViewController, UITextFieldDelegate, UINavig
     
     func createGameData() {
         guard let uid = Auth.auth().currentUser?.uid else { return }
-        let setupDate: DateFormatter = DateFormatter()
-        setupDate.dateFormat = "yyyy年MM月dd日HH時mm分"
-        let dateString: String = "\(setupDate.string(from: gameDatePicker.date))"
         let team = teamTextField.text
         let myScore = myScoreTextField.text
         let opponentScore = opponentScoreTextField.text
@@ -54,7 +51,7 @@ class GameRegisterViewController: UIViewController, UITextFieldDelegate, UINavig
         let secondHalf: String = secondHalfTextView.text
         let conclusion: String = conclusionTextView.text
         let gameData = [
-            "date": dateString,
+            "date": getGameStartTime(),
             "team": team,
             "myScore": myScore,
             "opponentScore": opponentScore,
@@ -63,6 +60,12 @@ class GameRegisterViewController: UIViewController, UITextFieldDelegate, UINavig
             "conclusion": conclusion,
         ]
         ref.child(uid).childByAutoId().setValue(gameData)
+    }
+    
+    private func getGameStartTime() -> String {
+        let setupDate = DateFormatter()
+        setupDate.dateFormat = "yyyy年MM月dd日HH時mm分"
+        return "\(setupDate.string(from: gameDatePicker.date))"
     }
     
     private func setupFirst() {
