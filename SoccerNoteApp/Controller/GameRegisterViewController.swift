@@ -39,7 +39,7 @@ class GameRegisterViewController: UIViewController, UITextFieldDelegate, UINavig
     
     @IBAction func didTapRegisterButton(_ sender: UIButton) {
         if teamTextField.text == "" || myScoreTextField.text == "" || opponentScoreTextField.text == "" {
-            let alert = UIAlertController(title: "あ", message: "あいう", preferredStyle: UIAlertController.Style.alert)
+            let alert = UIAlertController(title: "登録できません", message: "チーム名、スコアを記入してください", preferredStyle: UIAlertController.Style.alert)
             alert.addAction(UIAlertAction(title: "戻る", style: .default, handler: nil))
             present(alert, animated: true, completion: nil)
         }else{
