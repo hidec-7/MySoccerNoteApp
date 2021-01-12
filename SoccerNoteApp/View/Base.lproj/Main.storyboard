@@ -217,9 +217,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="Orh-nQ-m2s"/>
                     <connections>
+                        <outlet property="conclusionTextView" destination="3gj-Dt-Bve" id="dsl-V1-b5N"/>
                         <outlet property="firstHalfTextView" destination="ZUY-7G-0EB" id="uOx-yT-BeH"/>
+                        <outlet property="gameDatePicker" destination="3Kg-3u-GOy" id="3FX-g5-p6Q"/>
                         <outlet property="gameNavigationBar" destination="PM2-Sh-RwO" id="vx1-Fy-wCn"/>
-                        <outlet property="matomeTextView" destination="3gj-Dt-Bve" id="Ue6-5j-q6r"/>
                         <outlet property="myScoreTextField" destination="i39-ld-Wyn" id="Z4K-Bg-IQZ"/>
                         <outlet property="opponentScoreTextField" destination="u5l-uM-MaY" id="q7N-1o-FuB"/>
                         <outlet property="registerButton" destination="kJn-No-Q5j" id="qlk-os-N2W"/>

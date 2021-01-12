@@ -6,23 +6,23 @@
 //
 
 import UIKit
+import Firebase
 
-class GameRegisterViewController: UIViewController,UITextFieldDelegate,UINavigationBarDelegate {
+class GameRegisterViewController: UIViewController, UITextFieldDelegate, UINavigationBarDelegate, UITextViewDelegate {
+    
+    let ref = Database.database().reference()
     
     @IBOutlet weak private var gameNavigationBar: UINavigationBar!
+    @IBOutlet weak private var gameDatePicker: UIDatePicker!
     @IBOutlet weak private var teamTextField: UITextField!
     @IBOutlet weak private var myScoreTextField: UITextField!
     @IBOutlet weak private var opponentScoreTextField: UITextField!
     @IBOutlet weak private var firstHalfTextView: UITextView!
     @IBOutlet weak private var secondHalfTextView: UITextView!
-    @IBOutlet weak private var matomeTextView: UITextView!
+    @IBOutlet weak private var conclusionTextView: UITextView!
     @IBOutlet weak private var registerButton: UIButton!
     
     @IBAction private func didTapBackButton(_ sender: UIBarButtonItem) {
-        self.dismiss(animated: true, completion: nil)
-    }
-    
-    @IBAction private func didTapRegisterButton(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
     
@@ -35,6 +35,37 @@ class GameRegisterViewController: UIViewController,UITextFieldDelegate,UINavigat
         opponentScoreTextField.delegate = self
         
         setupFirst()
+    }
+    
+    @IBAction func didTapRegisterButton(_ sender: UIButton) {
+        createGameData()
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    func createGameData() {
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        let team = teamTextField.text
+        let myScore = myScoreTextField.text
+        let opponentScore = opponentScoreTextField.text
+        let firstHalf: String = firstHalfTextView.text
+        let secondHalf: String = secondHalfTextView.text
+        let conclusion: String = conclusionTextView.text
+        let gameData = [
+            "date": getGameStartTime(),
+            "team": team,
+            "myScore": myScore,
+            "opponentScore": opponentScore,
+            "frist": firstHalf,
+            "second": secondHalf,
+            "conclusion": conclusion,
+        ]
+        ref.child(uid).childByAutoId().setValue(gameData)
+    }
+    
+    private func getGameStartTime() -> String {
+        let setupDate = DateFormatter()
+        setupDate.dateFormat = "yyyy年MM月dd日HH時mm分"
+        return "\(setupDate.string(from: gameDatePicker.date))"
     }
     
     private func setupFirst() {
@@ -50,7 +81,7 @@ class GameRegisterViewController: UIViewController,UITextFieldDelegate,UINavigat
     private func setupTextView() {
         firstHalfTextView.layer.borderWidth = 1.0
         secondHalfTextView.layer.borderWidth = 1.0
-        matomeTextView.layer.borderWidth = 1.0
+        conclusionTextView.layer.borderWidth = 1.0
     }
     
     func position(for bar: UIBarPositioning) -> UIBarPosition {
