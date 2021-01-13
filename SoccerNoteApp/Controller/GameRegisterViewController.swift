@@ -38,8 +38,18 @@ class GameRegisterViewController: UIViewController, UITextFieldDelegate, UINavig
     }
     
     @IBAction func didTapRegisterButton(_ sender: UIButton) {
-        createGameData()
-        self.dismiss(animated: true, completion: nil)
+        if teamTextField.text!.isEmpty || myScoreTextField.text!.isEmpty || opponentScoreTextField.text!.isEmpty {
+            setupAlret()
+        } else {
+            createGameData()
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
+    
+    private func setupAlret() {
+            let alert = UIAlertController(title: "登録できません", message: "チーム名、スコアを記入してください", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "戻る", style: .default, handler: nil))
+            present(alert, animated: true, completion: nil)
     }
     
     func createGameData() {
