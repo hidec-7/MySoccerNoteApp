@@ -6,11 +6,12 @@
 //
 
 import UIKit
-import Firebase
+//import Firebase
+
 
 class GameRegisterViewController: UIViewController, UITextFieldDelegate, UINavigationBarDelegate, UITextViewDelegate {
     
-    let ref = Database.database().reference()
+//    let ref = Database.database().reference()
     
     @IBOutlet weak private var gameNavigationBar: UINavigationBar!
     @IBOutlet weak private var gameDatePicker: UIDatePicker!
@@ -41,7 +42,16 @@ class GameRegisterViewController: UIViewController, UITextFieldDelegate, UINavig
         if teamTextField.text!.isEmpty || myScoreTextField.text!.isEmpty || opponentScoreTextField.text!.isEmpty {
             setupAlret()
         } else {
-            createGameData()
+            let gameDateCreateModel = GameDateCreateModel(team: teamTextField.text ?? "",
+                                                          myscore: myScoreTextField.text ?? "",
+                                                          opponentScore: opponentScoreTextField.text ?? "",
+                                                          firstHalf: firstHalfTextView.text,
+                                                          secondHalf: secondHalfTextView.text,
+                                                          conclusion: conclusionTextView.text,
+                                                          gameData: gameDatePicker.date 
+                                                          )
+            gameDateCreateModel.createGameData()
+//            createGameData()
             self.dismiss(animated: true, completion: nil)
         }
     }
@@ -52,31 +62,32 @@ class GameRegisterViewController: UIViewController, UITextFieldDelegate, UINavig
             present(alert, animated: true, completion: nil)
     }
     
-    func createGameData() {
-        guard let uid = Auth.auth().currentUser?.uid else { return }
-        let team = teamTextField.text
-        let myScore = myScoreTextField.text
-        let opponentScore = opponentScoreTextField.text
-        let firstHalf: String = firstHalfTextView.text
-        let secondHalf: String = secondHalfTextView.text
-        let conclusion: String = conclusionTextView.text
-        let gameData = [
-            "date": getGameStartTime(),
-            "team": team,
-            "myScore": myScore,
-            "opponentScore": opponentScore,
-            "frist": firstHalf,
-            "second": secondHalf,
-            "conclusion": conclusion,
-        ]
-        ref.child(uid).childByAutoId().setValue(gameData)
-    }
     
-    private func getGameStartTime() -> String {
-        let setupDate = DateFormatter()
-        setupDate.dateFormat = "yyyy年MM月dd日HH時mm分"
-        return "\(setupDate.string(from: gameDatePicker.date))"
-    }
+//    func createGameData() {
+//        guard let uid = Auth.auth().currentUser?.uid else { return }
+//        let team = teamTextField.text
+//        let myScore = myScoreTextField.text
+//        let opponentScore = opponentScoreTextField.text
+//        let firstHalf: String = firstHalfTextView.text
+//        let secondHalf: String = secondHalfTextView.text
+//        let conclusion: String = conclusionTextView.text
+//        let gameData = [
+//            "date": getGameStartTime(),
+//            "team": team,
+//            "myScore": myScore,
+//            "opponentScore": opponentScore,
+//            "frist": firstHalf,
+//            "second": secondHalf,
+//            "conclusion": conclusion,
+//        ]
+//        ref.child(uid).childByAutoId().setValue(gameData)
+//    }
+    
+//    private func getGameStartTime() -> String {
+//        let setupDate = DateFormatter()
+//        setupDate.dateFormat = "yyyy年MM月dd日HH時mm分"
+//        return "\(setupDate.string(from: gameDatePicker.date))"
+//    }
     
     private func setupFirst() {
         setupRegisterButton()
