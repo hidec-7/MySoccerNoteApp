@@ -41,7 +41,13 @@ class GameRegisterViewController: UIViewController, UITextFieldDelegate, UINavig
         if teamTextField.text!.isEmpty || myScoreTextField.text!.isEmpty || opponentScoreTextField.text!.isEmpty {
             setupAlret()
         } else {
-            createGameData()
+            GameDataCreateModel.createGameData(gameDate: gameDatePicker.date,
+                                               team: teamTextField.text ?? "",
+                                               myScore: myScoreTextField.text ?? "",
+                                               opponentScore: opponentScoreTextField.text ?? "",
+                                               firstHalf: firstHalfTextView.text,
+                                               secondHalf: secondHalfTextView.text,
+                                               conclusion: conclusionTextView.text)
             self.dismiss(animated: true, completion: nil)
         }
     }
@@ -50,32 +56,6 @@ class GameRegisterViewController: UIViewController, UITextFieldDelegate, UINavig
             let alert = UIAlertController(title: "登録できません", message: "チーム名、スコアを記入してください", preferredStyle: UIAlertController.Style.alert)
             alert.addAction(UIAlertAction(title: "戻る", style: .default, handler: nil))
             present(alert, animated: true, completion: nil)
-    }
-    
-    func createGameData() {
-        guard let uid = Auth.auth().currentUser?.uid else { return }
-        let team = teamTextField.text
-        let myScore = myScoreTextField.text
-        let opponentScore = opponentScoreTextField.text
-        let firstHalf: String = firstHalfTextView.text
-        let secondHalf: String = secondHalfTextView.text
-        let conclusion: String = conclusionTextView.text
-        let gameData = [
-            "date": getGameStartTime(),
-            "team": team,
-            "myScore": myScore,
-            "opponentScore": opponentScore,
-            "frist": firstHalf,
-            "second": secondHalf,
-            "conclusion": conclusion,
-        ]
-        ref.child(uid).childByAutoId().setValue(gameData)
-    }
-    
-    private func getGameStartTime() -> String {
-        let setupDate = DateFormatter()
-        setupDate.dateFormat = "yyyy年MM月dd日HH時mm分"
-        return "\(setupDate.string(from: gameDatePicker.date))"
     }
     
     private func setupFirst() {

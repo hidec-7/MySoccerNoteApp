@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		18ABFFE72E8854D7D84ECA12 /* Pods_SoccerNoteAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF3D223E0E2FB07140786953 /* Pods_SoccerNoteAppTests.framework */; };
+		5D0D1E6A25B01C1700473A08 /* GameDataCreateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0D1E6925B01C1700473A08 /* GameDataCreateModel.swift */; };
 		5D14B371255659FA002CA3D4 /* GameManagementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D14B370255659FA002CA3D4 /* GameManagementViewController.swift */; };
 		5D14B37625565ADB002CA3D4 /* GameManagementTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D14B37525565ADB002CA3D4 /* GameManagementTableViewCell.swift */; };
 		5D18C04525691DDA00FE56AF /* GameManagementTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D18C04425691DDA00FE56AF /* GameManagementTableViewCell.xib */; };
@@ -47,6 +48,7 @@
 		115F135CA71328672A592ED8 /* Pods-SoccerNoteAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoccerNoteAppTests.debug.xcconfig"; path = "Target Support Files/Pods-SoccerNoteAppTests/Pods-SoccerNoteAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		492B97FBBAFC7EFFC420BBA4 /* Pods_SoccerNoteApp_SoccerNoteAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SoccerNoteApp_SoccerNoteAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5269FAAE9731CADC327C1A6E /* Pods-SoccerNoteApp-SoccerNoteAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoccerNoteApp-SoccerNoteAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-SoccerNoteApp-SoccerNoteAppUITests/Pods-SoccerNoteApp-SoccerNoteAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5D0D1E6925B01C1700473A08 /* GameDataCreateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDataCreateModel.swift; sourceTree = "<group>"; };
 		5D14B370255659FA002CA3D4 /* GameManagementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManagementViewController.swift; sourceTree = "<group>"; };
 		5D14B37525565ADB002CA3D4 /* GameManagementTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManagementTableViewCell.swift; sourceTree = "<group>"; };
 		5D18C04425691DDA00FE56AF /* GameManagementTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameManagementTableViewCell.xib; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				5D26BB7E258BBFA500A34757 /* LoginModel.swift */,
+				5D0D1E6925B01C1700473A08 /* GameDataCreateModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -455,6 +458,7 @@
 				5D14B37625565ADB002CA3D4 /* GameManagementTableViewCell.swift in Sources */,
 				5DAC50D5253DF01400F788BA /* SceneDelegate.swift in Sources */,
 				5DEB73B6255FA1A900FD06E3 /* GameRegisterViewController.swift in Sources */,
+				5D0D1E6A25B01C1700473A08 /* GameDataCreateModel.swift in Sources */,
 				5D14B371255659FA002CA3D4 /* GameManagementViewController.swift in Sources */,
 				5DA8B4032579590A00E02818 /* GameEditViewController.swift in Sources */,
 			);
