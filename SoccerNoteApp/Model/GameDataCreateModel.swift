@@ -10,7 +10,7 @@ import Firebase
 
 class GameDataCreateModel {
     
-    static func createGameData(team: String, myScore: String, opponentScore: String, firstHalf: String, secondHalf: String, conclusion: String, gameDate: Date) {
+    static func createGameData(gameDate: Date, team: String, myScore: String, opponentScore: String, firstHalf: String, secondHalf: String, conclusion: String) {
         guard let uid = Auth.auth().currentUser?.uid else { return }
         
         let gameDateStartString = getGameStartTime(gameDateString: gameDate)

@@ -41,7 +41,13 @@ class GameRegisterViewController: UIViewController, UITextFieldDelegate, UINavig
         if teamTextField.text!.isEmpty || myScoreTextField.text!.isEmpty || opponentScoreTextField.text!.isEmpty {
             setupAlret()
         } else {
-            GameDataCreateModel.createGameData(team: teamTextField.text ?? "", myScore: myScoreTextField.text ?? "", opponentScore: opponentScoreTextField.text ?? "", firstHalf: firstHalfTextView.text, secondHalf: secondHalfTextView.text, conclusion: conclusionTextView.text, gameDate: gameDatePicker.date)
+            GameDataCreateModel.createGameData(gameDate: gameDatePicker.date,
+                                               team: teamTextField.text ?? "",
+                                               myScore: myScoreTextField.text ?? "",
+                                               opponentScore: opponentScoreTextField.text ?? "",
+                                               firstHalf: firstHalfTextView.text,
+                                               secondHalf: secondHalfTextView.text,
+                                               conclusion: conclusionTextView.text)
             self.dismiss(animated: true, completion: nil)
         }
     }
