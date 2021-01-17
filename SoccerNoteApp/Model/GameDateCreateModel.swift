@@ -8,28 +8,20 @@
 import Foundation
 import Firebase
 
+//struct GameDateModel {
+//    let team: String
+//    let myScore: String
+//    let opponentScore: String
+//    let firstHalf: String
+//    let secondHalf: String
+//    let conclusion: String
+//    let gameData: Date
+//}
+
 class GameDateCreateModel {
     let ref = Database.database().reference()
     
-    let team: String
-    let myScore: String
-    let opponentScore: String
-    let firstHalf: String
-    let secondHalf: String
-    let conclusion: String
-    let gameData: Date
-    
-    init(team: String, myscore: String, opponentScore: String, firstHalf: String, secondHalf: String, conclusion: String, gameData: Date) {
-        self.team = team
-        self.myScore = myscore
-        self.opponentScore = opponentScore
-        self.firstHalf = firstHalf
-        self.secondHalf = secondHalf
-        self.conclusion = conclusion
-        self.gameData = gameData
-    }
-    
-    func createGameData() {
+    func createGameData(team: String, myScore: String, opponentScore: String, firstHalf: String, secondHalf: String, conclusion: String, gameData: Date) {
         guard let uid = Auth.auth().currentUser?.uid else { return }
         
         let gameDateStartString = getGameStartTime(gemeDateString: gameData)
