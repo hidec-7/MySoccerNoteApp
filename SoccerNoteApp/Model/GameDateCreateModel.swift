@@ -8,20 +8,8 @@
 import Foundation
 import Firebase
 
-//struct GameDateModel {
-//    let team: String
-//    let myScore: String
-//    let opponentScore: String
-//    let firstHalf: String
-//    let secondHalf: String
-//    let conclusion: String
-//    let gameData: Date
-//}
-
 class GameDateCreateModel {
-    let ref = Database.database().reference()
-    
-    func createGameData(team: String, myScore: String, opponentScore: String, firstHalf: String, secondHalf: String, conclusion: String, gameData: Date) {
+    static func createGameData(team: String, myScore: String, opponentScore: String, firstHalf: String, secondHalf: String, conclusion: String, gameData: Date) {
         guard let uid = Auth.auth().currentUser?.uid else { return }
         
         let gameDateStartString = getGameStartTime(gemeDateString: gameData)
@@ -34,10 +22,11 @@ class GameDateCreateModel {
                             "second": secondHalf,
                             "conclusion": conclusion]
         
+        let ref = Database.database().reference()
         ref.child(uid).childByAutoId().setValue(gameDataDict)
     }
     
-    private func getGameStartTime(gemeDateString date: Date) -> String {
+    private static func getGameStartTime(gemeDateString date: Date) -> String {
         let setupDate = DateFormatter()
         setupDate.dateFormat = "yyyy年MM月dd日HH時mm分"
         return "\(setupDate.string(from: date))"
