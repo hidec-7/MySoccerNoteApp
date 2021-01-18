@@ -6,10 +6,12 @@
 //
 
 import UIKit
+import Firebase
 
 class GameManagementViewController: UIViewController {
     
     private let cellId = "cellId"
+    var gameDataArray = [GameDataModel]()
     
     @IBOutlet weak private var gameManagementTableView: UITableView!
     @IBOutlet weak private var gameAddButton: UIBarButtonItem!
@@ -23,7 +25,30 @@ class GameManagementViewController: UIViewController {
         gameManagementTableView.dataSource = self
         
         gameManagementTableView.register(UINib(nibName: "GameManagementTableViewCell", bundle: nil), forCellReuseIdentifier: cellId)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        getGameData()
+    }
+    
+    private func getGameData() {
+        let ref = Database.database().reference()
+        guard let uid = Auth.auth().currentUser?.uid else { return }
         
+        ref.child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
+            self.gameDataArray = []
+            
+            for data in snapshot.children {
+                let snapData = data as! DataSnapshot
+                let dictionarySnapData = snapData.value as! [String: Any]
+                
+                var gameData = GameDataModel()
+                gameData.setFromDictionary(dictionarySnapData)
+                self.gameDataArray.append(gameData)
+            }
+            self.gameManagementTableView.reloadData()
+        })
     }
     
     private func headerTitle() {
@@ -32,7 +57,7 @@ class GameManagementViewController: UIViewController {
    
 }
 
-extension GameManagementViewController: UITableViewDelegate,UITableViewDataSource {
+extension GameManagementViewController: UITableViewDelegate, UITableViewDataSource {
     
     //今後変更の可能性あり
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -41,11 +66,21 @@ extension GameManagementViewController: UITableViewDelegate,UITableViewDataSourc
     
     //今後変更の可能性あり
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 100
+        return gameDataArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = gameManagementTableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
+        let gameData = gameDataArray[indexPath.row]
+        let teamLabel = cell.viewWithTag(1) as! UILabel
+        teamLabel.text = gameData.team
+        let myScoreLabel = cell.viewWithTag(2) as! UILabel
+        myScoreLabel.text = gameData.myScore
+        let opponentScore = cell.viewWithTag(3) as! UILabel
+        opponentScore.text = gameData.opponentScore
+        let date = cell.viewWithTag(4) as! UILabel
+        date.text = gameData.gameDate
+         
         return cell
     }
     
