@@ -37,14 +37,18 @@ class GameManagementViewController: UIViewController {
         guard let uid = Auth.auth().currentUser?.uid else { return }
         
         ref.child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
-            self.gameDataArray = []
             
             for data in snapshot.children {
                 let snapData = data as! DataSnapshot
                 let dictionarySnapData = snapData.value as! [String: Any]
-                
                 var gameData = GameDataModel()
-                gameData.setFromDictionary(dictionarySnapData)
+                gameData.gameDate = dictionarySnapData["gameDate"] as! String
+                gameData.team = dictionarySnapData["team"] as! String
+                gameData.myScore = dictionarySnapData["myScore"] as! String
+                gameData.opponentScore = dictionarySnapData["opponentScore"] as! String
+                gameData.firstHalf = dictionarySnapData["firstHalf"] as? String ?? ""
+                gameData.secondHalf = dictionarySnapData["secondHalf"] as? String ?? ""
+                gameData.conclusion = dictionarySnapData["conclusion"] as? String ?? ""
                 self.gameDataArray.append(gameData)
             }
             self.gameManagementTableView.reloadData()
@@ -59,28 +63,26 @@ class GameManagementViewController: UIViewController {
 
 extension GameManagementViewController: UITableViewDelegate, UITableViewDataSource {
     
-    //今後変更の可能性あり
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80
     }
-    
-    //今後変更の可能性あり
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return gameDataArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = gameManagementTableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
+        let cell = gameManagementTableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! GameManagementTableViewCell
         let gameData = gameDataArray[indexPath.row]
-        let teamLabel = cell.viewWithTag(1) as! UILabel
-        teamLabel.text = gameData.team
-        let myScoreLabel = cell.viewWithTag(2) as! UILabel
+        let opponentTeamLabel = cell.opponentTeamLabel as UILabel
+        opponentTeamLabel.text = gameData.team
+        let myScoreLabel = cell.myScoreLabel as UILabel
         myScoreLabel.text = gameData.myScore
-        let opponentScore = cell.viewWithTag(3) as! UILabel
-        opponentScore.text = gameData.opponentScore
-        let date = cell.viewWithTag(4) as! UILabel
-        date.text = gameData.gameDate
-         
+        let opponentScoreLabel = cell.opponentScoreLabel as UILabel
+        opponentScoreLabel.text = gameData.opponentScore
+        let dateLabel = cell.dateLabel as UILabel
+        dateLabel.text = gameData.gameDate
+        
         return cell
     }
     

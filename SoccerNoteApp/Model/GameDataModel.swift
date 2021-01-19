@@ -17,13 +17,4 @@ struct GameDataModel {
     var secondHalf: String = ""
     var conclusion: String = ""
     
-    mutating func setFromDictionary(_ dictionary: [String: Any]) {
-        gameDate = dictionary["gameDate"] as? String ?? ""
-        team = dictionary["team"] as? String ?? ""
-        myScore = dictionary["myScore"] as? String ?? ""
-        opponentScore = dictionary["opponentScore"] as? String ?? ""
-        firstHalf = dictionary["firstHalf"] as? String ?? ""
-        secondHalf = dictionary["secondHalf"] as? String ?? ""
-        conclusion = dictionary["conclusion"] as? String ?? ""
-    }
 }
