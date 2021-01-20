@@ -75,10 +75,10 @@ extension GameManagementViewController: UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = gameManagementTableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! GameManagementTableViewCell
         let gameData = gameDataArray[indexPath.row]
+        cell.dateLabel.text = gameData.gameDate
         cell.opponentTeamLabel.text = gameData.team
         cell.myScoreLabel.text = gameData.myScore
         cell.opponentScoreLabel.text = gameData.opponentScore
-        cell.dateLabel.text = gameData.gameDate
         
         return cell
     }
