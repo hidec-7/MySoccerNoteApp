@@ -51,6 +51,7 @@ class GameManagementViewController: UIViewController {
                 gameData.conclusion = dictionarySnapData["conclusion"] as? String ?? ""
                 self.gameDataArray.append(gameData)
             }
+            self.gameDataArray.reverse()
             self.gameManagementTableView.reloadData()
         })
     }
