@@ -36,8 +36,9 @@ class GameManagementViewController: UIViewController {
         let ref = Database.database().reference()
         guard let uid = Auth.auth().currentUser?.uid else { return }
         
+        gameDataArray.removeAll()
+        
         ref.child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
-            
             for data in snapshot.children {
                 let snapData = data as! DataSnapshot
                 let dictionarySnapData = snapData.value as! [String: Any]
