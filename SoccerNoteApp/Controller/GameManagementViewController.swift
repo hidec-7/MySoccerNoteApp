@@ -20,7 +20,7 @@ class GameManagementViewController: UIViewController {
         super.viewDidLoad()
         
         headerTitle()
-        
+
         gameManagementTableView.delegate = self
         gameManagementTableView.dataSource = self
         
@@ -29,32 +29,7 @@ class GameManagementViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        getGameData()
-    }
-    
-    private func getGameData() {
-        let ref = Database.database().reference()
-        guard let uid = Auth.auth().currentUser?.uid else { return }
-        
-        gameDataArray.removeAll()
-        
-        ref.child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
-            for data in snapshot.children {
-                let snapData = data as! DataSnapshot
-                let dictionarySnapData = snapData.value as! [String: Any]
-                var gameData = GameDataModel()
-                gameData.gameDate = dictionarySnapData["gameDate"] as! String
-                gameData.team = dictionarySnapData["team"] as! String
-                gameData.myScore = dictionarySnapData["myScore"] as! String
-                gameData.opponentScore = dictionarySnapData["opponentScore"] as! String
-                gameData.firstHalf = dictionarySnapData["firstHalf"] as? String ?? ""
-                gameData.secondHalf = dictionarySnapData["secondHalf"] as? String ?? ""
-                gameData.conclusion = dictionarySnapData["conclusion"] as? String ?? ""
-                self.gameDataArray.append(gameData)
-            }
-            self.gameDataArray.reverse()
-            self.gameManagementTableView.reloadData()
-        })
+        //getGameData()
     }
     
     private func headerTitle() {
