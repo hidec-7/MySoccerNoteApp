@@ -12,6 +12,7 @@ class GameManagementViewController: UIViewController {
     
     private let cellId = "cellId"
     var gameDataArray = [GameDataModel]()
+    var getData = GameDataReadModel()
     
     @IBOutlet weak private var gameManagementTableView: UITableView!
     @IBOutlet weak private var gameAddButton: UIBarButtonItem!
@@ -29,7 +30,7 @@ class GameManagementViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        //getGameData()
+        getData.getGameData(table: gameManagementTableView)
     }
     
     private func headerTitle() {
