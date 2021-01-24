@@ -23,7 +23,7 @@ class GameDataReadModel {
                 let snapData = data as! DataSnapshot
                 let dictionarySnapData = snapData.value as! [String: Any]
                 var gameData = GameDataModel()
-                // gameData.gameDate = dictionarySnapData["gameDate"] as! String
+                gameData.gameDate = dictionarySnapData["gameDate"] as! String
                 gameData.team = dictionarySnapData["team"] as! String
                 gameData.myScore = dictionarySnapData["myScore"] as! String
                 gameData.opponentScore = dictionarySnapData["opponentScore"] as! String
