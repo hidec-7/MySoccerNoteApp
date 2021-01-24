@@ -10,6 +10,7 @@ import UIKit
 class GameEditViewController: UIViewController, UITextFieldDelegate, UINavigationBarDelegate {
     
     @IBOutlet weak private var gameEditNavigationBar: UINavigationBar!
+    @IBOutlet weak private var gameEditDatePicker: UIDatePicker!
     @IBOutlet weak private var teamEditTextField: UITextField!
     @IBOutlet weak private var myScoreEditTextField: UITextField!
     @IBOutlet weak private var opponentScoreEditTextField: UITextField!
@@ -35,6 +36,11 @@ class GameEditViewController: UIViewController, UITextFieldDelegate, UINavigatio
         opponentScoreEditTextField.delegate = self
         
         setupFirst()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        viewWillAppear(animated)
+        
     }
     
     private func setupFirst() {
