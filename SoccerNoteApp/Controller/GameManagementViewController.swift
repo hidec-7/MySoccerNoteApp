@@ -38,7 +38,7 @@ class GameManagementViewController: UIViewController {
         
         gameDataArray.removeAll()
         
-        ref.child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
+        ref.child(uid).observeSingleEvent(of: .value) { (snapshot) in
             for data in snapshot.children {
                 let snapData = data as! DataSnapshot
                 let dictionarySnapData = snapData.value as! [String: Any]
@@ -54,13 +54,13 @@ class GameManagementViewController: UIViewController {
             }
             self.gameDataArray.reverse()
             table.reloadData()
-        })
+        }
     }
     
     private func headerTitle() {
         title = "試合管理"
     }
-   
+    
 }
 
 extension GameManagementViewController: UITableViewDelegate, UITableViewDataSource {
@@ -68,7 +68,7 @@ extension GameManagementViewController: UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80
     }
-
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return gameDataArray.count
     }
