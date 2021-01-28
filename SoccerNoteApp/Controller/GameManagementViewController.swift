@@ -11,7 +11,7 @@ import Firebase
 class GameManagementViewController: UIViewController {
     
     private let cellId = "cellId"
-    var gameDataArray = [GameDataModel]()
+//    var gameDataArray = [GameDataModel]()
     
     @IBOutlet weak private var gameManagementTableView: UITableView!
     @IBOutlet weak private var gameAddButton: UIBarButtonItem!
@@ -36,7 +36,7 @@ class GameManagementViewController: UIViewController {
         let ref = Database.database().reference()
         guard let uid = Auth.auth().currentUser?.uid else { return }
         
-        gameDataArray.removeAll()
+        GameDataModel.gameDataListArray.removeAll()
         
         ref.child(uid).observeSingleEvent(of: .value) { (snapshot) in
             for data in snapshot.children {
@@ -49,9 +49,9 @@ class GameManagementViewController: UIViewController {
                                              firstHalf: dictionarySnapData["firstHalf"] as? String ?? "",
                                              secondHalf: dictionarySnapData["secondHalf"] as? String ?? "",
                                              conclusion: dictionarySnapData["conclusion"] as? String ?? "")
-                self.gameDataArray.append(gameDate)
+                GameDataModel.gameDataListArray.append(gameDate)
             }
-            self.gameDataArray.reverse()
+            GameDataModel.gameDataListArray.reverse()
             table.reloadData()
         }
     }
@@ -69,12 +69,12 @@ extension GameManagementViewController: UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return gameDataArray.count
+        return GameDataModel.gameDataListArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = gameManagementTableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! GameManagementTableViewCell
-        let gameData = gameDataArray[indexPath.row]
+        let gameData = GameDataModel.gameDataListArray[indexPath.row]
         cell.dateLabel.text = gameData.gameDate
         cell.opponentTeamLabel.text = gameData.team
         cell.myScoreLabel.text = gameData.myScore
