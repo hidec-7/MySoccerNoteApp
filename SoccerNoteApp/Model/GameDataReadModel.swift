@@ -8,9 +8,15 @@
 import Foundation
 import Firebase
 
+protocol GameDataReadModelDelegate: AnyObject {
+    func reloadTableViewData() -> Void
+}
+
 class GameDataReadModel {
-    static func getGameData(table: UITableView) {
-        
+    static weak var delegate: GameDataReadModelDelegate?
+    
+    static func getGameData() {
+
         let ref = Database.database().reference()
         guard let uid = Auth.auth().currentUser?.uid else { return }
                 
@@ -30,7 +36,7 @@ class GameDataReadModel {
                 GameDataModel.gameDataListArray.append(gameDate)
             }
             GameDataModel.gameDataListArray.reverse()
-            table.reloadData()
+            delegate?.reloadTableViewData()
         }
     }
 }
