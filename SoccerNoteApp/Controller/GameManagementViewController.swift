@@ -29,10 +29,10 @@ class GameManagementViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        getGameData()
+        getGameData(table: gameManagementTableView)
     }
     
-    private func getGameData() {
+    private func getGameData(table: UITableView) {
         let ref = Database.database().reference()
         guard let uid = Auth.auth().currentUser?.uid else { return }
         
@@ -53,7 +53,7 @@ class GameManagementViewController: UIViewController {
                 self.gameDataArray.append(gameData)
             }
             self.gameDataArray.reverse()
-            self.gameManagementTableView.reloadData()
+            table.reloadData()
         })
     }
     
