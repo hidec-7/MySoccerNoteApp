@@ -6,8 +6,12 @@
 //
 
 import UIKit
+import Firebase
 
 class GameEditViewController: UIViewController, UITextFieldDelegate, UINavigationBarDelegate {
+    
+    var gameData: GameDataModel!
+    var key: String!
     
     @IBOutlet weak private var gameEditNavigationBar: UINavigationBar!
     @IBOutlet weak private var gameEditDatePicker: UIDatePicker!
@@ -23,10 +27,6 @@ class GameEditViewController: UIViewController, UITextFieldDelegate, UINavigatio
         dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func didTapEditButton(_ sender: UIButton) {
-        dismiss(animated: true, completion: nil)
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -39,8 +39,48 @@ class GameEditViewController: UIViewController, UITextFieldDelegate, UINavigatio
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        viewWillAppear(animated)
+        super.viewWillAppear(animated)
+        editGameData()
+    }
+    
+    @IBAction func didTapEditButton(_ sender: UIButton) {
+        let ref = Database.database().reference()
+        guard let uid = Auth.auth().currentUser?.uid else { return }
         
+        var updateGameData = gameData
+        updateGameData?.gameDate = stringFromDate(date: gameEditDatePicker.date)
+        updateGameData?.team = teamEditTextField.text ?? ""
+        updateGameData?.myScore = myScoreEditTextField.text ?? ""
+        updateGameData?.opponentScore = opponentScoreEditTextField.text ?? ""
+        updateGameData?.firstHalf = firstHalfEditTextView.text
+        updateGameData?.secondHalf = secondHalfEditTextView.text
+        updateGameData?.conclusion = conclusionEditTextView.text
+        
+        ref.child(uid).child(key).setValue(updateGameData)
+        
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    private func editGameData() {
+        gameEditDatePicker.date = dateFromString(dateString: gameData.gameDate)
+        teamEditTextField.text = gameData.team
+        myScoreEditTextField.text = gameData.myScore
+        opponentScoreEditTextField.text = gameData.opponentScore
+        firstHalfEditTextView.text = gameData.firstHalf
+        secondHalfEditTextView.text = gameData.secondHalf
+        conclusionEditTextView.text = gameData.conclusion
+    }
+    
+    private func dateFromString(dateString: String) -> Date {
+        let setupDate = DateFormatter()
+        setupDate.dateFormat = gameData.gameDate
+        return setupDate.date(from: dateString)!
+    }
+    
+    private func stringFromDate(date: Date) -> String {
+        let setupDate = DateFormatter()
+        setupDate.dateFormat = "yyyy年MM月dd日HH時mm分"
+        return "\(setupDate.string(from: date))"
     }
     
     private func setupFirst() {
@@ -59,9 +99,9 @@ class GameEditViewController: UIViewController, UITextFieldDelegate, UINavigatio
     }
     
     private func setupEditTextView() {
-            firstHalfEditTextView.layer.borderWidth = 1.0
-            secondHalfEditTextView.layer.borderWidth = 1.0
-            conclusionEditTextView.layer.borderWidth = 1.0
+        firstHalfEditTextView.layer.borderWidth = 1.0
+        secondHalfEditTextView.layer.borderWidth = 1.0
+        conclusionEditTextView.layer.borderWidth = 1.0
     }
     
     func position(for bar: UIBarPositioning) -> UIBarPosition {

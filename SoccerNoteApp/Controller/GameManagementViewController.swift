@@ -12,6 +12,7 @@ class GameManagementViewController: UIViewController {
     
     private let cellId = "cellId"
     var gameDataArray = [GameDataModel]()
+    var data: Any?
     
     @IBOutlet weak private var gameManagementTableView: UITableView!
     @IBOutlet weak private var gameAddButton: UIBarButtonItem!
@@ -85,8 +86,15 @@ extension GameManagementViewController: UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
+        data = gameDataArray[indexPath.row]
         performSegue(withIdentifier: "gameEdit", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "gameEdit" {
+            let editVC: GameEditViewController = segue.destination as! GameEditViewController
+            editVC.gameData = data as? GameDataModel
+        }
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
