@@ -9,7 +9,7 @@ import UIKit
 import Firebase
 
 class GameDataReadModel {
-    func getGameData(table: UITableView) {
+    static func getGameData(table: UITableView) {
         
         let ref = Database.database().reference()
         guard let uid = Auth.auth().currentUser?.uid else { return }

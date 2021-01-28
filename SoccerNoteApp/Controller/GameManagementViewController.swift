@@ -29,8 +29,7 @@ class GameManagementViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        let model = GameDataReadModel()
-        model.getGameData(table: gameManagementTableView)
+        GameDataReadModel.getGameData(table: gameManagementTableView)
     }
     
 //    private func getGameData(table: UITableView) {
