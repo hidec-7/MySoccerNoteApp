@@ -22,14 +22,15 @@ class GameManagementViewController: UIViewController {
         
         gameManagementTableView.delegate = self
         gameManagementTableView.dataSource = self
-        GameDataReadModel.delegate = self
         
         gameManagementTableView.register(UINib(nibName: "GameManagementTableViewCell", bundle: nil), forCellReuseIdentifier: cellId)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        GameDataReadModel.getGameData()
+        GameDataReadModel.getGameData {
+            self.gameManagementTableView.reloadData()
+        }
     }
     
     private func headerTitle() {
@@ -68,11 +69,5 @@ extension GameManagementViewController: UITableViewDelegate, UITableViewDataSour
         if editingStyle == .delete {
             //CRUDのDeleteを実装する際に追記
         }
-    }
-}
-
-extension GameManagementViewController: GameDataReadModelDelegate {
-    func reloadTableViewData() {
-        gameManagementTableView.reloadData()
     }
 }
