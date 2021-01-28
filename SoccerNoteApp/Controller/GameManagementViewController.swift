@@ -42,15 +42,14 @@ class GameManagementViewController: UIViewController {
             for data in snapshot.children {
                 let snapData = data as! DataSnapshot
                 let dictionarySnapData = snapData.value as! [String: Any]
-                var gameData = GameDataModel()
-                gameData.gameDate = dictionarySnapData["gameDate"] as! String
-                gameData.team = dictionarySnapData["team"] as! String
-                gameData.myScore = dictionarySnapData["myScore"] as! String
-                gameData.opponentScore = dictionarySnapData["opponentScore"] as! String
-                gameData.firstHalf = dictionarySnapData["firstHalf"] as? String ?? ""
-                gameData.secondHalf = dictionarySnapData["secondHalf"] as? String ?? ""
-                gameData.conclusion = dictionarySnapData["conclusion"] as? String ?? ""
-                self.gameDataArray.append(gameData)
+                let gameDate = GameDataModel(gameDate: dictionarySnapData["gameDate"] as! String,
+                                             team: dictionarySnapData["team"] as! String,
+                                             myScore: dictionarySnapData["myScore"] as! String,
+                                             opponentScore: dictionarySnapData["opponentScore"] as! String,
+                                             firstHalf: dictionarySnapData["firstHalf"] as? String ?? "",
+                                             secondHalf: dictionarySnapData["secondHalf"] as? String ?? "",
+                                             conclusion: dictionarySnapData["conclusion"] as? String ?? "")
+                self.gameDataArray.append(gameDate)
             }
             self.gameDataArray.reverse()
             table.reloadData()
