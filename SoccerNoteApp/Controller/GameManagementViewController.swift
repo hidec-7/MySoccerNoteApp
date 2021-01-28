@@ -11,7 +11,6 @@ import Firebase
 class GameManagementViewController: UIViewController {
     
     private let cellId = "cellId"
-//    var gameDataArray = [GameDataModel]()
     
     @IBOutlet weak private var gameManagementTableView: UITableView!
     @IBOutlet weak private var gameAddButton: UIBarButtonItem!
