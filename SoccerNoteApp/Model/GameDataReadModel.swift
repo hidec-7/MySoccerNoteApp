@@ -5,7 +5,7 @@
 //  Created by 渕一真 on 2021/01/28.
 //
 
-import UIKit
+import Foundation
 import Firebase
 
 class GameDataReadModel {
@@ -33,5 +33,4 @@ class GameDataReadModel {
             table.reloadData()
         }
     }
-
 }
