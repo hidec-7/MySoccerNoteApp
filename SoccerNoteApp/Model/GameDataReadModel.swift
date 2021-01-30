@@ -8,17 +8,22 @@
 import Foundation
 import Firebase
 
+protocol GameDataReadModelDelegate: AnyObject {
+    func reloadTableViewData() -> Void
+}
+
 class GameDataReadModel {
     
-    var gameDataArray = [GameDataModel]()
+    static weak var delegate: GameDataReadModelDelegate?
     
-    func getGameData(table: UITableView) {
+    static func getGameData() {
+        
         let ref = Database.database().reference()
         guard let uid = Auth.auth().currentUser?.uid else { return }
         
-        gameDataArray.removeAll()
+        GameDataModel.gameDataListArray.removeAll()
         
-        ref.child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
+        ref.child(uid).observeSingleEvent(of: .value) { (snapshot) in
             for data in snapshot.children {
                 let snapData = data as! DataSnapshot
                 let dictionarySnapData = snapData.value as! [String: Any]
@@ -30,11 +35,10 @@ class GameDataReadModel {
                 gameData.firstHalf = dictionarySnapData["firstHalf"] as? String ?? ""
                 gameData.secondHalf = dictionarySnapData["secondHalf"] as? String ?? ""
                 gameData.conclusion = dictionarySnapData["conclusion"] as? String ?? ""
-                self.gameDataArray.append(gameData)
+                GameDataModel.gameDataListArray.append(gameData)
             }
-            self.gameDataArray.reverse()
-            table.reloadData()
-        })
+            GameDataModel.gameDataListArray.reverse()
+            delegate?.reloadTableViewData()
+        }
     }
-    
 }

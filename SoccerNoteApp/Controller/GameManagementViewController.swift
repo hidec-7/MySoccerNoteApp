@@ -11,7 +11,6 @@ import Firebase
 class GameManagementViewController: UIViewController {
     
     private let cellId = "cellId"
-    var gameDataArray = [GameDataModel]()
     
     @IBOutlet weak private var gameManagementTableView: UITableView!
     @IBOutlet weak private var gameAddButton: UIBarButtonItem!
@@ -23,14 +22,14 @@ class GameManagementViewController: UIViewController {
 
         gameManagementTableView.delegate = self
         gameManagementTableView.dataSource = self
+        GameDataReadModel.delegate = self
         
         gameManagementTableView.register(UINib(nibName: "GameManagementTableViewCell", bundle: nil), forCellReuseIdentifier: cellId)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        let getGameData = GameDataReadModel()
-        getGameData.getGameData(table: gameManagementTableView)
+        GameDataReadModel.getGameData()
     }
     
     private func headerTitle() {
@@ -46,12 +45,12 @@ extension GameManagementViewController: UITableViewDelegate, UITableViewDataSour
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return gameDataArray.count
+        return GameDataModel.gameDataListArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = gameManagementTableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! GameManagementTableViewCell
-        let gameData = gameDataArray[indexPath.row]
+        let gameData = GameDataModel.gameDataListArray[indexPath.row]
         cell.dateLabel.text = gameData.gameDate
         cell.opponentTeamLabel.text = gameData.team
         cell.myScoreLabel.text = gameData.myScore
@@ -69,5 +68,11 @@ extension GameManagementViewController: UITableViewDelegate, UITableViewDataSour
         if editingStyle == .delete {
             //CRUDのDeleteを実装する際に追記
         }
+    }
+}
+
+extension GameManagementViewController: GameDataReadModelDelegate {
+    func reloadTableViewData() {
+        gameManagementTableView.reloadData()
     }
 }
