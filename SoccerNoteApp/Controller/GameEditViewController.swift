@@ -15,7 +15,7 @@ class GameEditViewController: UIViewController, UITextFieldDelegate, UINavigatio
     @IBOutlet weak private var opponentScoreEditTextField: UITextField!
     @IBOutlet weak private var firstHalfEditTextView: UITextView!
     @IBOutlet weak private var secondHalfEditTextView: UITextView!
-    @IBOutlet weak private var matomeEditTextView: UITextView!
+    @IBOutlet weak private var conclusionEditTextView: UITextView!
     @IBOutlet weak private var editButton: UIButton!
     
     @IBAction private func didTapBackButton(_ sender: UIBarButtonItem) {
