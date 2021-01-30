@@ -409,7 +409,7 @@
                         <outlet property="myScoreEditTextField" destination="LqK-vz-phX" id="lfv-CV-c9T"/>
                         <outlet property="opponentScoreEditTextField" destination="9Vv-ke-i6a" id="4Eo-IJ-2W3"/>
                         <outlet property="secondHalfEditTextView" destination="5BQ-VF-aht" id="bYj-7H-jCU"/>
-                        <outlet property="teamEditTextField" destination="LqK-vz-phX" id="5mL-7q-g6Y"/>
+                        <outlet property="teamEditTextField" destination="Ke2-7z-oI5" id="oUZ-Za-eyS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jCo-98-oLi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
