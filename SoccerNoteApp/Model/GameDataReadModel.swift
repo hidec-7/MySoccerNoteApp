@@ -12,7 +12,7 @@ protocol GameDataReadModelDelegate: AnyObject {
     func reloadTableViewData() -> Void
 }
 
-struct GameDataReadModel {
+class GameDataReadModel {
     
     static weak var delegate: GameDataReadModelDelegate?
     
