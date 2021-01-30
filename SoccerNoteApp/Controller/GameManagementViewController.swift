@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Firebase
 
 class GameManagementViewController: UIViewController {
     
@@ -29,7 +28,7 @@ class GameManagementViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        GameDataReadModel.getGameData()
+        GameDataReadModel.fetchGameData()
     }
     
     private func headerTitle() {

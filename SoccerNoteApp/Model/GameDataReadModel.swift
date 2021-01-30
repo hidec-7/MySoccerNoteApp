@@ -12,11 +12,11 @@ protocol GameDataReadModelDelegate: AnyObject {
     func reloadTableViewData() -> Void
 }
 
-class GameDataReadModel {
+struct GameDataReadModel {
     
     static weak var delegate: GameDataReadModelDelegate?
     
-    static func getGameData() {
+    static func fetchGameData() {
         
         let ref = Database.database().reference()
         guard let uid = Auth.auth().currentUser?.uid else { return }
