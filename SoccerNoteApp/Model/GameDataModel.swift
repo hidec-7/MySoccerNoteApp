@@ -9,6 +9,8 @@ import Foundation
 
 struct GameDataModel {
     
+    static var gameDataListArray = [GameDataModel]()
+    
     var gameDate: String = ""
     var team: String = ""
     var myScore: String = ""

@@ -6,12 +6,10 @@
 //
 
 import UIKit
-import Firebase
 
 class GameManagementViewController: UIViewController {
     
     private let cellId = "cellId"
-    var gameDataArray = [GameDataModel]()
     
     @IBOutlet weak private var gameManagementTableView: UITableView!
     @IBOutlet weak private var gameAddButton: UIBarButtonItem!
@@ -20,41 +18,17 @@ class GameManagementViewController: UIViewController {
         super.viewDidLoad()
         
         headerTitle()
-        
+
         gameManagementTableView.delegate = self
         gameManagementTableView.dataSource = self
+        GameDataReadModel.delegate = self
         
         gameManagementTableView.register(UINib(nibName: "GameManagementTableViewCell", bundle: nil), forCellReuseIdentifier: cellId)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        getGameData()
-    }
-    
-    private func getGameData() {
-        let ref = Database.database().reference()
-        guard let uid = Auth.auth().currentUser?.uid else { return }
-        
-        gameDataArray.removeAll()
-        
-        ref.child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
-            for data in snapshot.children {
-                let snapData = data as! DataSnapshot
-                let dictionarySnapData = snapData.value as! [String: Any]
-                var gameData = GameDataModel()
-                gameData.gameDate = dictionarySnapData["gameDate"] as! String
-                gameData.team = dictionarySnapData["team"] as! String
-                gameData.myScore = dictionarySnapData["myScore"] as! String
-                gameData.opponentScore = dictionarySnapData["opponentScore"] as! String
-                gameData.firstHalf = dictionarySnapData["firstHalf"] as? String ?? ""
-                gameData.secondHalf = dictionarySnapData["secondHalf"] as? String ?? ""
-                gameData.conclusion = dictionarySnapData["conclusion"] as? String ?? ""
-                self.gameDataArray.append(gameData)
-            }
-            self.gameDataArray.reverse()
-            self.gameManagementTableView.reloadData()
-        })
+        GameDataReadModel.fetchGameData()
     }
     
     private func headerTitle() {
@@ -70,12 +44,12 @@ extension GameManagementViewController: UITableViewDelegate, UITableViewDataSour
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return gameDataArray.count
+        return GameDataModel.gameDataListArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = gameManagementTableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! GameManagementTableViewCell
-        let gameData = gameDataArray[indexPath.row]
+        let gameData = GameDataModel.gameDataListArray[indexPath.row]
         cell.dateLabel.text = gameData.gameDate
         cell.opponentTeamLabel.text = gameData.team
         cell.myScoreLabel.text = gameData.myScore
@@ -93,5 +67,11 @@ extension GameManagementViewController: UITableViewDelegate, UITableViewDataSour
         if editingStyle == .delete {
             //CRUDのDeleteを実装する際に追記
         }
+    }
+}
+
+extension GameManagementViewController: GameDataReadModelDelegate {
+    func reloadTableViewData() {
+        gameManagementTableView.reloadData()
     }
 }
