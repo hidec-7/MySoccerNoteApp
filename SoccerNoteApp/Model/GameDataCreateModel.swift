@@ -19,8 +19,8 @@ class GameDataCreateModel {
                             "team": team,
                             "myScore": myScore,
                             "opponentScore": opponentScore,
-                            "first": firstHalf,
-                            "second": secondHalf,
+                            "firstHalf": firstHalf,
+                            "secondHalf": secondHalf,
                             "conclusion": conclusion]
         
         let ref = Database.database().reference()
