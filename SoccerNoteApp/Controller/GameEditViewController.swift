@@ -60,12 +60,12 @@ class GameEditViewController: UIViewController, UITextFieldDelegate, UINavigatio
         let conclusion = conclusionEditTextView.text
         
         let updateGameDatadic = ["gameDate": gameDate,
-                   "team": team,
-                   "myScore": myScore,
-                   "opponentScore": opponentScore,
-                   "firstHalf": firstHalf,
-                   "secondHalf": secondHalf,
-                   "conclusion": conclusion]
+                                 "team": team,
+                                 "myScore": myScore,
+                                 "opponentScore": opponentScore,
+                                 "firstHalf": firstHalf,
+                                 "secondHalf": secondHalf,
+                                 "conclusion": conclusion]
         
         gameDataKey = gameData.Key
         
