@@ -9,7 +9,10 @@ import UIKit
 
 class GameEditViewController: UIViewController, UITextFieldDelegate, UINavigationBarDelegate {
     
+    var gameData: GameDataModel!
+    
     @IBOutlet weak private var gameEditNavigationBar: UINavigationBar!
+    @IBOutlet weak private var gameEditDatePicker: UIDatePicker!
     @IBOutlet weak private var teamEditTextField: UITextField!
     @IBOutlet weak private var myScoreEditTextField: UITextField!
     @IBOutlet weak private var opponentScoreEditTextField: UITextField!
@@ -35,6 +38,27 @@ class GameEditViewController: UIViewController, UITextFieldDelegate, UINavigatio
         opponentScoreEditTextField.delegate = self
         
         setupFirst()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        gameManagementData()
+    }
+    
+    private func gameManagementData() {
+        gameEditDatePicker.date = dateFromString()
+        teamEditTextField.text = gameData.team
+        myScoreEditTextField.text = gameData.myScore
+        opponentScoreEditTextField.text = gameData.opponentScore
+        firstHalfEditTextView.text = gameData.firstHalf
+        secondHalfEditTextView.text = gameData.secondHalf
+        conclusionEditTextView.text = gameData.conclusion
+    }
+    
+    private func dateFromString() -> Date {
+        let setupDate = DateFormatter()
+        setupDate.dateFormat = "yyyy年MM月dd日HH時mm分"
+        return setupDate.date(from: gameData.gameDate)!
     }
     
     private func setupFirst() {

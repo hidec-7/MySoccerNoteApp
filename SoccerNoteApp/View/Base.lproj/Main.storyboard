@@ -405,6 +405,7 @@
                         <outlet property="conclusionEditTextView" destination="8Pu-g6-wvP" id="Jvk-wQ-03i"/>
                         <outlet property="editButton" destination="7e9-3y-h75" id="UcI-kX-Ekd"/>
                         <outlet property="firstHalfEditTextView" destination="rwk-OM-phs" id="cBg-Mm-nxB"/>
+                        <outlet property="gameEditDatePicker" destination="2ie-Qz-tbo" id="SLo-Jp-bXS"/>
                         <outlet property="gameEditNavigationBar" destination="Z06-EE-D7X" id="ngC-Vf-wch"/>
                         <outlet property="myScoreEditTextField" destination="LqK-vz-phX" id="lfv-CV-c9T"/>
                         <outlet property="opponentScoreEditTextField" destination="9Vv-ke-i6a" id="4Eo-IJ-2W3"/>
