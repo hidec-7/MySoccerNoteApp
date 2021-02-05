@@ -24,6 +24,7 @@
 		5DAC50DF253DF01600F788BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DAC50DD253DF01600F788BA /* LaunchScreen.storyboard */; };
 		5DAC50EA253DF01600F788BA /* SoccerNoteAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAC50E9253DF01600F788BA /* SoccerNoteAppTests.swift */; };
 		5DAC50F5253DF01600F788BA /* SoccerNoteAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAC50F4253DF01600F788BA /* SoccerNoteAppUITests.swift */; };
+		5DC6968825CDA5DF0004A106 /* GameDataUpdateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC6968725CDA5DF0004A106 /* GameDataUpdateModel.swift */; };
 		5DEB73B6255FA1A900FD06E3 /* GameRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DEB73B5255FA1A900FD06E3 /* GameRegisterViewController.swift */; };
 		88B4CD97EF5C5CA0733D80D3 /* Pods_SoccerNoteApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB1D48FC99ECD2AD6F3E59D0 /* Pods_SoccerNoteApp.framework */; };
 		D4A1AB5059EFDED3C1CD37D2 /* Pods_SoccerNoteApp_SoccerNoteAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 492B97FBBAFC7EFFC420BBA4 /* Pods_SoccerNoteApp_SoccerNoteAppUITests.framework */; };
@@ -72,6 +73,7 @@
 		5DAC50F0253DF01600F788BA /* SoccerNoteAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoccerNoteAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DAC50F4253DF01600F788BA /* SoccerNoteAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoccerNoteAppUITests.swift; sourceTree = "<group>"; };
 		5DAC50F6253DF01600F788BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5DC6968725CDA5DF0004A106 /* GameDataUpdateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDataUpdateModel.swift; sourceTree = "<group>"; };
 		5DEB73B5255FA1A900FD06E3 /* GameRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRegisterViewController.swift; sourceTree = "<group>"; };
 		8638536FE9BFCBFCEEE6EB00 /* Pods-SoccerNoteApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoccerNoteApp.debug.xcconfig"; path = "Target Support Files/Pods-SoccerNoteApp/Pods-SoccerNoteApp.debug.xcconfig"; sourceTree = "<group>"; };
 		BA673359A16D73500144469D /* Pods-SoccerNoteAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoccerNoteAppTests.release.xcconfig"; path = "Target Support Files/Pods-SoccerNoteAppTests/Pods-SoccerNoteAppTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 				5D0D1E6925B01C1700473A08 /* GameDataCreateModel.swift */,
 				5D0D1E8825B42E6700473A08 /* GameDataModel.swift */,
 				5D598F1A25B9D76B00D6D013 /* GameDataReadModel.swift */,
+				5DC6968725CDA5DF0004A106 /* GameDataUpdateModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -468,6 +471,7 @@
 				5D14B371255659FA002CA3D4 /* GameManagementViewController.swift in Sources */,
 				5D598F1B25B9D76B00D6D013 /* GameDataReadModel.swift in Sources */,
 				5DA8B4032579590A00E02818 /* GameEditViewController.swift in Sources */,
+				5DC6968825CDA5DF0004A106 /* GameDataUpdateModel.swift in Sources */,
 				5D0D1E8925B42E6700473A08 /* GameDataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
