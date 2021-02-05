@@ -26,6 +26,7 @@ class GameDataReadModel {
         ref.child(uid).observeSingleEvent(of: .value) { (snapshot) in
             for data in snapshot.children {
                 let snapData = data as! DataSnapshot
+                let gameDataKey = snapData.key
                 let dictionarySnapData = snapData.value as! [String: Any]
                 let gameData = GameDataModel(gameDate: dictionarySnapData["gameDate"] as! String,
                                              team: dictionarySnapData["team"] as! String,
@@ -33,7 +34,8 @@ class GameDataReadModel {
                                              opponentScore: dictionarySnapData["opponentScore"] as! String,
                                              firstHalf: dictionarySnapData["firstHalf"] as? String ?? "",
                                              secondHalf: dictionarySnapData["secondHalf"] as? String ?? "",
-                                             conclusion: dictionarySnapData["conclusion"] as? String ?? "")
+                                             conclusion: dictionarySnapData["conclusion"] as? String ?? "",
+                                             key: gameDataKey)
                 GameDataModel.gameDataListArray.append(gameData)
             }
             GameDataModel.gameDataListArray.reverse()

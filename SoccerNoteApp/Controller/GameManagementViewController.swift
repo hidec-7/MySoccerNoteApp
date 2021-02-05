@@ -10,7 +10,7 @@ import UIKit
 class GameManagementViewController: UIViewController {
     
     private let cellId = "cellId"
-    private var data: Any?
+    var data: Any?
     
     @IBOutlet weak private var gameManagementTableView: UITableView!
     @IBOutlet weak private var gameAddButton: UIBarButtonItem!

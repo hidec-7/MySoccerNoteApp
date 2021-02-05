@@ -6,10 +6,12 @@
 //
 
 import UIKit
+import Firebase
 
 class GameEditViewController: UIViewController, UITextFieldDelegate, UINavigationBarDelegate {
     
-    var gameData: GameDataModel!
+    var gameData: GameDataModel?
+    var gameDataKey: String?
     
     @IBOutlet weak private var gameEditNavigationBar: UINavigationBar!
     @IBOutlet weak private var gameEditDatePicker: UIDatePicker!
@@ -22,10 +24,6 @@ class GameEditViewController: UIViewController, UITextFieldDelegate, UINavigatio
     @IBOutlet weak private var editButton: UIButton!
     
     @IBAction private func didTapBackButton(_ sender: UIBarButtonItem) {
-        dismiss(animated: true, completion: nil)
-    }
-    
-    @IBAction func didTapEditButton(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
     
@@ -45,20 +43,57 @@ class GameEditViewController: UIViewController, UITextFieldDelegate, UINavigatio
         gameManagementData()
     }
     
+    @IBAction func didTapEditButton(_ sender: UIButton) {
+        updateGameData()
+    }
+    
+    func updateGameData() {
+        let ref = Database.database().reference()
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        
+        let updateGameDate = stringFromDate(date: gameEditDatePicker.date)
+        let updateTeam = teamEditTextField.text ?? ""
+        let updateMyScore = myScoreEditTextField.text ?? ""
+        let updateOpponentScore = opponentScoreEditTextField.text ?? ""
+        let updateFirstHalf = firstHalfEditTextView.text
+        let updateSecondHalf = secondHalfEditTextView.text
+        let updateConclusion = conclusionEditTextView.text
+        
+        let updateGameDataDic = ["gameDate": updateGameDate,
+                                 "team": updateTeam,
+                                 "myScore": updateMyScore,
+                                 "opponentScore": updateOpponentScore,
+                                 "firstHalf": updateFirstHalf,
+                                 "secondHalf": updateSecondHalf,
+                                 "conclusion": updateConclusion]
+        
+        gameDataKey = gameData?.key
+        
+        ref.child(uid).child(gameDataKey!).setValue(updateGameDataDic)
+        
+        dismiss(animated: true, completion: nil)
+    }
+    
     private func gameManagementData() {
         gameEditDatePicker.date = dateFromString()
-        teamEditTextField.text = gameData.team
-        myScoreEditTextField.text = gameData.myScore
-        opponentScoreEditTextField.text = gameData.opponentScore
-        firstHalfEditTextView.text = gameData.firstHalf
-        secondHalfEditTextView.text = gameData.secondHalf
-        conclusionEditTextView.text = gameData.conclusion
+        teamEditTextField.text = gameData?.team
+        myScoreEditTextField.text = gameData?.myScore
+        opponentScoreEditTextField.text = gameData?.opponentScore
+        firstHalfEditTextView.text = gameData?.firstHalf
+        secondHalfEditTextView.text = gameData?.secondHalf
+        conclusionEditTextView.text = gameData?.conclusion
+    }
+    
+    private func stringFromDate(date: Date) -> String {
+        let setupDate = DateFormatter()
+        setupDate.dateFormat = "yyyy年MM月dd日HH時mm分"
+        return "\(setupDate.string(from: date))"
     }
     
     private func dateFromString() -> Date {
         let setupDate = DateFormatter()
         setupDate.dateFormat = "yyyy年MM月dd日HH時mm分"
-        return setupDate.date(from: gameData.gameDate)!
+        return setupDate.date(from: gameData!.gameDate)!
     }
     
     private func setupFirst() {
