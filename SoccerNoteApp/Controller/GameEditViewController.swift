@@ -49,7 +49,8 @@ class GameEditViewController: UIViewController, UITextFieldDelegate, UINavigatio
                                            updateOpponentScore: opponentScoreEditTextField.text ?? "",
                                            updateFirstHalf: firstHalfEditTextView.text,
                                            updateSecondHalf: secondHalfEditTextView.text,
-                                           updateConclusion: conclusionEditTextView.text)
+                                           updateConclusion: conclusionEditTextView.text,
+                                           uniqid: gameData?.key ?? "")
         self.dismiss(animated: true, completion: nil)
     }
     

@@ -10,7 +10,8 @@ import UIKit
 class GameManagementViewController: UIViewController {
     
     private let cellId = "cellId"
-    var data: Any?
+    /// Any型は基本的に使用不可
+    var data: GameDataModel?
     
     @IBOutlet weak private var gameManagementTableView: UITableView!
     @IBOutlet weak private var gameAddButton: UIBarButtonItem!
@@ -67,7 +68,7 @@ extension GameManagementViewController: UITableViewDelegate, UITableViewDataSour
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "gameEdit" {
             let editVC = segue.destination as! GameEditViewController
-            editVC.gameData = data as? GameDataModel
+            editVC.gameData = data
         }
     }
     

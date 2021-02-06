@@ -8,12 +8,9 @@
 import Foundation
 import Firebase
 
-var gameData: GameDataModel?
-var gameDataKey: String?
-
 class GameDataUpdateModel {
     
-    static func updateGameData(updateGameDate: Date, updateTeam: String, updateMyScore: String, updateOpponentScore: String, updateFirstHalf: String, updateSecondHalf: String, updateConclusion: String) {
+    static func updateGameData(updateGameDate: Date, updateTeam: String, updateMyScore: String, updateOpponentScore: String, updateFirstHalf: String, updateSecondHalf: String, updateConclusion: String, uniqid: String) {
         guard let uid = Auth.auth().currentUser?.uid else { return }
         
         let updateGameStartTime = stringFromDate(date: updateGameDate)
@@ -25,10 +22,6 @@ class GameDataUpdateModel {
                                  "firstHalf": updateFirstHalf,
                                  "secondHalf": updateSecondHalf,
                                  "conclusion": updateConclusion]
-        
-        guard let uniqid = gameData?.key else {
-            return print("😱nil判定")
-        }
         
         let ref = Database.database().reference()
         /// 「!」は使用するとアプリクラッシュするため、guard文を使用することで「!」を回避
