@@ -24,7 +24,7 @@ class GameDataUpdateModel {
                                  "conclusion": updateConclusion]
         
         let ref = Database.database().reference()
-        /// 「!」は使用するとアプリクラッシュするため、guard文を使用することで「!」を回避
+        /// 「!」は使用するとアプリクラッシュ原則使用不可
         ref.child(uid).child(uniqid).setValue(updateGameDataDic)
     }
     private static func stringFromDate(date: Date) -> String {
