@@ -26,10 +26,13 @@ class GameDataUpdateModel {
                                  "secondHalf": updateSecondHalf,
                                  "conclusion": updateConclusion]
         
-        gameDataKey = gameData?.key
+        guard let uniqid = gameData?.key else {
+            return print("😱nil判定")
+        }
         
         let ref = Database.database().reference()
-        ref.child(uid).child(gameDataKey!).setValue(updateGameDataDic)
+        /// 「!」は使用するとアプリクラッシュするため、guard文を使用することで「!」を回避
+        ref.child(uid).child(uniqid).setValue(updateGameDataDic)
     }
     private static func stringFromDate(date: Date) -> String {
         let setupDate = DateFormatter()
