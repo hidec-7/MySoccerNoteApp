@@ -8,12 +8,9 @@
 import Foundation
 import Firebase
 
-var gameData: GameDataModel?
-var gameDataKey: String?
-
 class GameDataUpdateModel {
     
-    static func updateGameData(updateGameDate: Date, updateTeam: String, updateMyScore: String, updateOpponentScore: String, updateFirstHalf: String, updateSecondHalf: String, updateConclusion: String) {
+    static func updateGameData(updateGameDate: Date, updateTeam: String, updateMyScore: String, updateOpponentScore: String, updateFirstHalf: String, updateSecondHalf: String, updateConclusion: String, unipId: String) {
         guard let uid = Auth.auth().currentUser?.uid else { return }
         
         let updateGameStartTime = stringFromDate(date: updateGameDate)
@@ -26,10 +23,8 @@ class GameDataUpdateModel {
                                  "secondHalf": updateSecondHalf,
                                  "conclusion": updateConclusion]
         
-        gameDataKey = gameData?.key
-        
         let ref = Database.database().reference()
-        ref.child(uid).child(gameDataKey!).setValue(updateGameDataDic)
+        ref.child(uid).child(unipId).setValue(updateGameDataDic)
     }
     private static func stringFromDate(date: Date) -> String {
         let setupDate = DateFormatter()
