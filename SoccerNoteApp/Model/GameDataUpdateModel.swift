@@ -13,7 +13,7 @@ class GameDataUpdateModel {
     static func updateGameData(unipId: String, gameDate: Date, team: String, myScore: String, opponentScore: String, firstHalf: String, secondHalf: String, conclusion: String) {
         guard let uid = Auth.auth().currentUser?.uid else { return }
         
-        let updateGameStartTime = stringFromDate(date: gameDate)
+        let updateGameStartTime = DateConverter.stringFromDate(date: gameDate)
         
         let updateGameDataDic = ["gameDate": updateGameStartTime,
                                  "team": team,
@@ -26,9 +26,5 @@ class GameDataUpdateModel {
         let ref = Database.database().reference()
         ref.child(uid).child(unipId).setValue(updateGameDataDic)
     }
-    static func stringFromDate(date: Date) -> String {
-        let setupDate = DateFormatter()
-        setupDate.dateFormat = "yyyy年MM月dd日HH時mm分"
-        return "\(setupDate.string(from: date))"
-    }
+
 }

@@ -54,19 +54,13 @@ class GameEditViewController: UIViewController, UITextFieldDelegate, UINavigatio
     }
     
     private func gameManagementData() {
-        gameEditDatePicker.date = dateFromString()
+        gameEditDatePicker.date = DateConverter.dateFromString(date: gameData?.gameDate ?? "")
         teamEditTextField.text = gameData?.team
         myScoreEditTextField.text = gameData?.myScore
         opponentScoreEditTextField.text = gameData?.opponentScore
         firstHalfEditTextView.text = gameData?.firstHalf
         secondHalfEditTextView.text = gameData?.secondHalf
         conclusionEditTextView.text = gameData?.conclusion
-    }
-    
-    private func dateFromString() -> Date {
-        let setupDate = DateFormatter()
-        setupDate.dateFormat = "yyyy年MM月dd日HH時mm分"
-        return setupDate.date(from: gameData!.gameDate)!
     }
     
     private func setupFirst() {
