@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Firebase
 
 class GameEditViewController: UIViewController, UITextFieldDelegate, UINavigationBarDelegate {
     
@@ -43,14 +42,14 @@ class GameEditViewController: UIViewController, UITextFieldDelegate, UINavigatio
     }
     
     @IBAction func didTapEditButton(_ sender: UIButton) {
-        GameDataUpdateModel.updateGameData(updateGameDate: gameEditDatePicker.date,
-                                           updateTeam: teamEditTextField.text ?? "",
-                                           updateMyScore: myScoreEditTextField.text ?? "",
-                                           updateOpponentScore: opponentScoreEditTextField.text ?? "",
-                                           updateFirstHalf: firstHalfEditTextView.text,
-                                           updateSecondHalf: secondHalfEditTextView.text,
-                                           updateConclusion: conclusionEditTextView.text,
-                                           unipId: gameData?.key ?? "")
+        GameDataUpdateModel.updateGameData(unipId: gameData?.key ?? "",
+                                           gameDate: gameEditDatePicker.date,
+                                           team: teamEditTextField.text ?? "",
+                                           myScore: myScoreEditTextField.text ?? "",
+                                           opponentScore: opponentScoreEditTextField.text ?? "",
+                                           firstHalf: firstHalfEditTextView.text,
+                                           secondHalf: secondHalfEditTextView.text,
+                                           conclusion: conclusionEditTextView.text)
         self.dismiss(animated: true, completion: nil)
     }
     
@@ -103,3 +102,4 @@ class GameEditViewController: UIViewController, UITextFieldDelegate, UINavigatio
         textField.resignFirstResponder()
     }
 }
+
