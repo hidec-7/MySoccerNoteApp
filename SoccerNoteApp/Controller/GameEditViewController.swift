@@ -54,7 +54,7 @@ class GameEditViewController: UIViewController, UITextFieldDelegate, UINavigatio
     }
     
     private func gameManagementData() {
-        gameEditDatePicker.date = DateConverter.dateFromString(date: gameData?.gameDate ?? "")
+        gameEditDatePicker.date = DateConverter.dateFromString(date: gameData?.gameDate ?? "") ?? gameEditDatePicker.date
         teamEditTextField.text = gameData?.team
         myScoreEditTextField.text = gameData?.myScore
         opponentScoreEditTextField.text = gameData?.opponentScore

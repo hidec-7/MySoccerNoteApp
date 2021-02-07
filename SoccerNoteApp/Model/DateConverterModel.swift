@@ -15,9 +15,9 @@ class DateConverter {
         return "\(setupDate.string(from: date))"
     }
     
-    static func dateFromString(date: String) -> Date {
+    static func dateFromString(date: String) -> Date? {
         let setupDate = DateFormatter()
         setupDate.dateFormat = "yyyy年MM月dd日HH時mm分"
-        return setupDate.date(from: date)!
+        return setupDate.date(from: date)
     }
 }
