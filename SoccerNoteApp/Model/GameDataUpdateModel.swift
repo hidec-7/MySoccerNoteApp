@@ -26,5 +26,4 @@ class GameDataUpdateModel {
         let ref = Database.database().reference()
         ref.child(uid).child(unipId).setValue(updateGameDataDic)
     }
-
 }

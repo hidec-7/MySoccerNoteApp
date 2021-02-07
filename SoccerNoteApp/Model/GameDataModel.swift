@@ -19,5 +19,4 @@ struct GameDataModel {
     let firstHalf: String
     let secondHalf: String
     let conclusion: String
-    
 }

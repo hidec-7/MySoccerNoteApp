@@ -20,5 +20,4 @@ class DateConverter {
         setupDate.dateFormat = "yyyy年MM月dd日HH時mm分"
         return setupDate.date(from: date)!
     }
-    
 }

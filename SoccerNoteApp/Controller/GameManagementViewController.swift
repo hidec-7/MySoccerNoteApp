@@ -35,7 +35,6 @@ class GameManagementViewController: UIViewController {
     private func headerTitle() {
         title = "試合管理"
     }
-   
 }
 
 extension GameManagementViewController: UITableViewDelegate, UITableViewDataSource {

@@ -26,5 +26,4 @@ class GameDataCreateModel {
         let ref = Database.database().reference()
         ref.child(uid).childByAutoId().setValue(gameDataDict)
     }
-    
 }
