@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Firebase
 
 class GameManagementViewController: UIViewController {
     
@@ -73,17 +72,14 @@ extension GameManagementViewController: UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            deleteGameData(indexPath: indexPath)
+            data = GameDataModel.gameDataListArray[indexPath.row]
+            GameDataDeleteModel.deleteGameData(indexPath: indexPath, dataKey: data?.key ?? "")
             gameManagementTableView.deleteRows(at: [indexPath as IndexPath], with: .fade)
         }
     }
     
-    private func deleteGameData(indexPath: IndexPath) {
-        let ref = Database.database().reference()
-        guard let uid = Auth.auth().currentUser?.uid else { return }
-        data = GameDataModel.gameDataListArray[indexPath.row]
-        ref.child(uid).child(data?.key ?? "").removeValue()
-        GameDataModel.gameDataListArray.remove(at: indexPath.row)
+    func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
+        return "削除"
     }
 }
 
