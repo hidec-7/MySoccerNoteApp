@@ -21,5 +21,4 @@ class LoginModel {
             return
         }
     }
-    
 }

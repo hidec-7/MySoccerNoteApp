@@ -11,12 +11,12 @@ struct GameDataModel {
     
     static var gameDataListArray = [GameDataModel]()
     
-    var gameDate: String = ""
-    var team: String = ""
-    var myScore: String = ""
-    var opponentScore: String = ""
-    var firstHalf: String = ""
-    var secondHalf: String = ""
-    var conclusion: String = ""
-    
+    let key: String
+    let gameDate: String
+    let team: String
+    let myScore: String
+    let opponentScore: String
+    let firstHalf: String
+    let secondHalf: String
+    let conclusion: String
 }

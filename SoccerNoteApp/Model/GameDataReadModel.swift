@@ -12,7 +12,7 @@ protocol GameDataReadModelDelegate: AnyObject {
     func reloadTableViewData() -> Void
 }
 
-struct GameDataReadModel {
+class GameDataReadModel {
     
     static weak var delegate: GameDataReadModelDelegate?
     
@@ -27,7 +27,8 @@ struct GameDataReadModel {
             for data in snapshot.children {
                 let snapData = data as! DataSnapshot
                 let dictionarySnapData = snapData.value as! [String: Any]
-                let gameData = GameDataModel(gameDate: dictionarySnapData["gameDate"] as! String,
+                let gameData = GameDataModel(key: snapData.key,
+                                             gameDate: dictionarySnapData["gameDate"] as! String,
                                              team: dictionarySnapData["team"] as! String,
                                              myScore: dictionarySnapData["myScore"] as! String,
                                              opponentScore: dictionarySnapData["opponentScore"] as! String,

@@ -9,20 +9,47 @@ import UIKit
 
 class GameEditViewController: UIViewController, UITextFieldDelegate, UINavigationBarDelegate {
     
+    var gameData: GameDataModel?
+    
     @IBOutlet weak private var gameEditNavigationBar: UINavigationBar!
-    @IBOutlet weak private var teamEditTextField: UITextField!
-    @IBOutlet weak private var myScoreEditTextField: UITextField!
-    @IBOutlet weak private var opponentScoreEditTextField: UITextField!
-    @IBOutlet weak private var firstHalfEditTextView: UITextView!
-    @IBOutlet weak private var secondHalfEditTextView: UITextView!
-    @IBOutlet weak private var matomeEditTextView: UITextView!
+    @IBOutlet weak private var gameEditDatePicker: UIDatePicker! {
+        didSet {
+            gameEditDatePicker.date = DateConverter.dateFromString(date: gameData?.gameDate ?? "") ?? gameEditDatePicker.date
+        }
+    }
+    @IBOutlet weak private var teamEditTextField: UITextField! {
+        didSet {
+            teamEditTextField.text = gameData?.team
+        }
+    }
+    @IBOutlet weak private var myScoreEditTextField: UITextField! {
+        didSet {
+            myScoreEditTextField.text = gameData?.myScore
+        }
+    }
+    @IBOutlet weak private var opponentScoreEditTextField: UITextField! {
+        didSet {
+            opponentScoreEditTextField.text = gameData?.opponentScore
+        }
+    }
+    @IBOutlet weak private var firstHalfEditTextView: UITextView! {
+        didSet {
+            firstHalfEditTextView.text = gameData?.firstHalf
+        }
+    }
+    @IBOutlet weak private var secondHalfEditTextView: UITextView! {
+        didSet {
+            secondHalfEditTextView.text = gameData?.secondHalf
+        }
+    }
+    @IBOutlet weak private var conclusionEditTextView: UITextView! {
+        didSet {
+            conclusionEditTextView.text = gameData?.conclusion
+        }
+    }
     @IBOutlet weak private var editButton: UIButton!
     
     @IBAction private func didTapBackButton(_ sender: UIBarButtonItem) {
-        dismiss(animated: true, completion: nil)
-    }
-    
-    @IBAction func didTapEditButton(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
     
@@ -35,6 +62,18 @@ class GameEditViewController: UIViewController, UITextFieldDelegate, UINavigatio
         opponentScoreEditTextField.delegate = self
         
         setupFirst()
+    }
+    
+    @IBAction func didTapEditButton(_ sender: UIButton) {
+        GameDataUpdateModel.updateGameData(unipID: gameData?.key ?? "",
+                                           gameDate: gameEditDatePicker.date,
+                                           team: teamEditTextField.text ?? "",
+                                           myScore: myScoreEditTextField.text ?? "",
+                                           opponentScore: opponentScoreEditTextField.text ?? "",
+                                           firstHalf: firstHalfEditTextView.text,
+                                           secondHalf: secondHalfEditTextView.text,
+                                           conclusion: conclusionEditTextView.text)
+        self.dismiss(animated: true, completion: nil)
     }
     
     private func setupFirst() {
@@ -55,7 +94,7 @@ class GameEditViewController: UIViewController, UITextFieldDelegate, UINavigatio
     private func setupEditTextView() {
             firstHalfEditTextView.layer.borderWidth = 1.0
             secondHalfEditTextView.layer.borderWidth = 1.0
-            matomeEditTextView.layer.borderWidth = 1.0
+            conclusionEditTextView.layer.borderWidth = 1.0
     }
     
     func position(for bar: UIBarPositioning) -> UIBarPosition {
@@ -70,3 +109,4 @@ class GameEditViewController: UIViewController, UITextFieldDelegate, UINavigatio
         textField.resignFirstResponder()
     }
 }
+

@@ -10,6 +10,7 @@ import UIKit
 class GameManagementViewController: UIViewController {
     
     private let cellId = "cellId"
+    var data: GameDataModel?
     
     @IBOutlet weak private var gameManagementTableView: UITableView!
     @IBOutlet weak private var gameAddButton: UIBarButtonItem!
@@ -34,7 +35,6 @@ class GameManagementViewController: UIViewController {
     private func headerTitle() {
         title = "試合管理"
     }
-   
 }
 
 extension GameManagementViewController: UITableViewDelegate, UITableViewDataSource {
@@ -59,8 +59,15 @@ extension GameManagementViewController: UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
+        data = GameDataModel.gameDataListArray[indexPath.row]
         performSegue(withIdentifier: "gameEdit", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "gameEdit" {
+            let editVC = segue.destination as! GameEditViewController
+            editVC.gameData = data
+        }
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
