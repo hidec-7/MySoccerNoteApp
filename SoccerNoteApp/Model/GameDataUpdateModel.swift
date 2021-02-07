@@ -10,7 +10,7 @@ import Firebase
 
 class GameDataUpdateModel {
     
-    static func updateGameData(unipId: String, gameDate: Date, team: String, myScore: String, opponentScore: String, firstHalf: String, secondHalf: String, conclusion: String) {
+    static func updateGameData(unipID: String, gameDate: Date, team: String, myScore: String, opponentScore: String, firstHalf: String, secondHalf: String, conclusion: String) {
         guard let uid = Auth.auth().currentUser?.uid else { return }
         
         let updateGameStartTime = DateConverter.stringFromDate(date: gameDate)
@@ -24,6 +24,6 @@ class GameDataUpdateModel {
                                  "conclusion": conclusion]
         
         let ref = Database.database().reference()
-        ref.child(uid).child(unipId).setValue(updateGameDataDic)
+        ref.child(uid).child(unipID).setValue(updateGameDataDic)
     }
 }

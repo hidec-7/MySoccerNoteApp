@@ -42,7 +42,7 @@ class GameEditViewController: UIViewController, UITextFieldDelegate, UINavigatio
     }
     
     @IBAction func didTapEditButton(_ sender: UIButton) {
-        GameDataUpdateModel.updateGameData(unipId: gameData?.key ?? "",
+        GameDataUpdateModel.updateGameData(unipID: gameData?.key ?? "",
                                            gameDate: gameEditDatePicker.date,
                                            team: teamEditTextField.text ?? "",
                                            myScore: myScoreEditTextField.text ?? "",
