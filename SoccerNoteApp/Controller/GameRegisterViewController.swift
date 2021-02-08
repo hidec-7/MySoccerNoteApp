@@ -39,7 +39,7 @@ class GameRegisterViewController: UIViewController, UITextFieldDelegate, UINavig
     
     @IBAction func didTapRegisterButton(_ sender: UIButton) {
         if teamTextField.text!.isEmpty || myScoreTextField.text!.isEmpty || opponentScoreTextField.text!.isEmpty {
-            setupAlret()
+            setupRegisterAlret()
         } else {
             GameDataCreateModel.createGameData(gameDate: gameDatePicker.date,
                                                team: teamTextField.text ?? "",
@@ -52,7 +52,7 @@ class GameRegisterViewController: UIViewController, UITextFieldDelegate, UINavig
         }
     }
     
-    private func setupAlret() {
+    private func setupRegisterAlret() {
             let alert = UIAlertController(title: "登録できません", message: "チーム名、スコアを記入してください", preferredStyle: UIAlertController.Style.alert)
             alert.addAction(UIAlertAction(title: "戻る", style: .default, handler: nil))
             present(alert, animated: true, completion: nil)
