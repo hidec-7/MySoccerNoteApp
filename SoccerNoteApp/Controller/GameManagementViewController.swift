@@ -72,8 +72,25 @@ extension GameManagementViewController: UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            //CRUDのDeleteを実装する際に追記
+            showAlertDeleteGameData(indexPath: indexPath)
         }
+    }
+    
+    private func showAlertDeleteGameData(indexPath: IndexPath) {
+        let deleteAlert = UIAlertController(title: "確認", message: "この試合を削除しますか？", preferredStyle: UIAlertController.Style.alert)
+        let cancelAction = UIAlertAction(title: "キャンセル", style: .cancel, handler: nil)
+        let deleteAction = UIAlertAction(title: "削除", style: .destructive) { (_) in
+            self.data = GameDataModel.gameDataListArray[indexPath.row]
+            GameDataDeleteModel.deleteGameData(indexPath: indexPath, dataKey: self.data?.key ?? "")
+            self.gameManagementTableView.deleteRows(at: [indexPath as IndexPath], with: .fade)
+        }
+        deleteAlert.addAction(cancelAction)
+        deleteAlert.addAction(deleteAction)
+        present(deleteAlert, animated: true, completion: nil)
+    }
+    
+    func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
+        return "削除"
     }
 }
 
