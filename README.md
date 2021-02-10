@@ -60,16 +60,12 @@ FIXME: 長期化の可能性がある修正箇所
 
 
 ## 環境構築
-1. Bundlerをインストール
-    -  `sudo gem install bundler` 
-2. リポジトリをclone
+1. リポジトリをclone
     -  `git clone https://github.com/hidec-7/SoccerNoteDev.git` 
-3. CocoaPodsをインストール
-    -  `bundle install --path vendor/bundle` 
-4. CocoaPodsを実行
-    -  `bundle exec pod install`  
-5. SoccerNoteApp.xcworkspace を開く  
-6. Schemeを`SoccerNote`に変更 ※SoccerNoteAppではありません
+2. CocoaPodsをインストール
+    -  `pod install`   
+3. SoccerNoteApp.xcworkspace を開く  
+4. Schemeを`SoccerNote`に変更 ※SoccerNoteAppではありません
 
 
 ## インストール
