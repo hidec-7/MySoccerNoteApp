@@ -65,7 +65,6 @@ FIXME: 長期化の可能性がある修正箇所
 2. CocoaPodsをインストール
     -  `pod install`   
 3. SoccerNoteApp.xcworkspace を開く  
-4. Schemeを`SoccerNote`に変更 ※SoccerNoteAppではありません
 
 
 ## インストール
