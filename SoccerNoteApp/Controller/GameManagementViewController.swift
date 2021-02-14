@@ -11,8 +11,7 @@ class GameManagementViewController: UIViewController {
     
     private let cellId = "cellId"
     var data: GameDataModel?
-    var indicater = UIActivityIndicatorView()
-    
+
     @IBOutlet weak private var gameManagementTableView: UITableView!
     @IBOutlet weak private var gameAddButton: UIBarButtonItem!
     
@@ -38,6 +37,7 @@ class GameManagementViewController: UIViewController {
     }
     
     private func setupIndicater() {
+        let indicater = UIActivityIndicatorView()
         indicater.center = view.center
         indicater.style = .large
         indicater.color = UIColor(red: 44/255, green: 169/255, blue: 225/255, alpha: 1)
@@ -48,7 +48,7 @@ class GameManagementViewController: UIViewController {
             Thread.sleep(forTimeInterval: 1)
             DispatchQueue.main.async {
                 GameDataReadModel.fetchGameData()
-                self.indicater.stopAnimating()
+                indicater.stopAnimating()
             }
         }
     }
