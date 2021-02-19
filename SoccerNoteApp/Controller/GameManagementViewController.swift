@@ -11,7 +11,8 @@ class GameManagementViewController: UIViewController {
     
     private let cellId = "cellId"
     var data: GameDataModel?
-    
+    let indicater = UIActivityIndicatorView()
+
     @IBOutlet weak private var gameManagementTableView: UITableView!
     @IBOutlet weak private var gameAddButton: UIBarButtonItem!
     
@@ -30,10 +31,20 @@ class GameManagementViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         GameDataReadModel.fetchGameData()
+        setupIndicater()
     }
     
     private func headerTitle() {
         title = "試合管理"
+    }
+    
+    private func setupIndicater() {
+        indicater.center = view.center
+        indicater.style = .large
+        indicater.color = UIColor(red: 44/255, green: 169/255, blue: 225/255, alpha: 1)
+        view.addSubview(indicater)
+        
+        indicater.startAnimating()
     }
 }
 
@@ -96,6 +107,7 @@ extension GameManagementViewController: UITableViewDelegate, UITableViewDataSour
 
 extension GameManagementViewController: GameDataReadModelDelegate {
     func reloadTableViewData() {
+        indicater.stopAnimating()
         gameManagementTableView.reloadData()
     }
 }
