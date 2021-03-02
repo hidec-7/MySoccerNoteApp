@@ -68,7 +68,7 @@ FIXME: 長期化の可能性がある修正箇所
 
 
 ## インストール
-
+https://apps.apple.com/jp/app/mysoccernote/id1555488477
 
 ## 作者
 hiedematoaho0727246@gmail.com
