@@ -6,14 +6,21 @@
 //
 
 import UIKit
+import IQKeyboardManagerSwift
+import Firebase
 
-@main
+@UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    var window: UIWindow?
+    let loginModel = LoginModel()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        IQKeyboardManager.shared.enable = true
         // Override point for customization after application launch.
+        FirebaseApp.configure()
+        loginModel.anonymous()
+        
         return true
     }
 

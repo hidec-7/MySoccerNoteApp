@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellId" rowHeight="92" id="4QS-Sr-z7i" customClass="GameManagementTableViewCell" customModule="SoccerNoteApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="403" height="92"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4QS-Sr-z7i" id="6N1-IO-RCI">
+                <rect key="frame" x="0.0" y="0.0" width="403" height="92"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fYU-tM-s5i">
+                        <rect key="frame" x="16" y="16" width="25" height="24"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="相手チーム" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zdL-tw-K4p">
+                        <rect key="frame" x="57" y="11" width="122" height="29"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2020年11月22日 10:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L6z-lr-DAz">
+                        <rect key="frame" x="57" y="48" width="174" height="20.5"/>
+                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                        <color key="textColor" systemColor="systemGrayColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="zY3-Jd-tdm" userLabel="Score Stack View">
+                        <rect key="frame" x="299.5" y="9" width="87.5" height="33.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VEX-Kd-J5j">
+                                <rect key="frame" x="0.0" y="0.0" width="28.5" height="33.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ー" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vsn-Vk-P3l">
+                                <rect key="frame" x="29.5" y="0.0" width="28.5" height="33.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aZ1-yB-x34">
+                                <rect key="frame" x="59" y="0.0" width="28.5" height="33.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="zY3-Jd-tdm" firstAttribute="centerY" secondItem="zdL-tw-K4p" secondAttribute="centerY" id="AZ0-yg-Ryx"/>
+                    <constraint firstItem="zdL-tw-K4p" firstAttribute="leading" secondItem="fYU-tM-s5i" secondAttribute="trailing" constant="16" id="PiK-xG-YES"/>
+                    <constraint firstItem="fYU-tM-s5i" firstAttribute="leading" secondItem="6N1-IO-RCI" secondAttribute="leading" constant="16" id="Uin-Ac-MMP"/>
+                    <constraint firstItem="L6z-lr-DAz" firstAttribute="leading" secondItem="zdL-tw-K4p" secondAttribute="leading" id="ZDQ-t1-zTx"/>
+                    <constraint firstItem="fYU-tM-s5i" firstAttribute="top" secondItem="6N1-IO-RCI" secondAttribute="top" constant="16" id="ZgS-gr-GOT"/>
+                    <constraint firstAttribute="trailing" secondItem="zY3-Jd-tdm" secondAttribute="trailing" constant="16" id="cVf-YS-zfG"/>
+                    <constraint firstItem="L6z-lr-DAz" firstAttribute="top" secondItem="zdL-tw-K4p" secondAttribute="bottom" constant="8" id="jtT-YK-j7z"/>
+                    <constraint firstItem="zdL-tw-K4p" firstAttribute="bottom" secondItem="fYU-tM-s5i" secondAttribute="bottom" id="laQ-3l-eKJ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="dateLabel" destination="L6z-lr-DAz" id="c9u-q5-3Zw"/>
+                <outlet property="myScoreLabel" destination="VEX-Kd-J5j" id="xAn-EE-X9a"/>
+                <outlet property="opponentScoreLabel" destination="aZ1-yB-x34" id="g2w-bj-IYe"/>
+                <outlet property="opponentTeamLabel" destination="zdL-tw-K4p" id="d4U-nw-6k4"/>
+            </connections>
+            <point key="canvasLocation" x="78.985507246376812" y="70.3125"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
