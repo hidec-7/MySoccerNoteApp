@@ -1,0 +1,18 @@
+# document: https://github.com/realm/SwiftLint
+
+# 無効にするルール
+disabled_rules:
+- force_cast
+- force_try
+- todo
+
+# SwiftLintの適用から外すディレクトリ
+excluded:
+- Pods/
+- Libraries
+- Carthage/
+- RandomChoiceTests/
+- vendor
+
+# 1行あたりの文字数制限を300に変更
+line_length: 300

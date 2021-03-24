@@ -240,6 +240,7 @@
 				5DAC50CC253DF01400F788BA /* Frameworks */,
 				5DAC50CD253DF01400F788BA /* Resources */,
 				5A265AB08BF8D3DFBF55E108 /* [CP] Embed Pods Frameworks */,
+				5D33772D2609AA1A00CA8711 /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -399,6 +400,24 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SoccerNoteApp/Pods-SoccerNoteApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		5D33772D2609AA1A00CA8711 /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint autocorrect --format\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 		BC8A7767EDA3429381155C2F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
