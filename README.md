@@ -31,7 +31,7 @@ Firebaseから提供されているNoSQLデータベース
 **IQKeyIboardManagerSwift**  
 キーボードの表示に合わせて、入力場所を移動することができるライブラリ
 
-**SwiftLint**
+**SwiftLint**  
 Swiftの静的解析ツールの一つで、コンパイラよりも詳細にソースコードの解析をすることができるライブラリ
 
 ## バージョン管理
