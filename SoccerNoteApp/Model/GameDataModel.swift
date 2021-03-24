@@ -8,9 +8,9 @@
 import Foundation
 
 struct GameDataModel {
-    
+
     static var gameDataListArray = [GameDataModel]()
-    
+
     let key: String
     let gameDate: String
     let team: String

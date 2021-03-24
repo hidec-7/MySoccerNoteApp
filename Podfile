@@ -24,6 +24,7 @@ target 'SoccerNoteApp' do
   pod 'IQKeyboardManagerSwift'
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
+  pod 'SwiftLint'
 
 end
 

@@ -9,7 +9,7 @@ import Foundation
 import Firebase
 
 class GameDataDeleteModel {
-    
+
     static func deleteGameData(indexPath: IndexPath, dataKey: String) {
         let ref = Database.database().reference()
         guard let uid = Auth.auth().currentUser?.uid else { return }
