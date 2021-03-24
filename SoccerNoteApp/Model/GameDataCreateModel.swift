@@ -10,6 +10,7 @@ import Firebase
 
 class GameDataCreateModel {
 
+    // swiftlint:disable:next function_parameter_count
     static func createGameData(gameDate: Date, team: String, myScore: String, opponentScore: String, firstHalf: String, secondHalf: String, conclusion: String) {
         guard let uid = Auth.auth().currentUser?.uid else { return }
 
