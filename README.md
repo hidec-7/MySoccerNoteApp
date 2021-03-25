@@ -18,8 +18,8 @@ SoccerNote(SoccerNoteApp)
 |  Swift  | 5.3.2|
 |  iOS  |  13.0以上  |
 |  デバイス  |  iPhone<br>iPad |
-|  CocoaPods  |  1.9.3  |
-
+|  CocoaPods  |  1.10.1  |
+|  SwiftLint  |  TBD  |
 
 ## 使用ライブラリ
 **Firebase Authentication**  
@@ -30,9 +30,6 @@ Firebaseから提供されているNoSQLデータベース
 
 **IQKeyIboardManagerSwift**  
 キーボードの表示に合わせて、入力場所を移動することができるライブラリ
-
-**SwiftLint**  
-Swiftの静的解析ツールの一つで、コンパイラよりも詳細にソースコードの解析をすることができるライブラリ
 
 ## バージョン管理
 GitHubを使用
