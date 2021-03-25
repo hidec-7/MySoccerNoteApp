@@ -9,21 +9,21 @@ import Foundation
 import Firebase
 
 protocol GameDataReadModelDelegate: AnyObject {
-    func reloadTableViewData() -> Void
+    func reloadTableViewData()
 }
 
 class GameDataReadModel {
-    
+
     static weak var delegate: GameDataReadModelDelegate?
-    
+
     static func fetchGameData() {
-        
+
         let ref = Database.database().reference()
         guard let uid = Auth.auth().currentUser?.uid else { return }
-        
+
         GameDataModel.gameDataListArray.removeAll()
-        
-        ref.child(uid).observeSingleEvent(of: .value) { (snapshot) in
+
+        ref.child(uid).observeSingleEvent(of: .value) { snapshot in
             for data in snapshot.children {
                 let snapData = data as! DataSnapshot
                 let dictionarySnapData = snapData.value as! [String: Any]
