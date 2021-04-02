@@ -32,6 +32,7 @@ class GameManagementViewController: UIViewController {
         super.viewWillAppear(animated)
         GameDataReadModel.fetchGameData()
         setupIndicater()
+        setupAlertDataEmpty()
     }
 
     private func headerTitle() {
@@ -45,6 +46,15 @@ class GameManagementViewController: UIViewController {
         view.addSubview(indicater)
 
         indicater.startAnimating()
+    }
+
+    private func setupAlertDataEmpty() {
+        let alert = UIAlertController(title: "試合データが0件です", message: "登録画面に移動して、試合データを登録しましょう", preferredStyle: UIAlertController.Style.alert)
+        let okAction = UIAlertAction(title: "OK", style: .default) { (_) -> Void in
+            self.performSegue(withIdentifier: "gameRegister", sender: nil)
+        }
+        alert.addAction(okAction)
+        present(alert, animated: true, completion: nil)
     }
 }
 
