@@ -119,8 +119,8 @@ extension GameManagementViewController: GameDataReadModelDelegate {
     }
 
     private func setupAlertDataEmpty() {
-        let alert = UIAlertController(title: "試合データ0件", message: "試合登録画面に移動して、試合データを\n登録しましょう", preferredStyle: UIAlertController.Style.alert)
-        let okAction = UIAlertAction(title: "OK", style: .default) { _ -> Void in
+        let alert = UIAlertController(title: "試合データなし", message: "試合のデータを登録しましょう", preferredStyle: UIAlertController.Style.alert)
+        let okAction = UIAlertAction(title: "登録する", style: .default) { _ -> Void in
             self.performSegue(withIdentifier: "gameRegister", sender: nil)
         }
         alert.addAction(okAction)
