@@ -17,7 +17,7 @@ SoccerNote(SoccerNoteApp)
 |  Xcode  |12.4|
 |  Swift  | 5.3.2|
 |  iOS  |  13.0以上  |
-|  デバイス  |  iPhone<br>iPad<br>Mac(M1チップのみ) |
+|  デバイス  |  iPhone<br>iPad |
 |  CocoaPods  |  1.10.1  |
 |  SwiftLint  |  TBD  |
 
