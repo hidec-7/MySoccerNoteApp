@@ -58,7 +58,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PM2-Sh-RwO">
-                                <rect key="frame" x="0.0" y="44" width="375" height="54"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="45.666666666666657"/>
                                 <color key="barTintColor" red="0.1469349751" green="0.34631367410000002" blue="0.49445108259999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
                                     <navigationItem title="試合" id="HTE-mg-BDj">
@@ -71,8 +71,14 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="試合日時" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4oc-eK-YPb" userLabel="Game Date Label">
+                                <rect key="frame" x="16" y="97.666666666666671" width="343" height="20.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="5" translatesAutoresizingMaskIntoConstraints="NO" id="3Kg-3u-GOy">
-                                <rect key="frame" x="16" y="106" width="343" height="34.333333333333343"/>
+                                <rect key="frame" x="16" y="121.99999999999999" width="343" height="34.333333333333329"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="3Kg-3u-GOy" secondAttribute="height" multiplier="10:1" id="EHs-Qr-KGF"/>
@@ -80,7 +86,7 @@
                                 <locale key="locale" localeIdentifier="ja_JP"/>
                             </datePicker>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="1Pj-GZ-yV1" userLabel="Game Data Stack View">
-                                <rect key="frame" x="16" y="148.33333333333334" width="343" height="72.666666666666657"/>
+                                <rect key="frame" x="16" y="164.33333333333334" width="343" height="72.666666666666657"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="TTt-Tu-3dT" userLabel="Team Stack View">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="31.333333333333332"/>
@@ -122,7 +128,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3lk-kU-cIY" userLabel="Impression Stack View">
-                                <rect key="frame" x="16" y="229" width="343" height="465"/>
+                                <rect key="frame" x="16" y="245" width="343" height="465"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="aX0-Y7-CQv" userLabel="First Half Stack View">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="148.33333333333334"/>
@@ -134,7 +140,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZUY-7G-0EB">
-                                                <rect key="frame" x="0.0" y="20.333333333333343" width="343" height="128"/>
+                                                <rect key="frame" x="0.0" y="20.333333333333314" width="343" height="128"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <color key="textColor" systemColor="labelColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -181,7 +187,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kJn-No-Q5j">
-                                <rect key="frame" x="139.66666666666666" y="718" width="96" height="36"/>
+                                <rect key="frame" x="139.66666666666666" y="734" width="96" height="36"/>
                                 <color key="backgroundColor" red="0.25951080180000002" green="0.44316002090000001" blue="0.5641634995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="kJn-No-Q5j" secondAttribute="height" multiplier="8:3" id="KCl-4b-Hv7"/>
@@ -199,16 +205,19 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="PM2-Sh-RwO" firstAttribute="leading" secondItem="SjI-ID-hWl" secondAttribute="leading" id="0jb-u7-PX1"/>
-                            <constraint firstItem="SjI-ID-hWl" firstAttribute="bottom" secondItem="kJn-No-Q5j" secondAttribute="bottom" constant="24" id="18J-UI-WiC"/>
+                            <constraint firstItem="SjI-ID-hWl" firstAttribute="bottom" secondItem="kJn-No-Q5j" secondAttribute="bottom" constant="8" id="18J-UI-WiC"/>
                             <constraint firstItem="1Pj-GZ-yV1" firstAttribute="top" secondItem="3Kg-3u-GOy" secondAttribute="bottom" constant="8" id="22G-0u-ZkS"/>
                             <constraint firstItem="kJn-No-Q5j" firstAttribute="centerX" secondItem="3lk-kU-cIY" secondAttribute="centerX" id="435-B2-XnJ"/>
                             <constraint firstItem="PM2-Sh-RwO" firstAttribute="trailing" secondItem="SjI-ID-hWl" secondAttribute="trailing" id="6an-Pl-Zxn"/>
-                            <constraint firstItem="3Kg-3u-GOy" firstAttribute="top" secondItem="PM2-Sh-RwO" secondAttribute="bottom" constant="8" id="IjR-a6-DDb"/>
                             <constraint firstItem="3Kg-3u-GOy" firstAttribute="leading" secondItem="SjI-ID-hWl" secondAttribute="leading" constant="16" id="K5a-4C-cpV"/>
+                            <constraint firstItem="4oc-eK-YPb" firstAttribute="leading" secondItem="SjI-ID-hWl" secondAttribute="leading" constant="16" id="LwO-lG-iJi"/>
+                            <constraint firstItem="3Kg-3u-GOy" firstAttribute="top" secondItem="4oc-eK-YPb" secondAttribute="bottom" constant="4" id="QuV-yg-99N"/>
                             <constraint firstItem="1Pj-GZ-yV1" firstAttribute="centerX" secondItem="3Kg-3u-GOy" secondAttribute="centerX" id="V1H-fV-RvW"/>
                             <constraint firstItem="3lk-kU-cIY" firstAttribute="top" secondItem="1Pj-GZ-yV1" secondAttribute="bottom" constant="8" id="WJX-X7-mIJ"/>
                             <constraint firstItem="3lk-kU-cIY" firstAttribute="centerX" secondItem="1Pj-GZ-yV1" secondAttribute="centerX" id="WgQ-uA-duo"/>
                             <constraint firstItem="1Pj-GZ-yV1" firstAttribute="width" secondItem="3Kg-3u-GOy" secondAttribute="width" id="Wuz-Vo-a10"/>
+                            <constraint firstItem="4oc-eK-YPb" firstAttribute="top" secondItem="PM2-Sh-RwO" secondAttribute="bottom" constant="8" id="Yco-p3-Cco"/>
+                            <constraint firstItem="SjI-ID-hWl" firstAttribute="trailing" secondItem="4oc-eK-YPb" secondAttribute="trailing" constant="16" id="hTS-OA-PD5"/>
                             <constraint firstItem="3lk-kU-cIY" firstAttribute="width" secondItem="1Pj-GZ-yV1" secondAttribute="width" id="ild-0L-bXW"/>
                             <constraint firstAttribute="trailing" secondItem="3Kg-3u-GOy" secondAttribute="trailing" constant="16" id="niy-wG-4k3"/>
                             <constraint firstItem="kJn-No-Q5j" firstAttribute="top" secondItem="3lk-kU-cIY" secondAttribute="bottom" constant="24" id="rOE-ck-QQa"/>
