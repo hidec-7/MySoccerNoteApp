@@ -92,9 +92,9 @@ class GameEditViewController: UIViewController, UITextFieldDelegate, UINavigatio
     }
 
     private func setupEditTextView() {
-        firstHalfEditTextView.layer.borderWidth = 1.0
-        secondHalfEditTextView.layer.borderWidth = 1.0
-        conclusionEditTextView.layer.borderWidth = 1.0
+        firstHalfEditTextView.layer.borderWidth = 1.2
+        secondHalfEditTextView.layer.borderWidth = 1.2
+        conclusionEditTextView.layer.borderWidth = 1.2
     }
 
     func position(for bar: UIBarPositioning) -> UIBarPosition {
