@@ -1,5 +1,5 @@
 ## プロジェクト名
-SoccerNote(SoccerNoteApp)
+MySoccerNote(MySoccerNoteApp)
 
 ## 概要
 サッカーの試合結果を記録し一覧で表示。日付・相手チーム・スコアの記録。また、前半・後半・まとめに分けて試合のコメントを残すことが可能。とてもシンプルなアプリのため、簡単に記録でき、過去の試合を見返すことができます。
@@ -17,7 +17,7 @@ SoccerNote(SoccerNoteApp)
 |  Xcode  |12.4|
 |  Swift  | 5.3.2|
 |  iOS  |  13.0以上  |
-|  デバイス  |  iPhone<br>iPad |
+|  デバイス  |  iPhone<br>iPad<br>Mac(M1チップのみ) |
 |  CocoaPods  |  1.10.1  |
 |  SwiftLint  |  TBD  |
 

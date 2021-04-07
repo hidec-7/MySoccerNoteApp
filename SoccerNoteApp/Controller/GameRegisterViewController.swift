@@ -69,9 +69,9 @@ class GameRegisterViewController: UIViewController, UITextFieldDelegate, UINavig
     }
 
     private func setupTextView() {
-        firstHalfTextView.layer.borderWidth = 1.0
-        secondHalfTextView.layer.borderWidth = 1.0
-        conclusionTextView.layer.borderWidth = 1.0
+        firstHalfTextView.layer.borderWidth = 1.2
+        secondHalfTextView.layer.borderWidth = 1.2
+        conclusionTextView.layer.borderWidth = 1.2
     }
 
     func position(for bar: UIBarPositioning) -> UIBarPosition {

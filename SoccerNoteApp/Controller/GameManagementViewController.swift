@@ -109,5 +109,21 @@ extension GameManagementViewController: GameDataReadModelDelegate {
     func reloadTableViewData() {
         indicater.stopAnimating()
         gameManagementTableView.reloadData()
+        checkDataEmpty()
+    }
+
+    private func checkDataEmpty() {
+        if GameDataModel.gameDataListArray.count == 0 {
+            setupAlertDataEmpty()
+        }
+    }
+
+    private func setupAlertDataEmpty() {
+        let alert = UIAlertController(title: "試合データなし", message: "試合のデータを登録しましょう", preferredStyle: UIAlertController.Style.alert)
+        let okAction = UIAlertAction(title: "登録する", style: .default) { _ -> Void in
+            self.performSegue(withIdentifier: "gameRegister", sender: nil)
+        }
+        alert.addAction(okAction)
+        present(alert, animated: true, completion: nil)
     }
 }
