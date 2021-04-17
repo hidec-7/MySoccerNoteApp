@@ -32,6 +32,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="HL9-jX-8jB">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="MenuIcon" id="6ED-t2-s9L">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="add" id="tMa-K9-bVj">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
@@ -454,6 +457,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="MenuIcon" width="10.666666984558105" height="10.666666984558105"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
