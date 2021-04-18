@@ -269,6 +269,10 @@
                             <constraint firstItem="Vjp-or-C0h" firstAttribute="leading" secondItem="w6B-YH-egw" secondAttribute="leading" id="sYc-Oe-w5g"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="nonMenuView" destination="w6B-YH-egw" id="Eqf-2H-WR0"/>
+                        <outlet property="slideMenuView" destination="Vjp-or-C0h" id="nv7-1G-n7D"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1P7-Tm-2d4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
