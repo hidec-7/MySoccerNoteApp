@@ -257,7 +257,58 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vjp-or-C0h" userLabel="SlideMenuView">
                                 <rect key="frame" x="0.0" y="88" width="271" height="724"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MySoccerNote" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h5X-Ka-Ui9">
+                                        <rect key="frame" x="0.0" y="0.0" width="271" height="60"/>
+                                        <color key="backgroundColor" red="0.17787233329999999" green="0.31158018570000001" blue="0.40562260039999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="GtV-pH-64M"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="JKF-t0-8qD">
+                                        <rect key="frame" x="8" y="76" width="255" height="127.33333333333331"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uac-1Y-9pk">
+                                                <rect key="frame" x="0.0" y="0.0" width="255" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="HhF-Ey-77p"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="1" maxY="0.0"/>
+                                                <state key="normal" title="ご意見・ご要望　　　　&gt;">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0kW-i6-aW7">
+                                                <rect key="frame" x="0.0" y="58" width="255" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="10"/>
+                                                <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="1" maxY="0.0"/>
+                                                <state key="normal" title="レビューをする　　　　&gt;">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="アプリバージョン  　1.2.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OHw-mf-W7i">
+                                                <rect key="frame" x="0.0" y="107" width="255" height="20.333333333333329"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
                                 <color key="backgroundColor" red="0.21001623743258171" green="0.36192725269928738" blue="0.46514621175437976" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="h5X-Ka-Ui9" firstAttribute="leading" secondItem="Vjp-or-C0h" secondAttribute="leading" id="67r-WI-57s"/>
+                                    <constraint firstAttribute="trailing" secondItem="h5X-Ka-Ui9" secondAttribute="trailing" id="Aet-Br-ZVl"/>
+                                    <constraint firstAttribute="trailing" secondItem="JKF-t0-8qD" secondAttribute="trailing" constant="8" id="TKC-gz-0v9"/>
+                                    <constraint firstItem="JKF-t0-8qD" firstAttribute="top" secondItem="h5X-Ka-Ui9" secondAttribute="bottom" constant="16" id="VT9-VQ-ZQk"/>
+                                    <constraint firstItem="h5X-Ka-Ui9" firstAttribute="top" secondItem="Vjp-or-C0h" secondAttribute="top" id="eVD-74-Ezu"/>
+                                    <constraint firstItem="JKF-t0-8qD" firstAttribute="leading" secondItem="Vjp-or-C0h" secondAttribute="leading" constant="8" id="n7R-By-khK"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="na0-0g-Kew"/>
@@ -276,7 +327,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1P7-Tm-2d4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1055" y="854"/>
+            <point key="canvasLocation" x="1053.5999999999999" y="853.44827586206895"/>
         </scene>
         <!--Game Edit View Controller-->
         <scene sceneID="42S-Vn-j2h">
