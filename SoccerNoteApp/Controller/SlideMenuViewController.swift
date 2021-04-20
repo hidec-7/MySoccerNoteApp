@@ -12,6 +12,13 @@ class SlideMenuViewController: UIViewController {
     @IBOutlet private weak var slideMenuView: UIView!
     @IBOutlet private weak var nonMenuView: UIView!
 
+    @IBAction func contactButton(_ sender: UIButton) {
+        let url = NSURL(string: "https://form.run/@hideto-chaya--1614329817")
+        if UIApplication.shared.canOpenURL(url! as URL) {
+            UIApplication.shared.open(url! as URL, options: [:], completionHandler: nil)
+        }
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
