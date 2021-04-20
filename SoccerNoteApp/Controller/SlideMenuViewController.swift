@@ -12,13 +12,13 @@ class SlideMenuViewController: UIViewController {
     @IBOutlet private weak var slideMenuView: UIView!
     @IBOutlet private weak var nonMenuView: UIView!
 
-    @IBAction func contactButton(_ sender: UIButton) {
+    @IBAction private func contactButton(_ sender: UIButton) {
         let contactUrl = NSURL(string: "https://form.run/@hideto-chaya--1614329817")
         if UIApplication.shared.canOpenURL(contactUrl! as URL) {
             UIApplication.shared.open(contactUrl! as URL, options: [:], completionHandler: nil)
         }
     }
-    @IBAction func reviewButton(_ sender: UIButton) {
+    @IBAction private func reviewButton(_ sender: UIButton) {
         let reviewUrl = NSURL(string: "https://itunes.apple.com/jp/app/id1555488477?mt=8&action=write-review")
         if UIApplication.shared.canOpenURL(reviewUrl! as URL) {
             UIApplication.shared.open(reviewUrl! as URL, options: [:], completionHandler: nil)
