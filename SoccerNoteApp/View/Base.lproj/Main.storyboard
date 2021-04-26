@@ -258,14 +258,24 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vjp-or-C0h" userLabel="SlideMenuView">
                                 <rect key="frame" x="0.0" y="88" width="271" height="724"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="86r-7d-9q3">
-                                        <rect key="frame" x="-3" y="-3" width="274" height="70"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EdV-hc-QTf" userLabel="LogoBackground">
+                                        <rect key="frame" x="0.0" y="0.0" width="271" height="60.333333333333336"/>
+                                        <color key="backgroundColor" red="0.17787233329999999" green="0.31158018570000001" blue="0.40562260039999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="70" id="aot-Ld-3ts"/>
+                                            <constraint firstAttribute="width" secondItem="EdV-hc-QTf" secondAttribute="height" multiplier="9:2" id="G1i-TA-bLU"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppLogo" translatesAutoresizingMaskIntoConstraints="NO" id="86r-7d-9q3">
+                                        <rect key="frame" x="55" y="8" width="161" height="44.666666666666664"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="86r-7d-9q3" secondAttribute="height" multiplier="18:5" id="mCf-ab-2Yt"/>
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="JKF-t0-8qD">
-                                        <rect key="frame" x="8" y="67" width="255" height="127.33333333333331"/>
+                                        <rect key="frame" x="8" y="68.666666666666657" width="255" height="127.33333333333334"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uac-1Y-9pk">
                                                 <rect key="frame" x="0.0" y="0.0" width="255" height="40"/>
@@ -294,7 +304,7 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="アプリバージョン  　1.2.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OHw-mf-W7i">
-                                                <rect key="frame" x="0.0" y="107" width="255" height="20.333333333333329"/>
+                                                <rect key="frame" x="0.0" y="107.00000000000003" width="255" height="20.333333333333329"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -304,12 +314,15 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.21001623743258171" green="0.36192725269928738" blue="0.46514621175437976" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="86r-7d-9q3" secondAttribute="trailing" id="03L-EL-7iQ"/>
-                                    <constraint firstItem="86r-7d-9q3" firstAttribute="top" secondItem="Vjp-or-C0h" secondAttribute="top" constant="-3" id="IrR-qE-LLi"/>
+                                    <constraint firstItem="86r-7d-9q3" firstAttribute="leading" secondItem="Vjp-or-C0h" secondAttribute="leading" constant="55" id="FL8-4z-vLc"/>
+                                    <constraint firstItem="EdV-hc-QTf" firstAttribute="leading" secondItem="Vjp-or-C0h" secondAttribute="leading" id="HVJ-Cb-g4J"/>
+                                    <constraint firstItem="JKF-t0-8qD" firstAttribute="top" secondItem="86r-7d-9q3" secondAttribute="bottom" constant="16" id="Pyt-pr-8yc"/>
+                                    <constraint firstAttribute="trailing" secondItem="EdV-hc-QTf" secondAttribute="trailing" id="Q7j-SH-teg"/>
                                     <constraint firstAttribute="trailing" secondItem="JKF-t0-8qD" secondAttribute="trailing" constant="8" id="TKC-gz-0v9"/>
-                                    <constraint firstItem="JKF-t0-8qD" firstAttribute="top" secondItem="86r-7d-9q3" secondAttribute="bottom" id="aZi-Gf-3kd"/>
+                                    <constraint firstItem="86r-7d-9q3" firstAttribute="top" secondItem="Vjp-or-C0h" secondAttribute="top" constant="8" id="gpd-fo-I5y"/>
                                     <constraint firstItem="JKF-t0-8qD" firstAttribute="leading" secondItem="Vjp-or-C0h" secondAttribute="leading" constant="8" id="n7R-By-khK"/>
-                                    <constraint firstItem="86r-7d-9q3" firstAttribute="leading" secondItem="Vjp-or-C0h" secondAttribute="leading" constant="-3" id="oBr-qQ-h54"/>
+                                    <constraint firstItem="EdV-hc-QTf" firstAttribute="top" secondItem="Vjp-or-C0h" secondAttribute="top" id="oq7-7e-Wbs"/>
+                                    <constraint firstAttribute="trailing" secondItem="86r-7d-9q3" secondAttribute="trailing" constant="55" id="orH-19-pnZ"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -544,8 +557,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="AppLogo" width="181" height="74.666664123535156"/>
         <image name="MenuIcon" width="10.666666984558105" height="10.666666984558105"/>
-        <image name="logo" width="90.333335876464844" height="34.666667938232422"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
