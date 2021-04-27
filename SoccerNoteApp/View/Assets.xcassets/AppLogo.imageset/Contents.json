@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "ロゴ.png",
+      "filename" : "ロゴ-1.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "ロゴ-1.png",
+      "filename" : "ロゴ-2.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "ロゴ-2.png",
+      "filename" : "ロゴ-5.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
