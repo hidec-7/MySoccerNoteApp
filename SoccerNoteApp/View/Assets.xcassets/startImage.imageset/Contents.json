@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "startImage.png",
+      "filename" : "iPhone 12-12 Pro – 1.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "startImage-1.png",
+      "filename" : "iPhone 12-12 Pro – 1-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "startImage-2.png",
+      "filename" : "iPhone 12-12 Pro – 1-2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
