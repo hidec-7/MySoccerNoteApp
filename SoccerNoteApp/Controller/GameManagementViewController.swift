@@ -20,6 +20,7 @@ class GameManagementViewController: UIViewController {
         super.viewDidLoad()
 
         headerTitle()
+        setupTableView()
 
         gameManagementTableView.delegate = self
         gameManagementTableView.dataSource = self
@@ -36,6 +37,10 @@ class GameManagementViewController: UIViewController {
 
     private func headerTitle() {
         title = "試合管理"
+    }
+    
+    private func setupTableView() {
+        gameManagementTableView.tableFooterView = UIView(frame: .zero)
     }
 
     private func setupIndicater() {
