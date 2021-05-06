@@ -14,7 +14,7 @@ MySoccerNote(MySoccerNoteApp)
 ## 開発情報
 |  項目  |  バージョン  |
 | :---: | :---: |
-|  Xcode  |12.4|
+|  Xcode  |12.5|
 |  Swift  | 5.3.2|
 |  iOS  |  13.0以上  |
 |  デバイス  |  iPhone<br>iPad<br>Mac(M1チップのみ) |
