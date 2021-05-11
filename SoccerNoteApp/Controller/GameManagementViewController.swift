@@ -38,7 +38,7 @@ class GameManagementViewController: UIViewController {
     private func headerTitle() {
         title = "試合管理"
     }
-    
+
     private func setupTableView() {
         gameManagementTableView.tableFooterView = UIView(frame: .zero)
     }

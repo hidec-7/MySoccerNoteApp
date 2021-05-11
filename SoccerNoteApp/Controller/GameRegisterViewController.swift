@@ -65,7 +65,7 @@ class GameRegisterViewController: UIViewController, UITextFieldDelegate, UINavig
     }
 
     private func setupRegisterButton() {
-        registerButton.layer.cornerRadius = 15.0
+        registerButton.layer.cornerRadius = 18
     }
 
     private func setupTextView() {
