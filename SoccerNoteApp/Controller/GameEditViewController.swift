@@ -88,7 +88,7 @@ class GameEditViewController: UIViewController, UITextFieldDelegate, UINavigatio
     }
 
     private func setupEditButton() {
-        editButton.layer.cornerRadius = 15.0
+        editButton.layer.cornerRadius = 25.0
     }
 
     private func setupEditTextView() {
