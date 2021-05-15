@@ -15,12 +15,36 @@ class GameRegisterViewController: UIViewController, UITextFieldDelegate, UINavig
     @IBOutlet private weak var gameNavigationBar: UINavigationBar!
     @IBOutlet private weak var gameDatePicker: UIDatePicker!
     @IBOutlet private weak var teamTextField: UITextField!
-    @IBOutlet private weak var myScoreTextField: UITextField!
-    @IBOutlet private weak var opponentScoreTextField: UITextField!
-    @IBOutlet private weak var firstHalfTextView: UITextView!
-    @IBOutlet private weak var secondHalfTextView: UITextView!
-    @IBOutlet private weak var conclusionTextView: UITextView!
-    @IBOutlet private weak var registerButton: UIButton!
+    @IBOutlet private weak var myScoreTextField: UITextField! {
+        didSet {
+            myScoreTextField.keyboardType = UIKeyboardType.numberPad
+        }
+    }
+    @IBOutlet private weak var opponentScoreTextField: UITextField! {
+        didSet {
+            opponentScoreTextField.keyboardType = UIKeyboardType.numberPad
+        }
+    }
+    @IBOutlet private weak var firstHalfTextView: UITextView! {
+        didSet {
+            firstHalfTextView.layer.borderWidth = 1.2
+        }
+    }
+    @IBOutlet private weak var secondHalfTextView: UITextView! {
+        didSet {
+            secondHalfTextView.layer.borderWidth = 1.2
+        }
+    }
+    @IBOutlet private weak var conclusionTextView: UITextView! {
+        didSet {
+            conclusionTextView.layer.borderWidth = 1.2
+        }
+    }
+    @IBOutlet private weak var registerButton: UIButton! {
+        didSet {
+            registerButton.layer.cornerRadius = 25.0
+        }
+    }
 
     @IBAction private func didTapBackButton(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
@@ -33,8 +57,6 @@ class GameRegisterViewController: UIViewController, UITextFieldDelegate, UINavig
         teamTextField.delegate = self
         myScoreTextField.delegate = self
         opponentScoreTextField.delegate = self
-
-        setupFirst()
     }
 
     @IBAction func didTapRegisterButton(_ sender: UIButton) {
@@ -58,29 +80,8 @@ class GameRegisterViewController: UIViewController, UITextFieldDelegate, UINavig
         present(alert, animated: true, completion: nil)
     }
 
-    private func setupFirst() {
-        setupRegisterButton()
-        setupTextView()
-        setupKeyboard()
-    }
-
-    private func setupRegisterButton() {
-        registerButton.layer.cornerRadius = 18
-    }
-
-    private func setupTextView() {
-        firstHalfTextView.layer.borderWidth = 1.2
-        secondHalfTextView.layer.borderWidth = 1.2
-        conclusionTextView.layer.borderWidth = 1.2
-    }
-
     func position(for bar: UIBarPositioning) -> UIBarPosition {
         .topAttached
-    }
-
-    private func setupKeyboard() {
-        self.myScoreTextField.keyboardType = UIKeyboardType.numberPad
-        self.opponentScoreTextField.keyboardType = UIKeyboardType.numberPad
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
