@@ -35,21 +35,18 @@ class GameEditViewController: UIViewController, UITextFieldDelegate, UINavigatio
             opponentScoreEditTextField.text = gameData?.opponentScore
         }
     }
-
     @IBOutlet private weak var firstHalfEditTextView: UITextView! {
         didSet {
             firstHalfEditTextView.layer.borderWidth = 1.2
             firstHalfEditTextView.text = gameData?.firstHalf
         }
     }
-
     @IBOutlet private weak var secondHalfEditTextView: UITextView! {
         didSet {
             secondHalfEditTextView.layer.borderWidth = 1.2
             secondHalfEditTextView.text = gameData?.secondHalf
         }
     }
-
     @IBOutlet private weak var conclusionEditTextView: UITextView! {
         didSet {
             conclusionEditTextView.layer.borderWidth = 1.2
