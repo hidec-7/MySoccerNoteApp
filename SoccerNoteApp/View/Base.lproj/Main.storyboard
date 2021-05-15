@@ -111,6 +111,7 @@
                                                             </label>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="相手チーム" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HMf-mO-THt">
                                                                 <rect key="frame" x="49" y="0.0" width="294" height="35"/>
+                                                                <color key="backgroundColor" systemColor="systemGray6Color"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
@@ -121,6 +122,7 @@
                                                         <subviews>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="スコア" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i39-ld-Wyn">
                                                                 <rect key="frame" x="0.0" y="0.0" width="130.33333333333334" height="35"/>
+                                                                <color key="backgroundColor" systemColor="systemGray6Color"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
@@ -132,6 +134,7 @@
                                                             </label>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="スコア" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u5l-uM-MaY">
                                                                 <rect key="frame" x="212.66666666666663" y="0.0" width="130.33333333333337" height="35"/>
+                                                                <color key="backgroundColor" systemColor="systemGray6Color"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
@@ -153,7 +156,7 @@
                                                             </label>
                                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZUY-7G-0EB">
                                                                 <rect key="frame" x="0.0" y="25.666666666666686" width="343" height="128.33333333333334"/>
-                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                <color key="backgroundColor" systemColor="systemGray6Color"/>
                                                                 <color key="textColor" systemColor="labelColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -171,7 +174,7 @@
                                                             </label>
                                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="AM9-Fv-Aa6">
                                                                 <rect key="frame" x="0.0" y="25.333333333333371" width="343" height="128.33333333333334"/>
-                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                <color key="backgroundColor" systemColor="systemGray6Color"/>
                                                                 <color key="textColor" systemColor="labelColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -189,7 +192,7 @@
                                                             </label>
                                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3gj-Dt-Bve">
                                                                 <rect key="frame" x="0.0" y="25.666666666666629" width="343" height="128.33333333333334"/>
-                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                <color key="backgroundColor" systemColor="systemGray6Color"/>
                                                                 <color key="textColor" systemColor="labelColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
