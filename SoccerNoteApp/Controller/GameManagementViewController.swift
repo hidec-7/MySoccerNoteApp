@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
 class GameManagementViewController: UIViewController {
 
@@ -15,6 +16,7 @@ class GameManagementViewController: UIViewController {
 
     @IBOutlet private weak var gameManagementTableView: UITableView!
     @IBOutlet private weak var gameAddButton: UIBarButtonItem!
+    @IBOutlet private weak var managementBannerView: GADBannerView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +29,8 @@ class GameManagementViewController: UIViewController {
         GameDataReadModel.delegate = self
 
         gameManagementTableView.register(UINib(nibName: "GameManagementTableViewCell", bundle: nil), forCellReuseIdentifier: cellId)
+
+        AdMobModel.shared.setupBannerAd(adBaseView: self.managementBannerView, rootVC: self)
     }
 
     override func viewWillAppear(_ animated: Bool) {
