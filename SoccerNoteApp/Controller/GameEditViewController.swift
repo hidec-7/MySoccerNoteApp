@@ -74,7 +74,7 @@ class GameEditViewController: UIViewController, UITextFieldDelegate, UINavigatio
         myScoreEditTextField.delegate = self
         opponentScoreEditTextField.delegate = self
 
-        AdMobModel.shared.setupBannerAd(adBaseView: self.editBannerView, rootVC: self)
+        AdMobBannerModel.shared.setupBannerAd(adBaseView: self.editBannerView, rootVC: self)
     }
 
     @IBAction func didTapEditButton(_ sender: UIButton) {

@@ -30,7 +30,7 @@ class GameManagementViewController: UIViewController {
 
         gameManagementTableView.register(UINib(nibName: "GameManagementTableViewCell", bundle: nil), forCellReuseIdentifier: cellId)
 
-        AdMobModel.shared.setupBannerAd(adBaseView: self.managementBannerView, rootVC: self)
+        AdMobBannerModel.shared.setupBannerAd(adBaseView: self.managementBannerView, rootVC: self)
     }
 
     override func viewWillAppear(_ animated: Bool) {

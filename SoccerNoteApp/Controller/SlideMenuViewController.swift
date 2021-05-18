@@ -30,7 +30,7 @@ class SlideMenuViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        AdMobModel.shared.setupBannerAd(adBaseView: self.slideMenuBannerView, rootVC: self)
+        AdMobBannerModel.shared.setupBannerAd(adBaseView: self.slideMenuBannerView, rootVC: self)
     }
 
     override func viewWillAppear(_ animated: Bool) {

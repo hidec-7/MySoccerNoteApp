@@ -61,7 +61,7 @@ class GameRegisterViewController: UIViewController, UITextFieldDelegate, UINavig
         myScoreTextField.delegate = self
         opponentScoreTextField.delegate = self
 
-        AdMobModel.shared.setupBannerAd(adBaseView: self.bannerView, rootVC: self)
+        AdMobBannerModel.shared.setupBannerAd(adBaseView: self.bannerView, rootVC: self)
     }
 
     @IBAction func didTapRegisterButton(_ sender: UIButton) {

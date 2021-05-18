@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         loginModel.anonymous()
 
-        AdMobModel.shared.initSDK()
+        AdMobBannerModel.shared.initSDK()
 
         return true
     }

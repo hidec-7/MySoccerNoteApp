@@ -7,9 +7,9 @@
 
 import GoogleMobileAds
 
-class AdMobModel: NSObject {
+class AdMobBannerModel: NSObject {
 
-    static let shared = AdMobModel()
+    static let shared = AdMobBannerModel()
 
     func initSDK() {
         GADMobileAds.sharedInstance().start(completionHandler: nil)
