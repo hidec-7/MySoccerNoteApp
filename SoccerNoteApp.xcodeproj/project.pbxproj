@@ -16,6 +16,7 @@
 		5D26BB7F258BBFA500A34757 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D26BB7E258BBFA500A34757 /* LoginModel.swift */; };
 		5D28AE1C25D04E8800D9E3FD /* GameDataDeleteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D28AE1B25D04E8800D9E3FD /* GameDataDeleteModel.swift */; };
 		5D598F1B25B9D76B00D6D013 /* GameDataReadModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D598F1A25B9D76B00D6D013 /* GameDataReadModel.swift */; };
+		5D7F90CF2653DCF80095D5CF /* AdMobBannerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7F90CE2653DCF80095D5CF /* AdMobBannerModel.swift */; };
 		5D9670F5262AC17700265411 /* SlideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9670F4262AC17700265411 /* SlideMenuViewController.swift */; };
 		5DA8B4032579590A00E02818 /* GameEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA8B4022579590A00E02818 /* GameEditViewController.swift */; };
 		5DA8B43D2581D30500E02818 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5DA8B43C2581D30500E02818 /* GoogleService-Info.plist */; };
@@ -62,6 +63,7 @@
 		5D26BB7E258BBFA500A34757 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		5D28AE1B25D04E8800D9E3FD /* GameDataDeleteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDataDeleteModel.swift; sourceTree = "<group>"; };
 		5D598F1A25B9D76B00D6D013 /* GameDataReadModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDataReadModel.swift; sourceTree = "<group>"; };
+		5D7F90CE2653DCF80095D5CF /* AdMobBannerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdMobBannerModel.swift; sourceTree = "<group>"; };
 		5D9670F4262AC17700265411 /* SlideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideMenuViewController.swift; sourceTree = "<group>"; };
 		5DA8B4022579590A00E02818 /* GameEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEditViewController.swift; sourceTree = "<group>"; };
 		5DA8B43C2581D30500E02818 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				5DC6968725CDA5DF0004A106 /* GameDataUpdateModel.swift */,
 				5D28AE1B25D04E8800D9E3FD /* GameDataDeleteModel.swift */,
 				5DC696A525CF00360004A106 /* DateConverterModel.swift */,
+				5D7F90CE2653DCF80095D5CF /* AdMobBannerModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -501,6 +504,7 @@
 				5DA8B4032579590A00E02818 /* GameEditViewController.swift in Sources */,
 				5DC6968825CDA5DF0004A106 /* GameDataUpdateModel.swift in Sources */,
 				5DC696A625CF00370004A106 /* DateConverterModel.swift in Sources */,
+				5D7F90CF2653DCF80095D5CF /* AdMobBannerModel.swift in Sources */,
 				5D9670F5262AC17700265411 /* SlideMenuViewController.swift in Sources */,
 				5D0D1E8925B42E6700473A08 /* GameDataModel.swift in Sources */,
 				5D28AE1C25D04E8800D9E3FD /* GameDataDeleteModel.swift in Sources */,
@@ -613,6 +617,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -670,6 +675,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";

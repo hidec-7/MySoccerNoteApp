@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
 class GameEditViewController: UIViewController, UITextFieldDelegate, UINavigationBarDelegate {
 
@@ -59,6 +60,8 @@ class GameEditViewController: UIViewController, UITextFieldDelegate, UINavigatio
         }
     }
 
+    @IBOutlet private weak var editBannerView: GADBannerView!
+
     @IBAction private func didTapBackButton(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
     }
@@ -70,6 +73,8 @@ class GameEditViewController: UIViewController, UITextFieldDelegate, UINavigatio
         teamEditTextField.delegate = self
         myScoreEditTextField.delegate = self
         opponentScoreEditTextField.delegate = self
+
+        AdMobBannerModel.shared.setupBannerAd(adBaseView: self.editBannerView, rootVC: self)
     }
 
     @IBAction func didTapEditButton(_ sender: UIButton) {

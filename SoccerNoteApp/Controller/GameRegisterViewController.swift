@@ -7,6 +7,7 @@
 
 import UIKit
 import Firebase
+import GoogleMobileAds
 
 class GameRegisterViewController: UIViewController, UITextFieldDelegate, UINavigationBarDelegate, UITextViewDelegate {
 
@@ -46,6 +47,8 @@ class GameRegisterViewController: UIViewController, UITextFieldDelegate, UINavig
         }
     }
 
+    @IBOutlet private weak var bannerView: GADBannerView!
+
     @IBAction private func didTapBackButton(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
     }
@@ -57,6 +60,8 @@ class GameRegisterViewController: UIViewController, UITextFieldDelegate, UINavig
         teamTextField.delegate = self
         myScoreTextField.delegate = self
         opponentScoreTextField.delegate = self
+
+        AdMobBannerModel.shared.setupBannerAd(adBaseView: self.bannerView, rootVC: self)
     }
 
     @IBAction func didTapRegisterButton(_ sender: UIButton) {
