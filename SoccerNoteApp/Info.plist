@@ -21,7 +21,12 @@
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>GADApplicationIdentifier</key>
-	<string>ca-app-pub-3940256099942544~1458002511</string>
+	<string>$(GADApplicationIdentifier)</string>
+    <key>AdUnitIDs</key>
+    <dict>
+        <key>banner</key>
+        <string>$(BANNER_ID)</string>
+    </dict>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>SKAdNetworkItems</key>
