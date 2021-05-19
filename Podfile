@@ -25,7 +25,11 @@ target 'SoccerNoteApp' do
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
   pod 'SwiftLint'
+  pod 'Google-Mobile-Ads-SDK'
 
+end
+
+warn_for_unused_master_specs_repo => false
 end
 
 post_install do |installer|

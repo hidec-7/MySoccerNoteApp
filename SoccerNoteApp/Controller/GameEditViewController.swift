@@ -6,12 +6,14 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
 class GameEditViewController: UIViewController, UITextFieldDelegate, UINavigationBarDelegate {
 
     var gameData: GameDataModel?
 
     @IBOutlet private weak var gameEditNavigationBar: UINavigationBar!
+
     @IBOutlet private weak var gameEditDatePicker: UIDatePicker! {
         didSet {
             gameEditDatePicker.date = DateConverter.dateFromString(date: gameData?.gameDate ?? "") ?? gameEditDatePicker.date
@@ -24,30 +26,41 @@ class GameEditViewController: UIViewController, UITextFieldDelegate, UINavigatio
     }
     @IBOutlet private weak var myScoreEditTextField: UITextField! {
         didSet {
+            myScoreEditTextField.keyboardType = UIKeyboardType.numberPad
             myScoreEditTextField.text = gameData?.myScore
         }
     }
     @IBOutlet private weak var opponentScoreEditTextField: UITextField! {
         didSet {
+            opponentScoreEditTextField.keyboardType = UIKeyboardType.numberPad
             opponentScoreEditTextField.text = gameData?.opponentScore
         }
     }
     @IBOutlet private weak var firstHalfEditTextView: UITextView! {
         didSet {
+            firstHalfEditTextView.layer.borderWidth = 1.2
             firstHalfEditTextView.text = gameData?.firstHalf
         }
     }
     @IBOutlet private weak var secondHalfEditTextView: UITextView! {
         didSet {
+            secondHalfEditTextView.layer.borderWidth = 1.2
             secondHalfEditTextView.text = gameData?.secondHalf
         }
     }
     @IBOutlet private weak var conclusionEditTextView: UITextView! {
         didSet {
+            conclusionEditTextView.layer.borderWidth = 1.2
             conclusionEditTextView.text = gameData?.conclusion
         }
     }
-    @IBOutlet private weak var editButton: UIButton!
+    @IBOutlet private weak var editButton: UIButton! {
+        didSet {
+            editButton.layer.cornerRadius = 25.0
+        }
+    }
+
+    @IBOutlet private weak var editBannerView: GADBannerView!
 
     @IBAction private func didTapBackButton(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
@@ -61,7 +74,7 @@ class GameEditViewController: UIViewController, UITextFieldDelegate, UINavigatio
         myScoreEditTextField.delegate = self
         opponentScoreEditTextField.delegate = self
 
-        setupFirst()
+        AdMobBannerModel.shared.setupBannerAd(adBaseView: self.editBannerView, rootVC: self)
     }
 
     @IBAction func didTapEditButton(_ sender: UIButton) {
@@ -74,27 +87,6 @@ class GameEditViewController: UIViewController, UITextFieldDelegate, UINavigatio
                                            secondHalf: secondHalfEditTextView.text,
                                            conclusion: conclusionEditTextView.text)
         self.dismiss(animated: true, completion: nil)
-    }
-
-    private func setupFirst() {
-        setupKeyboard()
-        setupEditButton()
-        setupEditTextView()
-    }
-
-    private func setupKeyboard() {
-        myScoreEditTextField.keyboardType = UIKeyboardType.numberPad
-        opponentScoreEditTextField.keyboardType = UIKeyboardType.numberPad
-    }
-
-    private func setupEditButton() {
-        editButton.layer.cornerRadius = 15.0
-    }
-
-    private func setupEditTextView() {
-        firstHalfEditTextView.layer.borderWidth = 1.2
-        secondHalfEditTextView.layer.borderWidth = 1.2
-        conclusionEditTextView.layer.borderWidth = 1.2
     }
 
     func position(for bar: UIBarPositioning) -> UIBarPosition {

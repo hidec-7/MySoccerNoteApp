@@ -6,11 +6,13 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
 class SlideMenuViewController: UIViewController {
 
     @IBOutlet private weak var slideMenuView: UIView!
     @IBOutlet private weak var nonMenuView: UIView!
+    @IBOutlet private weak var slideMenuBannerView: GADBannerView!
 
     @IBAction private func contactButton(_ sender: UIButton) {
         let contactUrl = NSURL(string: "https://form.run/@hideto-chaya--1614329817")
@@ -27,6 +29,8 @@ class SlideMenuViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        AdMobBannerModel.shared.setupBannerAd(adBaseView: self.slideMenuBannerView, rootVC: self)
     }
 
     override func viewWillAppear(_ animated: Bool) {
