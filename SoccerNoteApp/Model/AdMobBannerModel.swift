@@ -19,12 +19,6 @@ class AdMobBannerModel: NSObject {
         let adView = GADBannerView(adSize: kGADAdSizeBanner)
         #if DEBUG
         adView.adUnitID = "ca-app-pub-3723443781375723/9182822814"
-        #else
-        if rootVC is ViewController {
-            adView.adUnitID = "ca-app-pub-3723443781375723/9182822814"
-        } else if rootVC is ViewController2 {
-            adView.adUnitID = "ca-app-pub-3723443781375723/9182822814"
-        }
         #endif
         adView.rootViewController = rootVC
         adView.load(GADRequest())
