@@ -18,7 +18,17 @@ class AdMobBannerModel: NSObject {
     func setupBannerAd(adBaseView: UIView, rootVC: UIViewController) {
         let adView = GADBannerView(adSize: kGADAdSizeBanner)
         #if DEBUG
-        adView.adUnitID = "ca-app-pub-3723443781375723/9182822814"
+        adView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        #else
+        if rootVC is GameManagementViewController {
+            adView.adUnitID = "ca-app-pub-3723443781375723/9182822814"
+        } else if rootVC is GameRegisterViewController {
+            adView.adUnitID = "ca-app-pub-3723443781375723/9182822814"
+        } else if rootVC is GameEditViewController {
+            adView.adUnitID = "ca-app-pub-3723443781375723/9182822814"
+        } else if rootVC is SlideMenuViewController {
+            adView.adUnitID = "ca-app-pub-3723443781375723/9182822814"
+        }
         #endif
         adView.rootViewController = rootVC
         adView.load(GADRequest())
